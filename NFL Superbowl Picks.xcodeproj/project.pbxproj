@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3DBBD1DC1BC1F51200CBAF2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBBD1DB1BC1F51200CBAF2C /* AppDelegate.swift */; };
-		3DBBD1DE1BC1F51200CBAF2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBBD1DD1BC1F51200CBAF2C /* ViewController.swift */; };
 		3DBBD1E11BC1F51200CBAF2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DBBD1DF1BC1F51200CBAF2C /* Main.storyboard */; };
 		3DBBD1E31BC1F51200CBAF2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DBBD1E21BC1F51200CBAF2C /* Assets.xcassets */; };
 		3DBBD1E61BC1F51200CBAF2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DBBD1E41BC1F51200CBAF2C /* LaunchScreen.storyboard */; };
 		3DBBD1F11BC1F51200CBAF2C /* NFL_Superbowl_PicksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBBD1F01BC1F51200CBAF2C /* NFL_Superbowl_PicksTests.swift */; };
 		3DBBD1FC1BC1F51200CBAF2C /* NFL_Superbowl_PicksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBBD1FB1BC1F51200CBAF2C /* NFL_Superbowl_PicksUITests.swift */; };
+		3DBBD20A1BC1F7BD00CBAF2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBBD2091BC1F7BD00CBAF2C /* AppDelegate.swift */; settings = {ASSET_TAGS = (); }; };
+		3DBBD20F1BC1F7C800CBAF2C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBBD20B1BC1F7C800CBAF2C /* SignUpViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3DBBD2101BC1F7C800CBAF2C /* NFCPicksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBBD20C1BC1F7C800CBAF2C /* NFCPicksViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3DBBD2111BC1F7C800CBAF2C /* AFCPicksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBBD20D1BC1F7C800CBAF2C /* AFCPicksViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3DBBD2121BC1F7C800CBAF2C /* NFLPicks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBBD20E1BC1F7C800CBAF2C /* NFLPicks.swift */; settings = {ASSET_TAGS = (); }; };
+		3DBBD2141BC1F7DF00CBAF2C /* KDCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBBD2131BC1F7DF00CBAF2C /* KDCircularProgress.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +39,6 @@
 
 /* Begin PBXFileReference section */
 		3DBBD1D81BC1F51200CBAF2C /* NFL Superbowl Picks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NFL Superbowl Picks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DBBD1DB1BC1F51200CBAF2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3DBBD1DD1BC1F51200CBAF2C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3DBBD1E01BC1F51200CBAF2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3DBBD1E21BC1F51200CBAF2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DBBD1E51BC1F51200CBAF2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,12 @@
 		3DBBD1F71BC1F51200CBAF2C /* NFL Superbowl PicksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NFL Superbowl PicksUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DBBD1FB1BC1F51200CBAF2C /* NFL_Superbowl_PicksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFL_Superbowl_PicksUITests.swift; sourceTree = "<group>"; };
 		3DBBD1FD1BC1F51200CBAF2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DBBD2091BC1F7BD00CBAF2C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3DBBD20B1BC1F7C800CBAF2C /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		3DBBD20C1BC1F7C800CBAF2C /* NFCPicksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCPicksViewController.swift; sourceTree = "<group>"; };
+		3DBBD20D1BC1F7C800CBAF2C /* AFCPicksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFCPicksViewController.swift; sourceTree = "<group>"; };
+		3DBBD20E1BC1F7C800CBAF2C /* NFLPicks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFLPicks.swift; sourceTree = "<group>"; };
+		3DBBD2131BC1F7DF00CBAF2C /* KDCircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDCircularProgress.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +105,12 @@
 		3DBBD1DA1BC1F51200CBAF2C /* NFL Superbowl Picks */ = {
 			isa = PBXGroup;
 			children = (
-				3DBBD1DB1BC1F51200CBAF2C /* AppDelegate.swift */,
-				3DBBD1DD1BC1F51200CBAF2C /* ViewController.swift */,
+				3DBBD2091BC1F7BD00CBAF2C /* AppDelegate.swift */,
+				3DBBD20B1BC1F7C800CBAF2C /* SignUpViewController.swift */,
+				3DBBD20C1BC1F7C800CBAF2C /* NFCPicksViewController.swift */,
+				3DBBD20D1BC1F7C800CBAF2C /* AFCPicksViewController.swift */,
+				3DBBD20E1BC1F7C800CBAF2C /* NFLPicks.swift */,
+				3DBBD2131BC1F7DF00CBAF2C /* KDCircularProgress.swift */,
 				3DBBD1DF1BC1F51200CBAF2C /* Main.storyboard */,
 				3DBBD1E21BC1F51200CBAF2C /* Assets.xcassets */,
 				3DBBD1E41BC1F51200CBAF2C /* LaunchScreen.storyboard */,
@@ -187,6 +199,7 @@
 		3DBBD1D01BC1F51200CBAF2C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "William Judd";
 				TargetAttributes = {
@@ -255,8 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DBBD1DE1BC1F51200CBAF2C /* ViewController.swift in Sources */,
-				3DBBD1DC1BC1F51200CBAF2C /* AppDelegate.swift in Sources */,
+				3DBBD2141BC1F7DF00CBAF2C /* KDCircularProgress.swift in Sources */,
+				3DBBD2121BC1F7C800CBAF2C /* NFLPicks.swift in Sources */,
+				3DBBD20F1BC1F7C800CBAF2C /* SignUpViewController.swift in Sources */,
+				3DBBD2101BC1F7C800CBAF2C /* NFCPicksViewController.swift in Sources */,
+				3DBBD2111BC1F7C800CBAF2C /* AFCPicksViewController.swift in Sources */,
+				3DBBD20A1BC1F7BD00CBAF2C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,10 +415,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "NFL Superbowl Picks/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Think-Jinues.NFL-Superbowl-Picks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -409,6 +428,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "NFL Superbowl Picks/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Think-Jinues.NFL-Superbowl-Picks";

@@ -19,13 +19,22 @@ struct NFLPicks {
     let ref: Firebase?
     var completed: Bool!
     
+    
+    
     // Initialize from arbitrary data
+    
+    
+    
+    
     init(name: String, addedByUser: String, completed: Bool, key: String = "") {
         self.key = key
         self.name = name
         self.addedByUser = addedByUser
         self.completed = completed
         self.ref = nil
+        
+    
+    
     }
     
     init(snapshot: FDataSnapshot) {

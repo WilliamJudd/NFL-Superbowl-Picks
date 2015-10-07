@@ -12,7 +12,7 @@ import CoreLocation
 class SignUpViewController: UIViewController {
 
     
-    @IBOutlet weak var cameraContainerView: UIView!
+//    @IBOutlet weak var cameraContainerView: UIView!
     @IBOutlet weak var blurImage: UIImageView!
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
@@ -29,6 +29,10 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var logo: UIImageView!
     @IBOutlet weak var logoWidth: NSLayoutConstraint!
     @IBOutlet weak var logoHeight: NSLayoutConstraint!
+    
+    
+    var nfcPicks: NSMutableArray!
+    var afcPicks: NSMutableArray!
     
     var recordRef: Firebase!
     let locationManager = CLLocationManager() //?????
@@ -68,26 +72,26 @@ class SignUpViewController: UIViewController {
     
     @IBAction func next(sender: AnyObject) {
         recordRef = appDelegate.ref.childByAutoId()
-        recordRef.setValue(["deviceID": deviceID.text!, "firstName": firstName.text!, "lastName": lastName.text!, "email": email.text!, "company": company.text!, "zipCode": zipCode.text!, "timestamp": [".sv":"timestamp"]])
-        if (latitude != nil) {
-            recordRef.updateChildValues(["scanLocation": ["latitude": latitude, "longitude": longitude]])
-            let scanLocationRef = recordRef.childByAppendingPath("scanLocation")
-            if (street != nil) {
-                scanLocationRef.updateChildValues(["street": street])
-            }
-            if (city != nil) {
-                scanLocationRef.updateChildValues(["city": city])
-            }
-            if (state != nil) {
-                scanLocationRef.updateChildValues(["state": state])
-            }
-            if (postalCode != nil) {
-                scanLocationRef.updateChildValues(["postalCode": postalCode])
-            }
-            if (country != nil) {
-                scanLocationRef.updateChildValues(["country": country])
-            }
-        }
+        recordRef.setValue(["deviceID": deviceID.text!, "firstName": firstName.text!, "lastName": lastName.text!, "email": email.text!, "company": company.text!, "zipCode": zipCode.text!,"picks" : "", "timestamp": [".sv":"timestamp"]])
+//        if (latitude != nil) {
+//            recordRef.updateChildValues(["scanLocation": ["latitude": latitude, "longitude": longitude]])
+//            let scanLocationRef = recordRef.childByAppendingPath("scanLocation")
+//            if (street != nil) {
+//                scanLocationRef.updateChildValues(["street": street])
+//            }
+//            if (city != nil) {
+//                scanLocationRef.updateChildValues(["city": city])
+//            }
+//            if (state != nil) {
+//                scanLocationRef.updateChildValues(["state": state])
+//            }
+//            if (postalCode != nil) {
+//                scanLocationRef.updateChildValues(["postalCode": postalCode])
+//            }
+//            if (country != nil) {
+//                scanLocationRef.updateChildValues(["country": country])
+//            }
+//        }
         performSegueWithIdentifier("picks", sender: nil)
     }
     
@@ -95,7 +99,7 @@ class SignUpViewController: UIViewController {
         if segue.identifier == "picks" {
             let nfcPicksViewController = segue.destinationViewController as! NFCPicksViewController
             nfcPicksViewController.recordRef = recordRef
-            nfcPicksViewController.toRecipient = email.text
+//            nfcPicksViewController.toRecipient = email.text
             resetForm(self)
         }
     }

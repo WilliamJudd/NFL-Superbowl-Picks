@@ -25,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //        secret: "19gGU5g/X7IACpA8V+7K/49KwOy5RSksYK8J2PF+")
     
     
+    
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         if preferences.objectForKey("deviceID") == nil {
             deviceID = randomStringWithLength(6)
@@ -32,6 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             preferences.synchronize()
         } else {
             deviceID = preferences.stringForKey("deviceID")
+        print(deviceID)
+            
         }
         self.emailSubject = preferences.stringForKey("emailSubject")
         self.emailBody = preferences.stringForKey("emailBody")

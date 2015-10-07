@@ -25,9 +25,7 @@ class NFCPicksViewController: UIViewController {
 // Firebase
     
     var recordRef: Firebase!
-    var toRecipient: String!
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-    
 // Progress Indicator
     
     
@@ -75,13 +73,32 @@ class NFCPicksViewController: UIViewController {
     
     
     
-    var nfcPicks: NSMutableArray = []
+    var nfcPicks : NSMutableArray = NSMutableArray()
     
     
     override func viewDidLoad() {
     
         super.viewDidLoad()
-    
+        
+       
+//        let Bucs = bucs
+//        let Eagles = eagles
+//        let Cardinals = cardinals
+//        let Cowboys = cowboys
+//        let Falcons = falcons
+//        let Giants = giants
+//        let Greenbay = greenbay
+//        let Panthers = panthers
+//        let Rams = rams
+//        let Redskins = redskins
+//        let Saints = saints
+//        let Seahawks = seahawks
+//        let Vikings = vikings
+//        let Lions = lions
+//        let Bears = bears
+//        let Niners = niners
+
+        
         self.animator = UIDynamicAnimator(referenceView: self.view)
         circularProgressView.angle = 0
         createOverlay()
@@ -267,20 +284,6 @@ class NFCPicksViewController: UIViewController {
         
     
     
-        let button = UIButton(type: UIButtonType.System) as UIButton
-        button.setTitle("Pick Again", forState: UIControlState.Normal)
-        button.setTitleColor(UIColor.redColor(), forState: UIControlState.Normal)
-        button.titleLabel?.font = UIFont(name: "Georgia-BoldItalic", size: 30)
-        button.titleLabel?.layer.shadowColor = UIColor.redColor().CGColor
-        button.titleLabel?.layer.shadowRadius = 4
-        button.titleLabel?.layer.shadowOpacity = 0.9
-        button.titleLabel?.layer.shadowOffset = CGSizeZero
-        button.titleLabel?.layer.masksToBounds = false
-        button.backgroundColor = UIColor.blueColor()
-        button.frame = CGRectMake(500, view.bounds.height / 2 - 50, 300, 50)
-        button.layer.cornerRadius = 10
-        button.addTarget(self, action: Selector("dismissAlert"), forControlEvents: UIControlEvents.TouchUpInside)
-        
         
         let button2 = UIButton(type: UIButtonType.System) as UIButton
         button2.setTitle("Pick AFC", forState: UIControlState.Normal)
@@ -297,20 +300,17 @@ class NFCPicksViewController: UIViewController {
         button2.addTarget(self, action: Selector("afcPicks"), forControlEvents: UIControlEvents.TouchUpInside)
         //
         
+        overlayView.addSubview(button2)
         
-        vibrancyView.contentView.addSubview(button)
-        vibrancyView.contentView.addSubview(button2)
+//        self.animator = UIDynamicAnimator(referenceView: self.view)
         
-        
-        let snapBehaviour: UISnapBehavior = UISnapBehavior(item: button, snapToPoint: CGPointMake(view.bounds.width / 2, view.bounds.height / 2 - 50))
-        snapBehaviour.damping = 0.9
         
         
         let snapBehaviour2: UISnapBehavior = UISnapBehavior(item: button2, snapToPoint: CGPointMake(view.bounds.width / 2, view.bounds.height / 2 + 50))
         snapBehaviour2.damping = 0.9
         
         
-        let slowDown: UIDynamicItemBehavior = UIDynamicItemBehavior(items: [button,button2])
+        let slowDown: UIDynamicItemBehavior = UIDynamicItemBehavior(items: [button2])
         
         //
         slowDown.resistance = 10
@@ -319,10 +319,9 @@ class NFCPicksViewController: UIViewController {
         
         
         animator.addBehavior(slowDown)
-        animator.addBehavior(snapBehaviour)
         animator.addBehavior(snapBehaviour2)
     
-    
+        
     
     }
     
@@ -340,131 +339,80 @@ class NFCPicksViewController: UIViewController {
 //            alertButtons()
 //        }
         
-        animator.removeAllBehaviors()
+//        animator.removeAllBehaviors()
+        
+        
         
         UIView.animateWithDuration(0.6) {
             self.overlayView.alpha = 1.0
         
         }
         
-        
     }
-    
-    
- 
 
-    
-    
-    
-
-
-    func dismissAlert() {
+    @IBAction func teamProgressButtonTapped(sender: UIButton!) {
         
-        let button = UIButton(type: UIButtonType.System) as UIButton
-        button.setTitle("Pick Again", forState: UIControlState.Normal)
-        button.setTitleColor(UIColor.redColor(), forState: UIControlState.Normal)
-        button.titleLabel?.font = UIFont(name: "Georgia-BoldItalic", size: 30)
-        button.titleLabel?.layer.shadowColor = UIColor.redColor().CGColor
-        button.titleLabel?.layer.shadowRadius = 4
-        button.titleLabel?.layer.shadowOpacity = 0.9
-        button.titleLabel?.layer.shadowOffset = CGSizeZero
-        button.titleLabel?.layer.masksToBounds = false
-        button.backgroundColor = UIColor.blueColor()
-        button.frame = CGRectMake(0, 0, 300, 50)
-        button.layer.cornerRadius = 10
-        button.addTarget(self, action: Selector("dismissAlert"), forControlEvents: UIControlEvents.TouchUpInside)
-        button.alpha = 0
+        eagles.setImage(UIImage(named: "eagles"), forState:.Normal);
+                eagles.setImage(UIImage(named: "Broncos Gold"), forState:.Selected);
         
+        bucs.setImage(UIImage(named: "buccs"), forState:.Normal);
+                bucs.setImage(UIImage(named: "lions"), forState:.Selected);
         
-        let button2 = UIButton(type: UIButtonType.System) as UIButton
-        button2.setTitle("Pick AFC", forState: UIControlState.Normal)
-        button2.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
-        button2.titleLabel?.font = UIFont(name: "Georgia-BoldItalic", size: 30)
-        button2.titleLabel?.layer.shadowColor = UIColor.grayColor().CGColor
-        button2.titleLabel?.layer.shadowRadius = 4
-        button2.titleLabel?.layer.shadowOpacity = 0.9
-        button2.titleLabel?.layer.shadowOffset = CGSizeZero
-        button2.titleLabel?.layer.masksToBounds = false
-        button2.backgroundColor = UIColor.redColor()
-        button2.frame = CGRectMake(0, 0, 300, 50)
-        button2.layer.cornerRadius = 10
-        button2.addTarget(self, action: Selector("afcPicks"), forControlEvents: UIControlEvents.TouchUpInside)
-        button2.alpha = 0
+        panthers.setImage(UIImage(named: "panthers"), forState:.Normal);
+                panthers.setImage(UIImage(named: "lions"), forState:.Selected);
         
-        view.addSubview(button)
-        view.addSubview(button2)
-        animator.removeAllBehaviors()
-        
-        let gravityBehaviour: UIGravityBehavior = UIGravityBehavior(items: [button,button2])
-        gravityBehaviour.gravityDirection = CGVectorMake(0.0, 10.0);
-        animator.addBehavior(gravityBehaviour)
-        
-       
-        let itemBehaviour: UIDynamicItemBehavior = UIDynamicItemBehavior(items: [button,button2])
-        itemBehaviour.addAngularVelocity(CGFloat(-M_PI_2), forItem: button)
-        itemBehaviour.addAngularVelocity(CGFloat(-M_PI_2), forItem: button2)
-        animator.addBehavior(itemBehaviour)
-        
-       
-        UIView.animateWithDuration(0.4, animations: {
-            self.overlayView.alpha = 0.0
-            }, completion: {
-                (value: Bool) in
-                button.removeFromSuperview()
-                button2.removeFromSuperview()
-               
-        self.currentCount = 0
-        self.circularProgressView.animateFromAngle(self.circularProgressView.angle, toAngle: 0, duration: 0.5, completion: nil)
-
-                
-        })
-        
-    }
-    
-
-    
-    
-    
-    @IBAction func teamProgressButtonTapped(sender: UIButton) {
-        
-        // add or subtract button to/from array
-        // do circle progress animation
-        // check to see if we've reached max count compared to array size
-        // if maxcount is reached, throw up alert
-        if  currentCount != (maxCount) {
-            currentCount += 1
-            let newAngleValue = newAngle()
-            circularProgressView.animateToAngle(newAngleValue, duration: 0.5, completion: nil)
-            self.nfcPicks.addObject(sender)
+        if sender == sender {
             
-            if sender == nfcPicks {
-            currentCount -= 1
-            self.nfcPicks.removeLastObject()
-                
-   
-            }
-            print(nfcPicks)
+            sender.selected = !sender.selected
+        
+            if sender.state.rawValue == 5  {
+             
+                currentCount += 1
+                let newAngleValue = newAngle()
+                circularProgressView.animateToAngle(newAngleValue, duration: 0.5, completion: nil)
+            
+            nfcPicks.addObject((sender.titleLabel?.text)!)
             
         }else{
-            
-            showAlert()
-           
+                currentCount -= 1
+                let newAngleValue = newAngle()
+                circularProgressView.animateToAngle(newAngleValue, duration: 0.5, completion: nil)
+                
+            nfcPicks.removeObject((sender.titleLabel?.text)!)
+                
+            }
         }
-    }
+        
+            print(sender.state)
+            print(nfcPicks)
+        
     
+//        let picksRef = recordRef.childByAppendingPath("picks")
+//        
+//        let NFCPicks = nfcPicks
+//        
+//        picksRef.updateChildValues(["nfcPicks" : NFCPicks])
+//    
+//    
+    
+    
+    if  nfcPicks.count == (5) {
+       
+        showAlert()
+    
+            }else{
+        
+    }
+
+}
+
     func newAngle() -> Int {
-        return Int(360 * (currentCount / maxCount))
+        
+        return Int(360 * (currentCount/maxCount))
+    
+    
+    
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     func afcPicks () {

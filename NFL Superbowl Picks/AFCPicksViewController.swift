@@ -14,8 +14,6 @@ import AVFoundation
 
 class AFCPicksViewController: UIViewController {
     
-    // Bubble Animation
-    
     var bubbleSound: SystemSoundID!
     let defaultDuration = 2.0
     let defaultDamping = 0.20
@@ -24,9 +22,7 @@ class AFCPicksViewController: UIViewController {
     // Firebase
     
     var recordRef: Firebase!
-    var toRecipient: String!
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-    
     // Progress Indicator
     
     
@@ -45,7 +41,11 @@ class AFCPicksViewController: UIViewController {
     
     // Alert View
     var overlayView: UIView!
-    var alertView: UIView!
+    //    var alertView: UIView!
+    //    var alertView2: UIView!
+    //    var button: UIButton!
+    //    var button2: UIButton!
+    var thanksView: UIView!
     var attachmentBehavior : UIAttachmentBehavior!
     var snapBehavior : UISnapBehavior!
    
@@ -69,14 +69,14 @@ class AFCPicksViewController: UIViewController {
     @IBOutlet weak var bengals: UIButton!
     @IBOutlet weak var afcLogo: UIImageView!
     
-    
+    var afcPicks : NSMutableArray = NSMutableArray()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.animator = UIDynamicAnimator(referenceView: self.view)
         circularProgressView.angle = 0
         createOverlay()
-        createAlert()
         
         
         
@@ -236,47 +236,77 @@ class AFCPicksViewController: UIViewController {
     
     func createOverlay() {
         // Create a gray view and set its alpha to 0 so it isn't visible
+        
+        //        let X_Co = Float(self.view.frame.size.width - 300)/2
+        //        button2.frame = CGRectMake(X_Co, 50, 300, 50)
+        
         overlayView = UIView(frame: view.bounds)
-        overlayView.backgroundColor = UIColor.grayColor()
-        overlayView.alpha = 0.0
+        overlayView.backgroundColor = UIColor.clearColor()
+        overlayView.alpha = 1.0
         view.addSubview(overlayView)
-    }
-    
-    func createAlert() {
-        // Here the red alert view is created. It is created with rounded corners and given a shadow around it
-        let alertWidth: CGFloat = 450
-        let alertHeight: CGFloat = 375
-        let alertViewFrame: CGRect = CGRectMake(0, 0, alertWidth, alertHeight)
-        alertView = UIView(frame: alertViewFrame)
-        alertView.backgroundColor = UIColor.redColor()
-        alertView.alpha = 0.0
-        alertView.layer.cornerRadius = 10;
-        alertView.layer.shadowColor = UIColor.blackColor().CGColor;
-        alertView.layer.shadowOffset = CGSizeMake(0, 5);
-        alertView.layer.shadowOpacity = 0.3;
-        alertView.layer.shadowRadius = 10.0;
         
-        // Create a button and set a listener on it for when it is tapped. Then the button is added to the alert view
-        let button = UIButton(type: UIButtonType.System) as UIButton
-        button.setTitle("Dismiss", forState: UIControlState.Normal)
-        button.backgroundColor = UIColor.whiteColor()
         
-        button.frame = CGRectMake(0, 0, alertWidth, 40.0)
-        button.layer.cornerRadius = 2
-        button.addTarget(self, action: Selector("dismissAlert"), forControlEvents: UIControlEvents.TouchUpInside)
+        let blur =  UIBlurEffect(style: UIBlurEffectStyle.Light)
+        let blurView  = UIVisualEffectView(effect: blur)
+        blurView.frame  = CGRectMake(0, 0, view.bounds.width, view.bounds.height)
+        blurView.alpha = 0.8
+        overlayView.addSubview(blurView)
+        
+        let vibrancyView: UIVisualEffectView = UIVisualEffectView(effect: UIVibrancyEffect(forBlurEffect: blur))
+        vibrancyView.frame  = CGRectMake(0, 0, view.bounds.width, view.bounds.height)
+        blurView.contentView.addSubview(vibrancyView)
+        
+        
+        let labelX = ((view.bounds.width - 700) / 2)
+        let labelY = ((view.bounds.height - 800) / 2)
+        
+        
+        thanksView = UIView()
+        thanksView.frame = CGRectMake(labelX, labelY, 700, 800)
+        thanksView.backgroundColor = UIColor.whiteColor()
+        thanksView.alpha = 3.0
+        overlayView.addSubview(thanksView)
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         let button2 = UIButton(type: UIButtonType.System) as UIButton
         button2.setTitle("Pick AFC", forState: UIControlState.Normal)
-        button2.backgroundColor = UIColor.whiteColor()
+        button2.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
+        button2.titleLabel?.font = UIFont(name: "Georgia-BoldItalic", size: 30)
+        button2.titleLabel?.layer.shadowColor = UIColor.grayColor().CGColor
+        button2.titleLabel?.layer.shadowRadius = 4
+        button2.titleLabel?.layer.shadowOpacity = 0.9
+        button2.titleLabel?.layer.shadowOffset = CGSizeZero
+        button2.titleLabel?.layer.masksToBounds = false
+        button2.backgroundColor = UIColor.redColor()
+        button2.frame = CGRectMake((view.bounds.width - 300)/2 , (view.bounds.height - 50)/2 - 350, 300, 50)
+        button2.layer.cornerRadius = 10
         button2.addTarget(self, action: Selector("afcPicks"), forControlEvents: UIControlEvents.TouchUpInside)
-        button2.frame = CGRectMake(0, 135, alertWidth, 40.0)
-        button2.layer.cornerRadius = 2
-        button2
-        alertView.addSubview(button)
-        alertView.addSubview(button2)
-        view.addSubview(alertView)
+        //
+        
+        
+        //        vibrancyView.contentView.addSubview(button)
+        vibrancyView.contentView.addSubview(button2)
+        
+        
+        
+        
+        
+        
     }
+    
+    
     
     
     
@@ -286,31 +316,17 @@ class AFCPicksViewController: UIViewController {
         // When the alert view is dismissed, I destroy it, so I check for this condition here
         // since if the Show Alert button is tapped again after dismissing, alertView will be nil
         // and so should be created again
-        if (alertView == nil) {
-            createAlert()
-        }
+        //        if (button == nil) {
+        //            alertButtons()
+        //        }
         
+        //        animator.removeAllBehaviors()
         
-        
-        animator.removeAllBehaviors()
-        
-        // Animate in the overlay
-        UIView.animateWithDuration(0.4) {
+        UIView.animateWithDuration(0.6) {
             self.overlayView.alpha = 1.0
+            
         }
         
-        // Animate the alert view using UIKit Dynamics.
-        alertView.alpha = 1.0
-        
-        let snapBehaviour: UISnapBehavior = UISnapBehavior(item: alertView, snapToPoint: view.center)
-        animator.addBehavior(snapBehaviour)
-    }
-    
-    
-    
-    func afcPicks () {
-        
-        performSegueWithIdentifier("afcpicks", sender: self)
         
     }
     
@@ -318,61 +334,131 @@ class AFCPicksViewController: UIViewController {
     
     
     
-    func dismissAlert() {
-        
-        animator.removeAllBehaviors()
-        
-        let gravityBehaviour: UIGravityBehavior = UIGravityBehavior(items: [alertView])
-        gravityBehaviour.gravityDirection = CGVectorMake(0.0, 10.0);
-        animator.addBehavior(gravityBehaviour)
-        
-        // This behaviour is included so that the alert view tilts when it falls, otherwise it will go straight down
-        let itemBehaviour: UIDynamicItemBehavior = UIDynamicItemBehavior(items: [alertView])
-        itemBehaviour.addAngularVelocity(CGFloat(-M_PI_2), forItem: alertView)
-        animator.addBehavior(itemBehaviour)
-        
-        // Animate out the overlay, remove the alert view from its superview and set it to nil
-        // If you don't set it to nil, it keeps falling off the screen and when Show Alert button is
-        // tapped again, it will snap into view from below. It won't have the location settings we defined in createAlert()
-        // And the more it 'falls' off the screen, the longer it takes to come back into view, so when the Show Alert button
-        // is tapped again after a considerable time passes, the app seems unresponsive for a bit of time as the alert view
-        // comes back up to the screen
-        UIView.animateWithDuration(0.4, animations: {
-            self.overlayView.alpha = 0.0
-            }, completion: {
-                (value: Bool) in
-                self.alertView.removeFromSuperview()
-                self.alertView = nil
-        })
-        
-    }
     
     
     
     
     
-    @IBAction func teamProgressButtonTapped(sender: UIButton) {
-        if currentCount < 4 {
-            currentCount += 1
-            let newAngleValue = newAngle()
+    @IBAction func teamProgressButtonTapped(sender: UIButton!) {
+        
+        titans.setImage(UIImage(named: "titans"), forState:.Normal);
+        titans.setImage(UIImage(named: "titansG"), forState:.Selected);
+        
+        texans.setImage(UIImage(named: "texans"), forState:.Normal);
+        texans.setImage(UIImage(named: "texansG"), forState:.Selected);
+        
+        steelers.setImage(UIImage(named: "steelers"), forState:.Normal);
+        steelers.setImage(UIImage(named: "steelersG"), forState:.Selected);
+        
+        ravens.setImage(UIImage(named: "ravens"), forState:.Normal);
+        ravens.setImage(UIImage(named: "ravensG"), forState:.Selected);
+        
+        raiders.setImage(UIImage(named: "raiders"), forState:.Normal);
+        raiders.setImage(UIImage(named: "raidersG"), forState:.Selected);
+        
+        patriots.setImage(UIImage(named: "patriots"), forState:.Normal);
+        patriots.setImage(UIImage(named: "patriotsG"), forState:.Selected);
+        
+        jets.setImage(UIImage(named: "jets"), forState:.Normal);
+        jets.setImage(UIImage(named: "jetsG"), forState:.Selected);
+        
+        jaguars.setImage(UIImage(named: "jags"), forState:.Normal);
+        jaguars.setImage(UIImage(named: "jagsG"), forState:.Selected);
+        
+        dolphins.setImage(UIImage(named: "dolphins"), forState:.Normal);
+        dolphins.setImage(UIImage(named: "dolphinsG"), forState:.Selected);
+        
+        colts.setImage(UIImage(named: "colts"), forState:.Normal);
+        colts.setImage(UIImage(named: "coltsG"), forState:.Selected);
+        
+        cheifs.setImage(UIImage(named: "cheifs"), forState:.Normal);
+        cheifs.setImage(UIImage(named: "cheifsG"), forState:.Selected);
+        
+        chargers.setImage(UIImage(named: "chargers"), forState:.Normal);
+        chargers.setImage(UIImage(named: "chargersG"), forState:.Selected);
+        
+        browns.setImage(UIImage(named: "browns"), forState:.Normal);
+        browns.setImage(UIImage(named: "brownsG"), forState:.Selected);
+        
+        bills.setImage(UIImage(named: "bills"), forState:.Normal);
+        bills.setImage(UIImage(named: "billsG"), forState:.Selected);
+        
+        bengals.setImage(UIImage(named: "bengals"), forState:.Normal);
+        bengals.setImage(UIImage(named: "bengalsG"), forState:.Selected);
+        
+        broncos.setImage(UIImage(named: "broncos"), forState:.Normal);
+        broncos.setImage(UIImage(named: "broncosG"), forState:.Selected);
+        
+        if sender == sender {
             
-            circularProgressView.animateToAngle(newAngleValue, duration: 0.5, completion: nil)
+            sender.selected = !sender.selected
             
+            if sender.state.rawValue == 5  {
+                
+                currentCount += 1
+                let newAngleValue = newAngle()
+                circularProgressView.animateToAngle(newAngleValue, duration: 0.5, completion: nil)
+                
+                afcPicks.addObject((sender.titleLabel?.text)!)
+                
+            }else{
+                currentCount -= 1
+                let newAngleValue = newAngle()
+                circularProgressView.animateToAngle(newAngleValue, duration: 0.5, completion: nil)
+                
+                afcPicks.removeObject((sender.titleLabel?.text)!)
+                
+            }
+        }
+        
+        print(sender.state)
+        print(afcPicks)
+        
+        
+//                let picksRef = recordRef.childByAppendingPath("picks")
+//        
+//                let AFCPicks = afcPicks
+//        
+//                picksRef.updateChildValues(["afcPicks" : AFCPicks])
+        
+        
+        
+        
+        if  afcPicks.count == (5) {
+            
+            emailPage()
             
         }else{
             
-            showAlert()
-            
         }
+        
     }
     
     func newAngle() -> Int {
-        return Int(360 * (currentCount / maxCount))
+        
+        return Int(360 * (currentCount/maxCount))
+        
+        
+        
     }
     
+    func emailPage () {
+        
+        performSegueWithIdentifier("thanks", sender: self)
+        
+    }
+    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+//        if segue.identifier == "thanks" {
+//            let afcPicksViewController = segue.destinationViewController as! AFCPicksViewController
+//            afcPicksViewController.recordRef = recordRef
+//            //            nfcPicksViewController.toRecipient = email.text
+//            
+//        }
+//    }
+//    
+    
     //    @IBAction func resetButtonTapped(sender: UIButton) {
-    //        currentCount = 0
-    //        circularProgressView.animateFromAngle(circularProgressView.angle, toAngle: 0, duration: 0.5, completion: nil)
     //    }
     
 }

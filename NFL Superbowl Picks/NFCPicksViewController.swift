@@ -80,25 +80,6 @@ class NFCPicksViewController: UIViewController {
     
         super.viewDidLoad()
         
-       
-//        let Bucs = bucs
-//        let Eagles = eagles
-//        let Cardinals = cardinals
-//        let Cowboys = cowboys
-//        let Falcons = falcons
-//        let Giants = giants
-//        let Greenbay = greenbay
-//        let Panthers = panthers
-//        let Rams = rams
-//        let Redskins = redskins
-//        let Saints = saints
-//        let Seahawks = seahawks
-//        let Vikings = vikings
-//        let Lions = lions
-//        let Bears = bears
-//        let Niners = niners
-
-        
         self.animator = UIDynamicAnimator(referenceView: self.view)
         circularProgressView.angle = 0
         createOverlay()
@@ -258,6 +239,9 @@ class NFCPicksViewController: UIViewController {
     func createOverlay() {
         // Create a gray view and set its alpha to 0 so it isn't visible
         
+//        let X_Co = Float(self.view.frame.size.width - 300)/2
+//        button2.frame = CGRectMake(X_Co, 50, 300, 50)
+        
         overlayView = UIView(frame: view.bounds)
         overlayView.backgroundColor = UIColor.grayColor()
         overlayView.alpha = 0.0
@@ -270,7 +254,7 @@ class NFCPicksViewController: UIViewController {
         
         let vibrancyView: UIVisualEffectView = UIVisualEffectView(effect: UIVibrancyEffect(forBlurEffect: blur))
         vibrancyView.frame  = CGRectMake(0, 0, view.bounds.width, view.bounds.height)
-
+        
         let overlayImage = UIImage(named: "overlayimage")!
         let backgroundImageView = UIImageView(image: overlayImage)
         backgroundImageView.frame = CGRectMake(0, 0, view.bounds.width, view.bounds.height)
@@ -282,8 +266,19 @@ class NFCPicksViewController: UIViewController {
         blurView.contentView.addSubview(vibrancyView)
         
         
-    
-    
+        
+        let labelX = ((view.bounds.width - 300) / 2)
+        let labelY = ((view.bounds.height - 50) / 2)
+     
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         let button2 = UIButton(type: UIButtonType.System) as UIButton
         button2.setTitle("Pick AFC", forState: UIControlState.Normal)
@@ -295,38 +290,24 @@ class NFCPicksViewController: UIViewController {
         button2.titleLabel?.layer.shadowOffset = CGSizeZero
         button2.titleLabel?.layer.masksToBounds = false
         button2.backgroundColor = UIColor.redColor()
-        button2.frame = CGRectMake(-500, view.bounds.height / 2 + 50, 300, 50)
+        button2.frame = CGRectMake((view.bounds.width - 300)/2 , (view.bounds.height - 50)/2 - 350, 300, 50)
         button2.layer.cornerRadius = 10
         button2.addTarget(self, action: Selector("afcPicks"), forControlEvents: UIControlEvents.TouchUpInside)
         //
         
-        overlayView.addSubview(button2)
         
-//        self.animator = UIDynamicAnimator(referenceView: self.view)
-        
-        
-        
-        let snapBehaviour2: UISnapBehavior = UISnapBehavior(item: button2, snapToPoint: CGPointMake(view.bounds.width / 2, view.bounds.height / 2 + 50))
-        snapBehaviour2.damping = 0.9
+//        vibrancyView.contentView.addSubview(button)
+        vibrancyView.contentView.addSubview(button2)
         
         
-        let slowDown: UIDynamicItemBehavior = UIDynamicItemBehavior(items: [button2])
-        
-        //
-        slowDown.resistance = 10
-        slowDown.density = 0
+
         
         
         
-        animator.addBehavior(slowDown)
-        animator.addBehavior(snapBehaviour2)
-    
-        
-    
     }
     
-
-
+    
+    
     
     
     
@@ -335,31 +316,78 @@ class NFCPicksViewController: UIViewController {
         // When the alert view is dismissed, I destroy it, so I check for this condition here
         // since if the Show Alert button is tapped again after dismissing, alertView will be nil
         // and so should be created again
-//        if (button == nil) {
-//            alertButtons()
-//        }
+        //        if (button == nil) {
+        //            alertButtons()
+        //        }
         
 //        animator.removeAllBehaviors()
         
-        
-        
         UIView.animateWithDuration(0.6) {
             self.overlayView.alpha = 1.0
-        
+            
         }
         
+        
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     @IBAction func teamProgressButtonTapped(sender: UIButton!) {
         
-        eagles.setImage(UIImage(named: "eagles"), forState:.Normal);
-                eagles.setImage(UIImage(named: "Broncos Gold"), forState:.Selected);
+        rams.setImage(UIImage(named: "rams"), forState:.Normal);
+        rams.setImage(UIImage(named: "ramsG"), forState:.Selected);
         
-        bucs.setImage(UIImage(named: "buccs"), forState:.Normal);
-                bucs.setImage(UIImage(named: "lions"), forState:.Selected);
+        redskins.setImage(UIImage(named: "redskins"), forState:.Normal);
+        redskins.setImage(UIImage(named: "redskinsG"), forState:.Selected);
+        
+        saints.setImage(UIImage(named: "saints"), forState:.Normal);
+        saints.setImage(UIImage(named: "saintsG"), forState:.Selected);
+        
+        seahawks.setImage(UIImage(named: "seahawks"), forState:.Normal);
+        seahawks.setImage(UIImage(named: "seahawksG"), forState:.Selected);
+        
+        vikings.setImage(UIImage(named: "vikings"), forState:.Normal);
+        vikings.setImage(UIImage(named: "vikingsG"), forState:.Selected);
+        
+        lions.setImage(UIImage(named: "lions"), forState:.Normal);
+        lions.setImage(UIImage(named: "lionsG"), forState:.Selected);
+        
+        bears.setImage(UIImage(named: "bears"), forState:.Normal);
+        bears.setImage(UIImage(named: "bearsG"), forState:.Selected);
+        
+        niners.setImage(UIImage(named: "49ers"), forState:.Normal);
+        niners.setImage(UIImage(named: "49ersG"), forState:.Selected);
+        
+        eagles.setImage(UIImage(named: "eagles"), forState:.Normal);
+        eagles.setImage(UIImage(named: "eaglesG"), forState:.Selected);
+        
+        cardinals.setImage(UIImage(named: "cardinals"), forState:.Normal);
+        cardinals.setImage(UIImage(named: "cardinalsG"), forState:.Selected);
+        
+        cowboys.setImage(UIImage(named: "cowboys"), forState:.Normal);
+        cowboys.setImage(UIImage(named: "cowboysG"), forState:.Selected);
+        
+        falcons.setImage(UIImage(named: "falcons"), forState:.Normal);
+        falcons.setImage(UIImage(named: "falconsG"), forState:.Selected);
+        
+        giants.setImage(UIImage(named: "giants"), forState:.Normal);
+        giants.setImage(UIImage(named: "giantsG"), forState:.Selected);
+        
+        greenbay.setImage(UIImage(named: "greenbay"), forState:.Normal);
+        greenbay.setImage(UIImage(named: "greenbayG"), forState:.Selected);
         
         panthers.setImage(UIImage(named: "panthers"), forState:.Normal);
-                panthers.setImage(UIImage(named: "lions"), forState:.Selected);
+        panthers.setImage(UIImage(named: "panthersG"), forState:.Selected);
+        
+        bucs.setImage(UIImage(named: "buccs"), forState:.Normal);
+        bucs.setImage(UIImage(named: "buccsG"), forState:.Selected);
         
         if sender == sender {
             
@@ -386,14 +414,14 @@ class NFCPicksViewController: UIViewController {
             print(sender.state)
             print(nfcPicks)
         
-    
+//    
 //        let picksRef = recordRef.childByAppendingPath("picks")
 //        
 //        let NFCPicks = nfcPicks
 //        
 //        picksRef.updateChildValues(["nfcPicks" : NFCPicks])
 //    
-//    
+    
     
     
     if  nfcPicks.count == (5) {
@@ -414,12 +442,21 @@ class NFCPicksViewController: UIViewController {
     
     }
     
-    
     func afcPicks () {
         
         performSegueWithIdentifier("afcpicks", sender: self)
         
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if segue.identifier == "afcpicks" {
+            let afcPicksViewController = segue.destinationViewController as! AFCPicksViewController
+            afcPicksViewController.recordRef = recordRef
+            //            nfcPicksViewController.toRecipient = email.text
+           
+        }
+    }
+
     
 //    @IBAction func resetButtonTapped(sender: UIButton) {
 //    }

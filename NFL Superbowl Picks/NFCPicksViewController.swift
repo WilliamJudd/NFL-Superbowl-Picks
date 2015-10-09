@@ -68,12 +68,13 @@ class NFCPicksViewController: UIViewController {
     @IBOutlet weak var lions: UIButton!
     @IBOutlet weak var bears: UIButton!
     @IBOutlet weak var niners: UIButton!
-    @IBOutlet weak var nfcLogo: UIImageView!
+    @IBOutlet weak var nfcLogo: UIButton!
     
     
     
     
     var nfcPicks : NSMutableArray = NSMutableArray()
+    var nfcPicks2 : NSMutableArray = NSMutableArray()
     
     
     override func viewDidLoad() {
@@ -82,7 +83,7 @@ class NFCPicksViewController: UIViewController {
         
         self.animator = UIDynamicAnimator(referenceView: self.view)
         circularProgressView.angle = 0
-        createOverlay()
+//        createOverlay()
         
 
         
@@ -272,7 +273,41 @@ class NFCPicksViewController: UIViewController {
      
         
         
+        let image = nfcPicks2[0] as! UIImage
+        let imageView = UIImageView(image: image)
+        imageView.frame = CGRect(x: (view.bounds.width - 150) / 2 - 300, y: (view.bounds.height - 100) / 2 - 240, width: 150, height: 150)
+        imageView.alpha = 0.0
+        view.addSubview(imageView)
         
+        let image2 = nfcPicks2[1] as! UIImage
+        let imageView2 = UIImageView(image: image2)
+        imageView2.frame = CGRect(x: (view.bounds.width - 150) / 2 - 150, y: (view.bounds.height - 100) / 2 - 240, width: 150, height: 150)
+        imageView2.alpha = 0.0
+        view.addSubview(imageView2)
+        
+        let image3 = nfcPicks2[2] as! UIImage
+        let imageView3 = UIImageView(image: image3)
+        imageView3.frame = CGRect(x: (view.bounds.width - 150) / 2 - 0, y: (view.bounds.height - 100) / 2 - 240, width: 150, height: 150)
+        imageView3.alpha = 0.0
+        view.addSubview(imageView3)
+        
+        let image4 = nfcPicks2[3] as! UIImage
+        let imageView4 = UIImageView(image: image4)
+        imageView4.frame = CGRect(x: (view.bounds.width - 150) / 2 + 150, y: (view.bounds.height - 100) / 2 - 240, width: 150, height: 150)
+        imageView4.alpha = 0.0
+        view.addSubview(imageView4)
+        
+        let image5 = nfcPicks2[4] as! UIImage
+        let imageView5 = UIImageView(image: image5)
+        imageView5.frame = CGRect(x: (view.bounds.width - 150) / 2 + 300, y: (view.bounds.height - 100) / 2 - 240, width: 150, height: 150)
+        imageView5.alpha = 0.0
+        view.addSubview(imageView5)
+        
+        let image6 = UIImage(named: "PlayersPNG")
+        let imageView6 = UIImageView(image: image6)
+        imageView6.frame = CGRect(x: (view.bounds.width - 500) / 2, y: (view.bounds.height - 400) / 2 + 175, width: 500, height: 400)
+        
+        view.addSubview(imageView6)
         
         
         
@@ -282,15 +317,17 @@ class NFCPicksViewController: UIViewController {
         
         let button2 = UIButton(type: UIButtonType.System) as UIButton
         button2.setTitle("Pick AFC", forState: UIControlState.Normal)
-        button2.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
+        button2.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         button2.titleLabel?.font = UIFont(name: "Georgia-BoldItalic", size: 30)
         button2.titleLabel?.layer.shadowColor = UIColor.grayColor().CGColor
         button2.titleLabel?.layer.shadowRadius = 4
         button2.titleLabel?.layer.shadowOpacity = 0.9
         button2.titleLabel?.layer.shadowOffset = CGSizeZero
         button2.titleLabel?.layer.masksToBounds = false
-        button2.backgroundColor = UIColor.redColor()
-        button2.frame = CGRectMake((view.bounds.width - 300)/2 , (view.bounds.height - 50)/2 - 350, 300, 50)
+        button2.layer.borderColor = UIColor.whiteColor().CGColor
+        button2.layer.borderWidth = 1.0
+        button2.backgroundColor = UIColor.clearColor()
+        button2.frame = CGRectMake((view.bounds.width - 300)/2 , (view.bounds.height - 75)/2 - 400, 300, 75)
         button2.layer.cornerRadius = 10
         button2.addTarget(self, action: Selector("afcPicks"), forControlEvents: UIControlEvents.TouchUpInside)
         //
@@ -299,36 +336,55 @@ class NFCPicksViewController: UIViewController {
 //        vibrancyView.contentView.addSubview(button)
         vibrancyView.contentView.addSubview(button2)
         
-        
-
-        
-        
-        
-    }
-    
-    
-    
-    
-    
-    
-    
-    func showAlert() {
-        // When the alert view is dismissed, I destroy it, so I check for this condition here
-        // since if the Show Alert button is tapped again after dismissing, alertView will be nil
-        // and so should be created again
-        //        if (button == nil) {
-        //            alertButtons()
-        //        }
-        
-//        animator.removeAllBehaviors()
-        
-        UIView.animateWithDuration(0.6) {
+        UIView.animateWithDuration(0.0) {
             self.overlayView.alpha = 1.0
             
         }
         
+        UIView.animateWithDuration(1) {
+            imageView.alpha = 1.0
         
+        }
+        
+        UIView.animateWithDuration(2) {
+            imageView2.alpha = 1.0
+            
+        }
+        UIView.animateWithDuration(3) {
+            imageView3.alpha = 1.0
+            
+        }
+        UIView.animateWithDuration(4) {
+            imageView4.alpha = 1.0
+            
+        }
+        UIView.animateWithDuration(5) {
+            imageView5.alpha = 1.0
+            
+        }
     }
+    
+    
+    
+    
+    
+//    func showAlert() {
+//        // When the alert view is dismissed, I destroy it, so I check for this condition here
+//        // since if the Show Alert button is tapped again after dismissing, alertView will be nil
+//        // and so should be created again
+//        //        if (button == nil) {
+//        //            alertButtons()
+//        //        }
+//        
+////        animator.removeAllBehaviors()
+//        
+//        UIView.animateWithDuration(0.6) {
+//            self.overlayView.alpha = 1.0
+//            
+//        }
+//        
+//        
+//    }
     
     
     
@@ -389,6 +445,10 @@ class NFCPicksViewController: UIViewController {
         bucs.setImage(UIImage(named: "buccs"), forState:.Normal);
         bucs.setImage(UIImage(named: "buccsG"), forState:.Selected);
         
+        nfcLogo.setImage(UIImage(named: "NFC Logo"), forState:.Normal);
+        nfcLogo.setImage(UIImage(named: "nfcG"), forState:.Selected);
+        
+        
         if sender == sender {
             
             sender.selected = !sender.selected
@@ -400,33 +460,36 @@ class NFCPicksViewController: UIViewController {
                 circularProgressView.animateToAngle(newAngleValue, duration: 0.5, completion: nil)
             
             nfcPicks.addObject((sender.titleLabel?.text)!)
-            
+            nfcPicks2.addObject(sender.imageForState(.Selected)!)
+                
         }else{
                 currentCount -= 1
                 let newAngleValue = newAngle()
                 circularProgressView.animateToAngle(newAngleValue, duration: 0.5, completion: nil)
                 
             nfcPicks.removeObject((sender.titleLabel?.text)!)
+            nfcPicks2.removeObject(sender.imageForState(.Selected)!)
                 
             }
         }
         
             print(sender.state)
             print(nfcPicks)
+            print(nfcPicks2)
         
-//    
+//
 //        let picksRef = recordRef.childByAppendingPath("picks")
 //        
 //        let NFCPicks = nfcPicks
 //        
 //        picksRef.updateChildValues(["nfcPicks" : NFCPicks])
-//    
+//
     
     
     
     if  nfcPicks.count == (5) {
        
-        showAlert()
+        createOverlay()
     
             }else{
         
@@ -452,6 +515,8 @@ class NFCPicksViewController: UIViewController {
         if segue.identifier == "afcpicks" {
             let afcPicksViewController = segue.destinationViewController as! AFCPicksViewController
             afcPicksViewController.recordRef = recordRef
+            afcPicksViewController.nfcPicks = nfcPicks
+            afcPicksViewController.nfcPicks2 = nfcPicks2
             //            nfcPicksViewController.toRecipient = email.text
            
         }
@@ -461,6 +526,8 @@ class NFCPicksViewController: UIViewController {
 //    @IBAction func resetButtonTapped(sender: UIButton) {
 //    }
   
+    @IBAction func nfcSubmit(sender: AnyObject) {
+    }
 }
 
 

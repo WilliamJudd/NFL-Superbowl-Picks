@@ -70,14 +70,18 @@ class AFCPicksViewController: UIViewController {
     @IBOutlet weak var afcLogo: UIImageView!
     
     var afcPicks : NSMutableArray = NSMutableArray()
-
+    var afcPicks2 : NSMutableArray = NSMutableArray()
+    var nfcPicks : NSMutableArray = NSMutableArray()
+    var nfcPicks2 : NSMutableArray = NSMutableArray()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(nfcPicks)
         self.animator = UIDynamicAnimator(referenceView: self.view)
         circularProgressView.angle = 0
-        createOverlay()
-        
+//        createOverlay()
+//        showThanksView()
         
         
     }
@@ -240,95 +244,119 @@ class AFCPicksViewController: UIViewController {
         //        let X_Co = Float(self.view.frame.size.width - 300)/2
         //        button2.frame = CGRectMake(X_Co, 50, 300, 50)
         
-        overlayView = UIView(frame: view.bounds)
-        overlayView.backgroundColor = UIColor.clearColor()
-        overlayView.alpha = 1.0
-        view.addSubview(overlayView)
+        let labelX = ((view.bounds.width - 600) / 2)
+        let labelY = ((view.bounds.height - 400) / 2)
         
+        thanksView = UIView()
+        thanksView.frame = CGRectMake(labelX, labelY, 600, 400)
+        thanksView.backgroundColor = UIColor.clearColor()
+        thanksView.alpha = 0.0
+        //        thanksView.layer.shadowColor = UIColor.redColor().CGColor
+        //        thanksView.layer.shadowPath = UIBezierPath(roundedRect: view.bounds, cornerRadius: 12.0).CGPath
+        //        thanksView.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+        //        thanksView.layer.shadowOpacity = 1.0
+        //        thanksView.layer.shadowRadius = 2
+        //        thanksView.layer.masksToBounds = true
+        thanksView.layer.cornerRadius = 100
+        thanksView.clipsToBounds = true
+        //
+        view.addSubview(thanksView)
+
         
         let blur =  UIBlurEffect(style: UIBlurEffectStyle.Light)
         let blurView  = UIVisualEffectView(effect: blur)
         blurView.frame  = CGRectMake(0, 0, view.bounds.width, view.bounds.height)
-        blurView.alpha = 0.8
-        overlayView.addSubview(blurView)
+        blurView.alpha = 1.0
+        thanksView.addSubview(blurView)
         
         let vibrancyView: UIVisualEffectView = UIVisualEffectView(effect: UIVibrancyEffect(forBlurEffect: blur))
         vibrancyView.frame  = CGRectMake(0, 0, view.bounds.width, view.bounds.height)
-        blurView.contentView.addSubview(vibrancyView)
-        
-        
-        let labelX = ((view.bounds.width - 700) / 2)
-        let labelY = ((view.bounds.height - 800) / 2)
-        
-        
-        thanksView = UIView()
-        thanksView.frame = CGRectMake(labelX, labelY, 700, 800)
-        thanksView.backgroundColor = UIColor.whiteColor()
-        thanksView.alpha = 3.0
-        overlayView.addSubview(thanksView)
+        blurView.addSubview(vibrancyView)
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        let button2 = UIButton(type: UIButtonType.System) as UIButton
-        button2.setTitle("Pick AFC", forState: UIControlState.Normal)
-        button2.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
-        button2.titleLabel?.font = UIFont(name: "Georgia-BoldItalic", size: 30)
-        button2.titleLabel?.layer.shadowColor = UIColor.grayColor().CGColor
-        button2.titleLabel?.layer.shadowRadius = 4
-        button2.titleLabel?.layer.shadowOpacity = 0.9
-        button2.titleLabel?.layer.shadowOffset = CGSizeZero
-        button2.titleLabel?.layer.masksToBounds = false
-        button2.backgroundColor = UIColor.redColor()
-        button2.frame = CGRectMake((view.bounds.width - 300)/2 , (view.bounds.height - 50)/2 - 350, 300, 50)
-        button2.layer.cornerRadius = 10
-        button2.addTarget(self, action: Selector("afcPicks"), forControlEvents: UIControlEvents.TouchUpInside)
-        //
-        
-        
-        //        vibrancyView.contentView.addSubview(button)
-        vibrancyView.contentView.addSubview(button2)
-        
-        
-        
-        
-        
-        
-    }
-    
-    
-    
-    
-    
-    
-    
-    func showAlert() {
-        // When the alert view is dismissed, I destroy it, so I check for this condition here
-        // since if the Show Alert button is tapped again after dismissing, alertView will be nil
-        // and so should be created again
-        //        if (button == nil) {
-        //            alertButtons()
-        //        }
-        
-        //        animator.removeAllBehaviors()
-        
-        UIView.animateWithDuration(0.6) {
-            self.overlayView.alpha = 1.0
+        UIView.animateWithDuration(1.0, delay: 0.0, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: {
             
-        }
-        
-        
+                        self.thanksView.alpha = 1.0
+            
+                        }, completion: nil)
+    
     }
+    
+//    func showThanksView() {
+//    
+//        let labelX = ((view.bounds.width - 600) / 2)
+//        let labelY = ((view.bounds.height - 800) / 2)
+//        
+//        
+//        thanksView = UIView()
+//        thanksView.frame = CGRectMake(labelX, labelY, 600, 800)
+//        thanksView.backgroundColor = UIColor.whiteColor()
+//        thanksView.alpha = 0.0
+////        thanksView.layer.shadowColor = UIColor.redColor().CGColor
+////        thanksView.layer.shadowPath = UIBezierPath(roundedRect: view.bounds, cornerRadius: 12.0).CGPath
+////        thanksView.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+////        thanksView.layer.shadowOpacity = 1.0
+////        thanksView.layer.shadowRadius = 2
+////        thanksView.layer.masksToBounds = true
+//        thanksView.layer.cornerRadius = 100
+//        thanksView.clipsToBounds = true
+////
+//        view.addSubview(thanksView)
+//        
+////        let overlayImage = UIImage(named: "overlayimage")!
+////        let backgroundImageView = UIImageView(image: overlayImage)
+////        backgroundImageView.frame = CGRectMake(0, 0, thanksView.bounds.width, thanksView.bounds.height)
+////        backgroundImageView.alpha = 0.8
+//        
+//        
+//        
+//        //        backgroundImageView.layer.cornerRadius = 100
+////        backgroundImageView.clipsToBounds = true
+////        thanksView.addSubview(backgroundImageView)
+//        
+//        let blur =  UIBlurEffect(style: UIBlurEffectStyle.Dark)
+//        let blurView  = UIVisualEffectView(effect: blur)
+//        blurView.frame  = CGRectMake(0, 0, thanksView.bounds.width, thanksView.bounds.height)
+//        blurView.alpha = 1.0
+//        thanksView.addSubview(blurView)
+//        
+//        let vibrancyView: UIVisualEffectView = UIVisualEffectView(effect: UIVibrancyEffect(forBlurEffect: blur))
+//        vibrancyView.frame  = CGRectMake(0, 0, thanksView.bounds.width, thanksView.bounds.height)
+//        blurView.contentView.addSubview(vibrancyView)
+//        
+//    }
+//    
+//    
+//    func showAlert() {
+//        // When the alert view is dismissed, I destroy it, so I check for this condition here
+//        // since if the Show Alert button is tapped again after dismissing, alertView will be nil
+//        // and so should be created again
+//        //        if (button == nil) {
+//        //            alertButtons()
+//        //        }
+//        
+//                animator.removeAllBehaviors()
+//        
+//        UIView.animateWithDuration(0.4) {
+//            self.overlayView.alpha = 0.0
+//        }
+////        UIView.animateWithDuration(0.8) {
+////            self.thanksView.alpha = 1.0
+////        }
+//        
+//        UIView.animateWithDuration(1.0, delay: 0.0, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: {
+//            
+//            self.thanksView.alpha = 1.0
+//            
+//            }, completion: nil)
+////        // Animate the alert view using UIKit Dynamics.
+//        
+////        let snapBehaviour: UISnapBehavior = UISnapBehavior(item: thanksView, snapToPoint: view.center)
+////        animator.addBehavior(snapBehaviour)
+//        
+//        
+//    }
     
     
     
@@ -400,6 +428,7 @@ class AFCPicksViewController: UIViewController {
                 circularProgressView.animateToAngle(newAngleValue, duration: 0.5, completion: nil)
                 
                 afcPicks.addObject((sender.titleLabel?.text)!)
+                afcPicks2.addObject(sender.imageForState(.Selected)!)
                 
             }else{
                 currentCount -= 1
@@ -407,7 +436,7 @@ class AFCPicksViewController: UIViewController {
                 circularProgressView.animateToAngle(newAngleValue, duration: 0.5, completion: nil)
                 
                 afcPicks.removeObject((sender.titleLabel?.text)!)
-                
+                afcPicks2.removeObject(sender.imageForState(.Selected)!)
             }
         }
         
@@ -448,15 +477,18 @@ class AFCPicksViewController: UIViewController {
         
     }
     
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-//        if segue.identifier == "thanks" {
-//            let afcPicksViewController = segue.destinationViewController as! AFCPicksViewController
-//            afcPicksViewController.recordRef = recordRef
-//            //            nfcPicksViewController.toRecipient = email.text
-//            
-//        }
-//    }
-//    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if segue.identifier == "thanks" {
+            let thanksViewController = segue.destinationViewController as! PickVerificationViewController
+            thanksViewController.recordRef = recordRef
+            thanksViewController.nfcPicks = nfcPicks
+            thanksViewController.nfcPicks2 = nfcPicks2
+            thanksViewController.afcPicks = afcPicks
+            thanksViewController.afcPicks2 = afcPicks2
+            //            nfcPicksViewController.toRecipient = email.text
+            
+        }
+    }
     
     //    @IBAction func resetButtonTapped(sender: UIButton) {
     //    }

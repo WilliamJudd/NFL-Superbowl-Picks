@@ -30,6 +30,17 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var logoWidth: NSLayoutConstraint!
     @IBOutlet weak var logoHeight: NSLayoutConstraint!
     
+    let kSuccessTitle = "Congratulations"
+    let kErrorTitle = "Connection error"
+    let kNoticeTitle = "Notice"
+    let kWarningTitle = "Warning"
+    let kInfoTitle = "Info"
+    let kSubtitle = "You've just displayed this awesome Pop Up View"
+    
+    let kDefaultAnimationDuration = 2.0
+
+    
+
     
     var nfcPicks: NSMutableArray!
     var afcPicks: NSMutableArray!
@@ -93,15 +104,24 @@ class SignUpViewController: UIViewController {
 //            }
 //        }
         performSegueWithIdentifier("picks", sender: nil)
+    
+    
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if segue.identifier == "picks" {
             let nfcPicksViewController = segue.destinationViewController as! NFCPicksViewController
             nfcPicksViewController.recordRef = recordRef
-//            nfcPicksViewController.toRecipient = email.text
+            
+            
+            
+            //            nfcPicksViewController.toRecipient = email.text
             resetForm(self)
         }
+    }
+    
+    @IBAction func unwindToContainerVC(segue: UIStoryboardSegue) {
+        
     }
     
 //    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

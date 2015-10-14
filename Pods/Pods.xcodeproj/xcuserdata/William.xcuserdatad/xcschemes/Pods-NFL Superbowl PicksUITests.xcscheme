@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DCD91AF30AFAB6435F9CBB65"
+               BlueprintIdentifier = "4FDB94F65113D55D81E775A6"
                BuildableName = "libPods-NFL Superbowl PicksUITests.a"
                BlueprintName = "Pods-NFL Superbowl PicksUITests"
                ReferencedContainer = "container:Pods.xcodeproj">

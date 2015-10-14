@@ -16,36 +16,19 @@ import MessageUI
 
 class AFCPicksViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
-    var bubbleSound: SystemSoundID!
-    let defaultDuration = 2.0
-    let defaultDamping = 0.20
-    let defaultVelocity = 6.0
-    
-    // Firebase
-    
     var recordRef: Firebase!
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     // Progress Indicator
-    
-    
     var currentCount = 0.0
     let maxCount = 5.0
-    
-    
-    // Dynamics
-    
-    var animator: UIDynamicAnimator!
-    var collisionBehavior: UICollisionBehavior!
-    var pushBehavior: UIPushBehavior!
-    var pushBehavior2: UIPushBehavior!
-    var itemBehavior: UIDynamicItemBehavior!
-    var gravity: UIGravityBehavior!
-    
     // Alert View
     var overlayView: UIView!
     var alertView: UIView!
- 
-   
+    // Arrays
+    var afcPicks : NSMutableArray = NSMutableArray()
+    var afcPicks2 : NSMutableArray = NSMutableArray()
+    var nfcPicks : NSMutableArray = NSMutableArray()
+    var nfcPicks2 : NSMutableArray = NSMutableArray()
     
     @IBOutlet weak var circularProgressView: KDCircularProgress!
     @IBOutlet weak var jaguars: UIButton!
@@ -66,25 +49,17 @@ class AFCPicksViewController: UIViewController, MFMailComposeViewControllerDeleg
     @IBOutlet weak var bengals: UIButton!
     @IBOutlet weak var afcLogo: UIImageView!
     
-    var afcPicks : NSMutableArray = NSMutableArray()
-    var afcPicks2 : NSMutableArray = NSMutableArray()
-    var nfcPicks : NSMutableArray = NSMutableArray()
-    var nfcPicks2 : NSMutableArray = NSMutableArray()
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(nfcPicks)
-        self.animator = UIDynamicAnimator(referenceView: self.view)
+        
+//        _ = NSTimer.scheduledTimerWithTimeInterval(45.0, target: self, selector: "timeToMoveOn", userInfo: nil, repeats: false)
+
+        
+        
         circularProgressView.angle = 0
-//        createOverlay()
-//        showThanksView()
-        
-        
-    }
-    
-    
-    override func viewDidAppear(animated: Bool) {
         let bubbles = [self.jaguars,self.titans,self.texans,self.ravens,self.raiders,self.patriots,self.dolphins,self.colts,self.cheifs,self.chargers,self.browns,self.broncos,self.bills,self.steelers,self.jets,self.bengals]
         
         for bt in bubbles{
@@ -232,59 +207,11 @@ class AFCPicksViewController: UIViewController, MFMailComposeViewControllerDeleg
             
             bt.layer.addAnimation(scaleY, forKey: "scaleYAnimation")
         }
-
-    }
-    
-//    func createOverlay() {
-//        // Create a gray view and set its alpha to 0 so it isn't visible
-//        
-//        //        let X_Co = Float(self.view.frame.size.width - 300)/2
-//        //        button2.frame = CGRectMake(X_Co, 50, 300, 50)
-//        
-//        let labelX = ((view.bounds.width - 600) / 2)
-//        let labelY = ((view.bounds.height - 400) / 2)
-//        
-//        thanksView = UIView()
-//        thanksView.frame = CGRectMake(labelX, labelY, 600, 400)
-//        thanksView.backgroundColor = UIColor.clearColor()
-//        thanksView.alpha = 0.0
-//        //        thanksView.layer.shadowColor = UIColor.redColor().CGColor
-//        //        thanksView.layer.shadowPath = UIBezierPath(roundedRect: view.bounds, cornerRadius: 12.0).CGPath
-//        //        thanksView.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
-//        //        thanksView.layer.shadowOpacity = 1.0
-//        //        thanksView.layer.shadowRadius = 2
-//        //        thanksView.layer.masksToBounds = true
-//        thanksView.layer.cornerRadius = 100
-//        thanksView.clipsToBounds = true
-//        //
-//        view.addSubview(thanksView)
-//
-//        
-//        let blur =  UIBlurEffect(style: UIBlurEffectStyle.Light)
-//        let blurView  = UIVisualEffectView(effect: blur)
-//        blurView.frame  = CGRectMake(0, 0, view.bounds.width, view.bounds.height)
-//        blurView.alpha = 1.0
-//        thanksView.addSubview(blurView)
-//        
-//        let vibrancyView: UIVisualEffectView = UIVisualEffectView(effect: UIVibrancyEffect(forBlurEffect: blur))
-//        vibrancyView.frame  = CGRectMake(0, 0, view.bounds.width, view.bounds.height)
-//        blurView.addSubview(vibrancyView)
-//        
-//        
-//        
-//        UIView.animateWithDuration(1.0, delay: 0.0, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: {
-//            
-//                        self.thanksView.alpha = 1.0
-//            
-//                        }, completion: nil)
-//    
-//    }
-    
- 
-    
-    func createAlert2() {
-        // Here the red alert view is created. It is created with rounded corners and given a shadow around it
         
+    }
+        
+        
+    func createAlert2() {
         
         alertView = UIView(frame: view.bounds)
         alertView.backgroundColor = UIColor.clearColor()
@@ -295,56 +222,36 @@ class AFCPicksViewController: UIViewController, MFMailComposeViewControllerDeleg
         alertView.layer.shadowOpacity = 0.3;
         alertView.layer.shadowRadius = 10.0;
         alertView.tag = 1
-        // Create a button and set a listener on it for when it is tapped. Then the button is added to the alert view
-        
         
         let alert = UIImage(named: "Alert4") as UIImage!
         let imageView = UIImageView(image: alert)
         imageView.frame = CGRectMake((view.bounds.width - 320) / 2, (view.bounds.height - 320) / 2 - 30, 320, 320)
         imageView.alpha = 0.0
-        
-        
-        
-        
+    
+        // Change Picks
         let button = UIButton(type: UIButtonType.System) as UIButton
         button.setTitle("Change Picks", forState: UIControlState.Normal)
         button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         button.titleLabel?.font = UIFont(name: "Arial", size: 20)
-        //        button2.titleLabel?.layer.shadowColor = UIColor.grayColor().CGColor
-        //        button2.titleLabel?.layer.shadowRadius = 4
-        //        button2.titleLabel?.layer.shadowOpacity = 0.9
-        //        button2.titleLabel?.layer.shadowOffset = CGSizeZero
-        //        button2.titleLabel?.layer.masksToBounds = false
-        //        button2.layer.borderColor = UIColor.whiteColor().CGColor
-        //        button2.layer.borderWidth = 1.0
         button.backgroundColor = UIColor(red: 0.82, green: 0.01, blue: 0.11, alpha: 1)
         button.frame = CGRectMake((view.bounds.width - 312)/2 , (view.bounds.height - 65)/2 + 26, 312, 65)
         button.layer.cornerRadius = 5
         button.addTarget(self, action: Selector("dismissA"), forControlEvents: UIControlEvents.TouchUpInside)
         button.alpha = 0.9
-        //        button.bringSubviewToFront(button)
         
+        // Submit
         let button2 = UIButton(type: UIButtonType.System) as UIButton
         button2.setTitle("Submit!", forState: UIControlState.Normal)
         button2.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         button2.titleLabel?.font = UIFont(name: "Arial", size: 20)
-        //        button2.titleLabel?.layer.shadowColor = UIColor.grayColor().CGColor
-        //        button2.titleLabel?.layer.shadowRadius = 4
-        //        button2.titleLabel?.layer.shadowOpacity = 0.9
-        //        button2.titleLabel?.layer.shadowOffset = CGSizeZero
-        //        button2.titleLabel?.layer.masksToBounds = false
-        //        button2.layer.borderColor = UIColor.whiteColor().CGColor
-        //        button2.layer.borderWidth = 1.0
         button2.backgroundColor = UIColor(red: 0.82, green: 0.01, blue: 0.11, alpha: 1)
         button2.frame = CGRectMake((view.bounds.width - 312)/2 , (view.bounds.height - 65)/2 + 94, 312, 65)
         button2.layer.cornerRadius = 5
         button2.alpha = 0.9
-        button2.addTarget(self, action: Selector("emailAlert"), forControlEvents: UIControlEvents.TouchUpInside)
+        button2.addTarget(self, action: Selector("lastPage"), forControlEvents: UIControlEvents.TouchUpInside)
         
         
         view.addSubview(alertView)
-        //        alertView.addSubview(button)
-        //        alertView.bringSubviewToFront(button)
         alertView.addSubview(imageView)
         alertView.insertSubview(button, aboveSubview: imageView)
         alertView.insertSubview(button2, aboveSubview: imageView)
@@ -357,9 +264,7 @@ class AFCPicksViewController: UIViewController, MFMailComposeViewControllerDeleg
     }
     
     func createAlert3() {
-        // Here the red alert view is created. It is created with rounded corners and given a shadow around it
-        
-        
+       
         alertView = UIView(frame: view.bounds)
         alertView.backgroundColor = UIColor.clearColor()
         alertView.alpha = 0.0
@@ -369,7 +274,6 @@ class AFCPicksViewController: UIViewController, MFMailComposeViewControllerDeleg
         alertView.layer.shadowOpacity = 0.3;
         alertView.layer.shadowRadius = 10.0;
         alertView.tag = 1
-        // Create a button and set a listener on it for when it is tapped. Then the button is added to the alert view
         
         
         let alert = UIImage(named: "Alert5") as UIImage!
@@ -377,31 +281,19 @@ class AFCPicksViewController: UIViewController, MFMailComposeViewControllerDeleg
         imageView.frame = CGRectMake((view.bounds.width - 320) / 2, (view.bounds.height - 280) / 2 - 30, 320, 280)
         imageView.alpha = 0.0
         
-        
-        
-        
-        let button = UIButton(type: UIButtonType.System) as UIButton
-        button.setTitle("OK!", forState: UIControlState.Normal)
-        button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        button.titleLabel?.font = UIFont(name: "Arial", size: 20)
-        //        button2.titleLabel?.layer.shadowColor = UIColor.grayColor().CGColor
-        //        button2.titleLabel?.layer.shadowRadius = 4
-        //        button2.titleLabel?.layer.shadowOpacity = 0.9
-        //        button2.titleLabel?.layer.shadowOffset = CGSizeZero
-        //        button2.titleLabel?.layer.masksToBounds = false
-        //        button2.layer.borderColor = UIColor.whiteColor().CGColor
-        //        button2.layer.borderWidth = 1.0
-        button.backgroundColor = UIColor(red: 0.82, green: 0.01, blue: 0.11, alpha: 1)
-        button.frame = CGRectMake((view.bounds.width - 310)/2 , (view.bounds.height - 125)/2 + 103, 310, 65)
-        button.layer.cornerRadius = 5
-        button.addTarget(self, action: Selector("dismissA"), forControlEvents: UIControlEvents.TouchUpInside)
-        button.bringSubviewToFront(button)
+        // OK!
+        let button3 = UIButton(type: UIButtonType.System) as UIButton
+        button3.setTitle("OK!", forState: UIControlState.Normal)
+        button3.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        button3.titleLabel?.font = UIFont(name: "Arial", size: 20)
+        button3.backgroundColor = UIColor(red: 0.82, green: 0.01, blue: 0.11, alpha: 1)
+        button3.frame = CGRectMake((view.bounds.width - 310)/2 , (view.bounds.height - 125)/2 + 103, 310, 65)
+        button3.layer.cornerRadius = 5
+        button3.addTarget(self, action: Selector("dismissA"), forControlEvents: UIControlEvents.TouchUpInside)
         
         view.addSubview(alertView)
-        //        alertView.addSubview(button)
-        //        alertView.bringSubviewToFront(button)
         alertView.addSubview(imageView)
-        alertView.insertSubview(button, aboveSubview: imageView)
+        alertView.insertSubview(button3, aboveSubview: imageView)
         
         UIView.animateWithDuration(0.7) {
             self.alertView.alpha = 1.0
@@ -410,82 +302,11 @@ class AFCPicksViewController: UIViewController, MFMailComposeViewControllerDeleg
         }
         
     }
+   
+       
+   
     
-  
     
-    func emailAlert() {
-        // Here the red alert view is created. It is created with rounded corners and given a shadow around it
-        
-        
-        alertView = UIView(frame: view.bounds)
-        alertView.backgroundColor = UIColor.clearColor()
-        alertView.alpha = 0.0
-        alertView.layer.cornerRadius = 10;
-        alertView.layer.shadowColor = UIColor.blackColor().CGColor;
-        alertView.layer.shadowOffset = CGSizeMake(0, 5);
-        alertView.layer.shadowOpacity = 0.3;
-        alertView.layer.shadowRadius = 10.0;
-        alertView.tag = 1
-        // Create a button and set a listener on it for when it is tapped. Then the button is added to the alert view
-        
-        
-        let alert = UIImage(named: "Email Alert") as UIImage!
-        let imageView = UIImageView(image: alert)
-        imageView.frame = CGRectMake((view.bounds.width - 320) / 2, (view.bounds.height - 320) / 2 - 30, 320, 320)
-        imageView.alpha = 0.0
-        
-        
-        
-        
-        let button = UIButton(type: UIButtonType.System) as UIButton
-        button.setTitle("No Thank You", forState: UIControlState.Normal)
-        button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        button.titleLabel?.font = UIFont(name: "Arial", size: 20)
-        //        button2.titleLabel?.layer.shadowColor = UIColor.grayColor().CGColor
-        //        button2.titleLabel?.layer.shadowRadius = 4
-        //        button2.titleLabel?.layer.shadowOpacity = 0.9
-        //        button2.titleLabel?.layer.shadowOffset = CGSizeZero
-        //        button2.titleLabel?.layer.masksToBounds = false
-        //        button2.layer.borderColor = UIColor.whiteColor().CGColor
-        //        button2.layer.borderWidth = 1.0
-        button.backgroundColor = UIColor(red: 0.82, green: 0.01, blue: 0.11, alpha: 1)
-        button.frame = CGRectMake((view.bounds.width - 312)/2 , (view.bounds.height - 65)/2 + 26, 312, 65)
-        button.layer.cornerRadius = 5
-        button.addTarget(self, action: Selector("emailPage"), forControlEvents: UIControlEvents.TouchUpInside)
-        button.alpha = 0.9
-        //        button.bringSubviewToFront(button)
-        
-        let button2 = UIButton(type: UIButtonType.System) as UIButton
-        button2.setTitle("Yes!", forState: UIControlState.Normal)
-        button2.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        button2.titleLabel?.font = UIFont(name: "Arial", size: 20)
-        //        button2.titleLabel?.layer.shadowColor = UIColor.grayColor().CGColor
-        //        button2.titleLabel?.layer.shadowRadius = 4
-        //        button2.titleLabel?.layer.shadowOpacity = 0.9
-        //        button2.titleLabel?.layer.shadowOffset = CGSizeZero
-        //        button2.titleLabel?.layer.masksToBounds = false
-        //        button2.layer.borderColor = UIColor.whiteColor().CGColor
-        //        button2.layer.borderWidth = 1.0
-        button2.backgroundColor = UIColor(red: 0.82, green: 0.01, blue: 0.11, alpha: 1)
-        button2.frame = CGRectMake((view.bounds.width - 312)/2 , (view.bounds.height - 65)/2 + 94, 312, 65)
-        button2.layer.cornerRadius = 5
-        button2.alpha = 0.9
-        button2.addTarget(self, action: Selector("emailButton"), forControlEvents: UIControlEvents.TouchUpInside)
-        
-        
-        view.addSubview(alertView)
-        //        alertView.addSubview(button)
-        //        alertView.bringSubviewToFront(button)
-        alertView.addSubview(imageView)
-        alertView.insertSubview(button, aboveSubview: imageView)
-        alertView.insertSubview(button2, aboveSubview: imageView)
-        
-        UIView.animateWithDuration(0.7) {
-            self.alertView.alpha = 1.0
-            imageView.alpha = 1.0
-            
-        }
-    }
 
 
 
@@ -577,8 +398,6 @@ func dismissA () {
             }
         }
         
-        print(sender.state)
-        print(afcPicks)
         
         
                 let picksRef = recordRef.childByAppendingPath("picks")
@@ -644,14 +463,14 @@ func dismissA () {
                                 }else{
                                     
                                     
-                                }
-                                
-                            }}}
+                            }
+                        }
+                    }
                 }
             }
-            
         }
     }
+}
     
     func newAngle() -> Int {
         
@@ -661,11 +480,12 @@ func dismissA () {
         
     }
     
-    func emailPage () {
+    func lastPage(){
         
         performSegueWithIdentifier("thanks", sender: self)
-        
     }
+  
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if segue.identifier == "thanks" {
@@ -680,40 +500,22 @@ func dismissA () {
         }
     }
     
-    func emailButton () {
-        let mailComposeViewController = configuredMailComposeViewController()
-        if MFMailComposeViewController.canSendMail() {
-            self.presentViewController(mailComposeViewController, animated: true, completion: nil)
-        } else {
-            self.showSendMailErrorAlert()
+    
+    func timeToMoveOn() {
+        self.performSegueWithIdentifier("unwindFromAFCVC", sender: self)
+        
+    }
+    
+    
+    
+    func delay(seconds seconds: Double, completion:()->()) {
+        let popTime = dispatch_time(DISPATCH_TIME_NOW, Int64( Double(NSEC_PER_SEC) * seconds ))
+        
+        dispatch_after(popTime, dispatch_get_main_queue()) {
+            completion()
         }
-        
     }
     
-    func configuredMailComposeViewController() -> MFMailComposeViewController {
-        let mailComposerVC = MFMailComposeViewController()
-        mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
-        
-        mailComposerVC.setToRecipients(["someone@somewhere.com"])
-        mailComposerVC.setSubject("Sending you an in-app e-mail...")
-        mailComposerVC.setMessageBody("Sending e-mail in-app is not so bad!", isHTML: false)
-       
-        return mailComposerVC
-    }
-    
-    func showSendMailErrorAlert() {
-        let sendMailErrorAlert = UIAlertView(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", delegate: self, cancelButtonTitle: "OK")
-        sendMailErrorAlert.show()
-    }
-    
-    // MARK: MFMailComposeViewControllerDelegate Method
-    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
-        controller.dismissViewControllerAnimated(true, completion: nil)
-
-        
-        emailPage()
-    }
-
     
 }
 

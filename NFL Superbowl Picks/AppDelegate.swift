@@ -7,7 +7,6 @@
 //
 
 import UIKit
-//import AmazonS3RequestManager
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,12 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var emailBody: String!
     let preferences = NSUserDefaults.standardUserDefaults()
     var failedAuth = false
-    //    let amazonS3Manager = AmazonS3RequestManager(bucket: "photoleads",
-    //        region: .USStandard,
-    //        accessKey: "AKIAJGR6BUOA7GOEDYRA",
-    //        secret: "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")
-    
-    
     
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -41,19 +34,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.emailBody = preferences.stringForKey("emailBody")
         failedAuth = false
         auth()
+
+        
+        
+//        Firebase.defaultConfig().persistenceEnabled = true
+        
+        
+        
         return true
+    
+    
     }
     
-//  Amazon //
-    
-//    func postFile(sourcePath: String!, fileName: String!) {
-//        amazonS3Manager.putObject(NSURL.fileURLWithPath(sourcePath)!, destinationPath: deviceID! + "/" + fileName)
-//        let delayTime = dispatch_time(DISPATCH_TIME_NOW,
-//            Int64(15 * Double(NSEC_PER_SEC)))
-//        dispatch_after(delayTime, dispatch_get_main_queue()) {
-//            NSFileManager.defaultManager().removeItemAtPath(sourcePath)
-//        }
-//    }
+
     
     func auth() {
         ref = Firebase(url:"https://nflpicks.firebaseio.com/")
@@ -94,6 +87,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return randomString as String
     }
+    
+    
+    
     
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

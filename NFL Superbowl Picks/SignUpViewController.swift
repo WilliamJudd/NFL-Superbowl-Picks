@@ -11,8 +11,23 @@ import CoreLocation
 
 class SignUpViewController: UIViewController {
 
+    var recordRef: Firebase!
+    let locationManager = CLLocationManager() //?????
+    var latitude: String!
+    var longitude: String!
+    var street: String!
+    var city: String!
+    var postalCode: String!
+    var country: String!
+    var state: String!
+    var updateTimer: NSTimer!
+    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
-//    @IBOutlet weak var cameraContainerView: UIView!
+    var nfcPicks: NSMutableArray!
+    var afcPicks: NSMutableArray!
+
+    
+    
     @IBOutlet weak var blurImage: UIImageView!
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
@@ -30,41 +45,11 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var logoWidth: NSLayoutConstraint!
     @IBOutlet weak var logoHeight: NSLayoutConstraint!
     
-    let kSuccessTitle = "Congratulations"
-    let kErrorTitle = "Connection error"
-    let kNoticeTitle = "Notice"
-    let kWarningTitle = "Warning"
-    let kInfoTitle = "Info"
-    let kSubtitle = "You've just displayed this awesome Pop Up View"
-    
-    let kDefaultAnimationDuration = 2.0
-
-    
-
-    
-    var nfcPicks: NSMutableArray!
-    var afcPicks: NSMutableArray!
-    
-    var recordRef: Firebase!
-    let locationManager = CLLocationManager() //?????
-    var latitude: String!
-    var longitude: String!
-    var street: String!
-    var city: String!
-    var postalCode: String!
-    var country: String!
-    var state: String!
-    var updateTimer: NSTimer!
-    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        if UIDevice.currentDevice().model != "iPad" {
-        //            logoWidth.constant = 192
-        //            logoHeight.constant = 97
-        //        }
+        
         deviceID.text = appDelegate.deviceID
         resetForm(self)
         firstName.addTarget(self, action: "validateForm", forControlEvents: UIControlEvents.EditingChanged)
@@ -72,7 +57,14 @@ class SignUpViewController: UIViewController {
         email.addTarget(self, action: "validateForm", forControlEvents: UIControlEvents.EditingChanged)
         company.addTarget(self, action: "validateForm", forControlEvents: UIControlEvents.EditingChanged)
         zipCode.addTarget(self, action: "validateForm", forControlEvents: UIControlEvents.EditingChanged)
+        
         updateTimer = NSTimer.scheduledTimerWithTimeInterval(15.0, target: self, selector: "reAuth", userInfo: nil, repeats: true)
+        
+//        updateTimer = NSTimer.scheduledTimerWithTimeInterval(15.0, target: self, selector: "reAuth", userInfo: nil, repeats: true)
+//    
+    
+    // Firebase update to see if anybody is using the app.
+    
     }
     
     func reAuth(){
@@ -80,30 +72,13 @@ class SignUpViewController: UIViewController {
             appDelegate.auth()
         }
     }
+        
     
     @IBAction func next(sender: AnyObject) {
         recordRef = appDelegate.ref.childByAutoId()
         recordRef.setValue(["deviceID": deviceID.text!, "firstName": firstName.text!, "lastName": lastName.text!, "email": email.text!, "company": company.text!, "zipCode": zipCode.text!,"picks" : "", "timestamp": [".sv":"timestamp"]])
-//        if (latitude != nil) {
-//            recordRef.updateChildValues(["scanLocation": ["latitude": latitude, "longitude": longitude]])
-//            let scanLocationRef = recordRef.childByAppendingPath("scanLocation")
-//            if (street != nil) {
-//                scanLocationRef.updateChildValues(["street": street])
-//            }
-//            if (city != nil) {
-//                scanLocationRef.updateChildValues(["city": city])
-//            }
-//            if (state != nil) {
-//                scanLocationRef.updateChildValues(["state": state])
-//            }
-//            if (postalCode != nil) {
-//                scanLocationRef.updateChildValues(["postalCode": postalCode])
-//            }
-//            if (country != nil) {
-//                scanLocationRef.updateChildValues(["country": country])
-//            }
-//        }
-        performSegueWithIdentifier("picks", sender: nil)
+
+                performSegueWithIdentifier("picks", sender: nil)
     
     
     }
@@ -119,37 +94,7 @@ class SignUpViewController: UIViewController {
             resetForm(self)
         }
     }
-    
-    @IBAction func unwindToContainerVC(segue: UIStoryboardSegue) {
-        
-    }
-    
-//    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        latitude = String(stringInterpolationSegment: manager.location.coordinate.latitude)
-//        longitude = String(stringInterpolationSegment: manager.location.coordinate.longitude)
-//        locationManager.stopUpdatingLocation()
-//        CLGeocoder().reverseGeocodeLocation(manager.location, completionHandler: {(placemarks, error) -> Void in
-//            if (error != nil) {
-//                //                println("Reverse geocoder failed with error" + error.localizedDescription)
-//                return
-//            }
-//            
-//            
-//            if placemarks.count > 0 {
-//                let placemark = placemarks[0] as! CLPlacemark
-//                self.street = placemark.thoroughfare
-//                if placemark.subThoroughfare != nil {
-//                    self.street = placemark.subThoroughfare + " " + self.street
-//                }
-//                self.city = placemark.locality
-//                self.state = placemark.administrativeArea
-//                self.postalCode = placemark.postalCode
-//                self.country = placemark.country
-//            } else {
-//                print("Problem with the data received from geocoder")
-//            }
-//        })
-//    }
+
     
     func validateForm() {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
@@ -167,15 +112,7 @@ class SignUpViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-//        CameraManager.sharedInstance.addPreviewLayerToView(self.cameraContainerView)
-        firstName.becomeFirstResponder()
-//        locationManager.delegate = self
-//        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-//        locationManager.requestWhenInUseAuthorization()
-//        locationManager.startUpdatingLocation()
-    }
+   
     
     @IBAction func resetForm(sender: AnyObject) {
         firstName.text = ""
@@ -189,7 +126,7 @@ class SignUpViewController: UIViewController {
         companyCheck.alpha = 0
         zipCodeCheck.alpha = 0
         nextButton.enabled = false
-        firstName.becomeFirstResponder()
+//        firstName.becomeFirstResponder()
     }
     
     func textFieldShouldReturn(textField: UITextField!) -> Bool {   //delegate method
@@ -212,6 +149,13 @@ class SignUpViewController: UIViewController {
         }
         return true
     }
+    
+    
+    func timeToMoveOn() {
+        self.performSegueWithIdentifier("unwindFromLoginVC", sender: self)
+        
+    }
+
     
     
 }

@@ -14,4 +14,4 @@ target 'NFL Superbowl PicksUITests' do
 end
 
 pod 'Firebase', '>= 2.4.1'
-pod 'SCLAlertView'
+

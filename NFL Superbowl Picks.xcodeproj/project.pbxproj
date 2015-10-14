@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		146E371D333715431BB3FF98 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 810FAC41B8BECA516BAE7625 /* libPods.a */; };
 		3D6CFCF71BC6259B0015C050 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D6CFCF61BC6259B0015C050 /* AVFoundation.framework */; };
+		3D81C8F51B29DEC5001C8249 /* TimeoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D81C8F41B29DEC5001C8249 /* TimeoutViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3D8CB3B21BCB40E9003A38DA /* Alert2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D8CB3AF1BCB40E9003A38DA /* Alert2.png */; settings = {ASSET_TAGS = (); }; };
 		3D8CB3B31BCB40E9003A38DA /* Alert3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D8CB3B01BCB40E9003A38DA /* Alert3.png */; settings = {ASSET_TAGS = (); }; };
 		3D8CB3B51BCB4138003A38DA /* Alert1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D8CB3B41BCB4138003A38DA /* Alert1.png */; settings = {ASSET_TAGS = (); }; };
@@ -27,6 +27,7 @@
 		3DBBD2111BC1F7C800CBAF2C /* AFCPicksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBBD20D1BC1F7C800CBAF2C /* AFCPicksViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3DBBD2141BC1F7DF00CBAF2C /* KDCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBBD2131BC1F7DF00CBAF2C /* KDCircularProgress.swift */; settings = {ASSET_TAGS = (); }; };
 		3DE3D51B1BC7122800BD0286 /* ScrollViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3D51A1BC7122800BD0286 /* ScrollViewContainer.swift */; settings = {ASSET_TAGS = (); }; };
+		D71924BA1FC39AB55DCFE606 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85825DA28720738EF130211D /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		3D6CFCF21BC625690015C050 /* lazydylib1.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = lazydylib1.o; path = usr/lib/lazydylib1.o; sourceTree = SDKROOT; };
 		3D6CFCF31BC625690015C050 /* libdyld.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libdyld.tbd; path = usr/lib/system/libdyld.tbd; sourceTree = SDKROOT; };
 		3D6CFCF61BC6259B0015C050 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		3D81C8F41B29DEC5001C8249 /* TimeoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeoutViewController.swift; sourceTree = "<group>"; };
 		3D8CB3AF1BCB40E9003A38DA /* Alert2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Alert2.png; sourceTree = "<group>"; };
 		3D8CB3B01BCB40E9003A38DA /* Alert3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Alert3.png; sourceTree = "<group>"; };
 		3D8CB3B41BCB4138003A38DA /* Alert1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Alert1.png; sourceTree = "<group>"; };
@@ -78,7 +80,7 @@
 		3DBBD2131BC1F7DF00CBAF2C /* KDCircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDCircularProgress.swift; sourceTree = "<group>"; };
 		3DBBD2151BC1FC8A00CBAF2C /* NFL Superbowl Picks-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NFL Superbowl Picks-Bridging-Header.h"; sourceTree = "<group>"; };
 		3DE3D51A1BC7122800BD0286 /* ScrollViewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewContainer.swift; sourceTree = "<group>"; };
-		810FAC41B8BECA516BAE7625 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		85825DA28720738EF130211D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8A4BD2299BD3A4093389DC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		96A8001B67D024F5377C5762 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,7 +91,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D6CFCF71BC6259B0015C050 /* AVFoundation.framework in Frameworks */,
-				146E371D333715431BB3FF98 /* libPods.a in Frameworks */,
+				D71924BA1FC39AB55DCFE606 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,12 +115,13 @@
 		3DB1C25E1BC5A44000855B44 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3DE3D5661BCAF9C400BD0286 /* Alerts */,
+				3DE3D51A1BC7122800BD0286 /* ScrollViewContainer.swift */,
 				3DBBD2131BC1F7DF00CBAF2C /* KDCircularProgress.swift */,
 				3DBBD1E21BC1F51200CBAF2C /* Assets.xcassets */,
 				3DBBD1E41BC1F51200CBAF2C /* LaunchScreen.storyboard */,
 				3DBBD1E71BC1F51200CBAF2C /* Info.plist */,
 				3DBBD2151BC1FC8A00CBAF2C /* NFL Superbowl Picks-Bridging-Header.h */,
-				3DE3D5661BCAF9C400BD0286 /* Alerts */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -149,11 +152,11 @@
 			isa = PBXGroup;
 			children = (
 				3DBBD2091BC1F7BD00CBAF2C /* AppDelegate.swift */,
+				3D81C8F41B29DEC5001C8249 /* TimeoutViewController.swift */,
 				3DBBD20B1BC1F7C800CBAF2C /* SignUpViewController.swift */,
 				3DBBD20C1BC1F7C800CBAF2C /* NFCPicksViewController.swift */,
 				3DBBD20D1BC1F7C800CBAF2C /* AFCPicksViewController.swift */,
 				3DB1C2581BC2675900855B44 /* PickVerificationViewController.swift */,
-				3DE3D51A1BC7122800BD0286 /* ScrollViewContainer.swift */,
 				3DBBD1DF1BC1F51200CBAF2C /* Main.storyboard */,
 				3DB1C25E1BC5A44000855B44 /* Supporting Files */,
 			);
@@ -209,7 +212,7 @@
 				3D6CFCF01BC6252D0015C050 /* dylib1.o */,
 				3D6CFCEE1BC624C60015C050 /* libsqlite3.tbd */,
 				3D6CFCEC1BC623FE0015C050 /* libsqlite3.0.tbd */,
-				810FAC41B8BECA516BAE7625 /* libPods.a */,
+				85825DA28720738EF130211D /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				3DE3D51B1BC7122800BD0286 /* ScrollViewContainer.swift in Sources */,
 				3DBBD2141BC1F7DF00CBAF2C /* KDCircularProgress.swift in Sources */,
 				3DBBD20F1BC1F7C800CBAF2C /* SignUpViewController.swift in Sources */,
+				3D81C8F51B29DEC5001C8249 /* TimeoutViewController.swift in Sources */,
 				3DBBD2101BC1F7C800CBAF2C /* NFCPicksViewController.swift in Sources */,
 				3DBBD2111BC1F7C800CBAF2C /* AFCPicksViewController.swift in Sources */,
 				3DBBD20A1BC1F7BD00CBAF2C /* AppDelegate.swift in Sources */,

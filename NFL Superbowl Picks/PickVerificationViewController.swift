@@ -38,17 +38,13 @@ class PickVerificationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Set up the image you want to scroll & zoom and add it to the scroll view
-        print(nfcPicks)
+      
         pageImages.append(UIImage(named: "exibitScroll1")!)
         pageImages.append(UIImage(named: "exhibitScroll2")!)
         pageImages.append(UIImage(named: "exhibitScroll3")!)
         pageImages.append(UIImage(named: "exhibitScroll4")!)
-//            UIImage(named:"photo4.png")!,
-//            UIImage(named:"photo5.png")!]
-        
+
         let pageCount = pageImages.count
-//      
         
         let image = nfcPicks2[0] as! UIImage
         let imageView = UIImageView(image: image)
@@ -103,7 +99,7 @@ class PickVerificationViewController: UIViewController {
         
         
         
-//        
+        
 //        _ = NSTimer.scheduledTimerWithTimeInterval(8.0, target: self, selector: "timeToMoveOn", userInfo: nil, repeats: false)
         
         
@@ -211,7 +207,7 @@ class PickVerificationViewController: UIViewController {
     
   
     func timeToMoveOn() {
-        self.performSegueWithIdentifier("unwindToContainerVC", sender: self)
+        self.performSegueWithIdentifier("unwindFromPicksVerVC", sender: self)
     
     }
     

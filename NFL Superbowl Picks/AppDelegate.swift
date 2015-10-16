@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,10 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        Firebase.defaultConfig().persistenceEnabled = true
         if preferences.objectForKey("deviceID") == nil {
             deviceID = randomStringWithLength(6)
             preferences.setObject(deviceID, forKey: "deviceID")
             preferences.synchronize()
+            
+        
+        
         } else {
             deviceID = preferences.stringForKey("deviceID")
         print(deviceID)
@@ -37,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         
         
-//        Firebase.defaultConfig().persistenceEnabled = true
+        
         
         
         

@@ -15,3 +15,5 @@ end
 
 pod 'Firebase', '>= 2.4.1'
 
+use_frameworks!
+pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift2'

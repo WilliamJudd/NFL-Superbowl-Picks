@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xpb-Dk-rjT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xpb-Dk-rjT">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -17,10 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WaitScreen" translatesAutoresizingMaskIntoConstraints="NO" id="KT6-ne-SAF">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WaitScreenTemp" translatesAutoresizingMaskIntoConstraints="NO" id="KT6-ne-SAF">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="968"/>
+                                <animations/>
                             </imageView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
@@ -46,34 +48,40 @@
                         <subviews>
                             <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7x4-RT-4Gk">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Field Background" translatesAutoresizingMaskIntoConstraints="NO" id="fLC-P5-Pxe">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SOUTHEASTERN LOGO- HORIZONTAL WHITE" translatesAutoresizingMaskIntoConstraints="NO" id="mmP-0S-4XN">
                                 <rect key="frame" x="153" y="707" width="502" height="257"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GetInGame" translatesAutoresizingMaskIntoConstraints="NO" id="DwH-qJ-Eig">
-                                <rect key="frame" x="226" y="28" width="317" height="230"/>
+                                <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="text_field_back" translatesAutoresizingMaskIntoConstraints="NO" id="z1r-je-L8M">
-                                <rect key="frame" x="127" y="294" width="524" height="74"/>
+                                <rect key="frame" x="127" y="232" width="524" height="74"/>
+                                <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="text_field_back" translatesAutoresizingMaskIntoConstraints="NO" id="GL8-x4-fS1">
-                                <rect key="frame" x="127" y="371" width="524" height="74"/>
+                                <rect key="frame" x="127" y="309" width="524" height="74"/>
+                                <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="text_field_back" translatesAutoresizingMaskIntoConstraints="NO" id="SVP-Qt-EIO">
-                                <rect key="frame" x="127" y="448" width="524" height="74"/>
+                                <rect key="frame" x="127" y="386" width="524" height="74"/>
+                                <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="text_field_back" translatesAutoresizingMaskIntoConstraints="NO" id="oaj-ir-xL0">
-                                <rect key="frame" x="127" y="525" width="524" height="74"/>
+                                <rect key="frame" x="127" y="463" width="524" height="74"/>
+                                <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="text_field_back" translatesAutoresizingMaskIntoConstraints="NO" id="rec-up-WBo">
-                                <rect key="frame" x="127" y="602" width="524" height="74"/>
+                                <rect key="frame" x="127" y="540" width="524" height="74"/>
+                                <animations/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="AAe-J0-esb">
-                                <rect key="frame" x="162" y="294" width="484" height="74"/>
+                                <rect key="frame" x="162" y="232" width="484" height="74"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="36"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
@@ -81,7 +89,8 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ubl-Ag-udX">
-                                <rect key="frame" x="162" y="371" width="484" height="74"/>
+                                <rect key="frame" x="162" y="309" width="484" height="74"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="36"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
@@ -89,7 +98,8 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="c0x-DN-vTg">
-                                <rect key="frame" x="162" y="448" width="484" height="74"/>
+                                <rect key="frame" x="162" y="386" width="484" height="74"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="36"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
@@ -97,7 +107,8 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Company" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8sI-7y-Nun">
-                                <rect key="frame" x="162" y="525" width="484" height="74"/>
+                                <rect key="frame" x="162" y="463" width="484" height="74"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="36"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
@@ -105,7 +116,8 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Zip Code" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="tDC-E6-XFH">
-                                <rect key="frame" x="162" y="602" width="484" height="74"/>
+                                <rect key="frame" x="162" y="540" width="484" height="74"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="36"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
@@ -113,7 +125,8 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9WG-f1-K9v">
-                                <rect key="frame" x="571" y="686" width="70" height="70"/>
+                                <rect key="frame" x="571" y="624" width="70" height="70"/>
+                                <animations/>
                                 <state key="normal" image="next_button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -122,25 +135,31 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whd-AW-XXF">
-                                <rect key="frame" x="117" y="266" width="524" height="20"/>
+                                <rect key="frame" x="117" y="204" width="524" height="20"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="a6A-Ei-Hn2">
-                                <rect key="frame" x="578" y="392" width="42" height="32"/>
+                                <rect key="frame" x="578" y="330" width="42" height="32"/>
+                                <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="OpY-s8-ZSC">
-                                <rect key="frame" x="578" y="469" width="42" height="32"/>
+                                <rect key="frame" x="578" y="407" width="42" height="32"/>
+                                <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="lR1-lS-eZi">
-                                <rect key="frame" x="578" y="546" width="42" height="32"/>
+                                <rect key="frame" x="578" y="484" width="42" height="32"/>
+                                <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="UVM-ei-Mgo">
-                                <rect key="frame" x="578" y="623" width="42" height="32"/>
+                                <rect key="frame" x="578" y="561" width="42" height="32"/>
+                                <animations/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PcH-ps-hHK">
-                                <rect key="frame" x="137" y="679" width="69" height="30"/>
+                                <rect key="frame" x="137" y="617" width="69" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Clear">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -151,9 +170,15 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="lfD-jQ-cdd">
-                                <rect key="frame" x="578" y="315" width="42" height="32"/>
+                                <rect key="frame" x="578" y="253" width="42" height="32"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GetInGame" translatesAutoresizingMaskIntoConstraints="NO" id="DwH-qJ-Eig">
+                                <rect key="frame" x="246" y="28" width="277" height="187"/>
+                                <animations/>
                             </imageView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
@@ -194,12 +219,15 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Field Background" translatesAutoresizingMaskIntoConstraints="NO" id="UxY-3r-E6u">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SOUTHEASTERN LOGO-VERT WHITE" translatesAutoresizingMaskIntoConstraints="NO" id="EPc-hp-mP3">
                                 <rect key="frame" x="278" y="28" width="233" height="231"/>
+                                <animations/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Txg-0q-HCv" userLabel="cardinals">
                                 <rect key="frame" x="577" y="844" width="150" height="150"/>
+                                <animations/>
                                 <state key="normal" title="Cardinals" image="cardinals"/>
                                 <connections>
                                     <action selector="teamProgressButtonTapped:" destination="23d-E3-Z9E" eventType="touchUpInside" id="qQj-oJ-gvT"/>
@@ -207,20 +235,23 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aT9-Pi-HM4" userLabel="cowboys">
                                 <rect key="frame" x="227" y="209" width="150" height="150"/>
+                                <animations/>
                                 <state key="normal" title="Cowboys" image="cowboys"/>
                                 <connections>
                                     <action selector="teamProgressButtonTapped:" destination="23d-E3-Z9E" eventType="touchUpInside" id="rI3-Qe-5Ky"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGG-xI-ayZ" userLabel="eagles">
-                                <rect key="frame" x="29" y="551" width="150" height="150"/>
+                                <rect key="frame" x="30" y="540" width="150" height="150"/>
+                                <animations/>
                                 <state key="normal" title="Eagles" image="eagles"/>
                                 <connections>
                                     <action selector="teamProgressButtonTapped:" destination="23d-E3-Z9E" eventType="touchUpInside" id="JWR-vc-YOM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sae-Iw-t0J" userLabel="falcons">
-                                <rect key="frame" x="113" y="719" width="150" height="150"/>
+                                <rect key="frame" x="121" y="698" width="150" height="150"/>
+                                <animations/>
                                 <state key="normal" title="Falcons" image="falcons"/>
                                 <connections>
                                     <action selector="teamProgressButtonTapped:" destination="23d-E3-Z9E" eventType="touchUpInside" id="yhW-8l-fKT"/>
@@ -228,27 +259,31 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7aY-M4-D16" userLabel="panthers">
                                 <rect key="frame" x="20" y="150" width="150" height="150"/>
+                                <animations/>
                                 <state key="normal" title="Panthers" image="panthers"/>
                                 <connections>
                                     <action selector="teamProgressButtonTapped:" destination="23d-E3-Z9E" eventType="touchUpInside" id="WoY-Ur-u0N"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJC-qw-zm9" userLabel="rams">
-                                <rect key="frame" x="82" y="367" width="150" height="150"/>
+                                <rect key="frame" x="56" y="349" width="150" height="150"/>
+                                <animations/>
                                 <state key="normal" title="Rams" image="rams"/>
                                 <connections>
                                     <action selector="teamProgressButtonTapped:" destination="23d-E3-Z9E" eventType="touchUpInside" id="nEX-tr-1t8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sF-aM-5et" userLabel="redskins">
-                                <rect key="frame" x="585" y="82" width="150" height="150"/>
+                                <rect key="frame" x="570" y="35" width="150" height="150"/>
+                                <animations/>
                                 <state key="normal" title="Redskins" image="redskins"/>
                                 <connections>
                                     <action selector="teamProgressButtonTapped:" destination="23d-E3-Z9E" eventType="touchUpInside" id="JvK-ow-cQ6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hct-sk-qgW" userLabel="saints">
-                                <rect key="frame" x="551" y="658" width="150" height="150"/>
+                                <rect key="frame" x="551" y="625" width="150" height="150"/>
+                                <animations/>
                                 <state key="normal" title="Saints" image="saints"/>
                                 <connections>
                                     <action selector="teamProgressButtonTapped:" destination="23d-E3-Z9E" eventType="touchUpInside" id="AWR-UT-kbH"/>
@@ -256,20 +291,15 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7z-g5-gre" userLabel="seahawks">
                                 <rect key="frame" x="331" y="828" width="150" height="150"/>
+                                <animations/>
                                 <state key="normal" title="Seahawks" image="seahawks"/>
                                 <connections>
                                     <action selector="teamProgressButtonTapped:" destination="23d-E3-Z9E" eventType="touchUpInside" id="OdJ-YF-GbV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZI3-qO-wv9" userLabel="lions">
-                                <rect key="frame" x="7" y="854" width="150" height="150"/>
-                                <state key="normal" title="Lions" image="lions"/>
-                                <connections>
-                                    <action selector="teamProgressButtonTapped:" destination="23d-E3-Z9E" eventType="touchUpInside" id="dMa-0a-Ndw"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7n-h3-vJD" userLabel="49ners">
                                 <rect key="frame" x="609" y="231" width="150" height="150"/>
+                                <animations/>
                                 <state key="normal" title="49ners" image="49ers"/>
                                 <connections>
                                     <action selector="teamProgressButtonTapped:" destination="23d-E3-Z9E" eventType="touchUpInside" id="4IJ-gL-A42"/>
@@ -277,13 +307,27 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8O-hO-h3D" userLabel="bears">
                                 <rect key="frame" x="369" y="35" width="150" height="150"/>
-                                <state key="normal" title="Bears" image="bears" backgroundImage="49ers"/>
+                                <animations/>
+                                <state key="normal" title="Bears" image="bears" backgroundImage="bearsG(larger)"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="scaleX">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="scaleY">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="flash"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="teamProgressButtonTapped:" destination="23d-E3-Z9E" eventType="touchUpInside" id="GxR-2f-ryK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gi-OH-dgw" userLabel="greenbay">
                                 <rect key="frame" x="138" y="20" width="150" height="150"/>
+                                <animations/>
                                 <state key="normal" title="Greenbay" image="greenbay"/>
                                 <connections>
                                     <action selector="teamProgressButtonTapped:" destination="23d-E3-Z9E" eventType="touchUpInside" id="pBb-EN-bZD"/>
@@ -294,12 +338,14 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQr-n3-s3b">
                                         <rect key="frame" x="34" y="34" width="233" height="233"/>
+                                        <animations/>
                                         <state key="normal" title="Button" image="NFC Logo"/>
                                         <connections>
                                             <action selector="nfcSubmit:" destination="23d-E3-Z9E" eventType="touchUpInside" id="ZIc-Gq-KCi"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="angle">
@@ -313,10 +359,10 @@
                                         <real key="value" value="0.10000000000000001"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
-                                        <color key="value" red="0.36755259429999998" green="1" blue="0.25770074259999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.043137254901960784" green="0.2627450980392157" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="IBColor1">
-                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="trackThickness">
                                         <real key="value" value="0.10000000000000001"/>
@@ -325,13 +371,15 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nH6-mM-jtp" userLabel="vikings">
                                 <rect key="frame" x="319" y="647" width="150" height="150"/>
+                                <animations/>
                                 <state key="normal" title="Vikings" image="vikings"/>
                                 <connections>
                                     <action selector="teamProgressButtonTapped:" destination="23d-E3-Z9E" eventType="touchUpInside" id="iJZ-Dw-MqU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgL-OO-rw3" userLabel="giants">
-                                <rect key="frame" x="439" y="240" width="150" height="150"/>
+                                <rect key="frame" x="422" y="225" width="150" height="150"/>
+                                <animations/>
                                 <state key="normal" title="Giants" image="giants"/>
                                 <connections>
                                     <action selector="teamProgressButtonTapped:" destination="23d-E3-Z9E" eventType="touchUpInside" id="qxA-P6-Tgq"/>
@@ -339,12 +387,22 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQb-4s-jYK" userLabel="bucs">
                                 <rect key="frame" x="598" y="424" width="150" height="150"/>
+                                <animations/>
                                 <state key="normal" title="Bucs" image="buccs"/>
                                 <connections>
                                     <action selector="teamProgressButtonTapped:" destination="23d-E3-Z9E" eventType="touchUpInside" id="lsh-9I-9hX"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZI3-qO-wv9" userLabel="lions">
+                                <rect key="frame" x="39" y="849" width="150" height="150"/>
+                                <animations/>
+                                <state key="normal" title="Lions" image="lions"/>
+                                <connections>
+                                    <action selector="teamProgressButtonTapped:" destination="23d-E3-Z9E" eventType="touchUpInside" id="dMa-0a-Ndw"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
@@ -390,17 +448,21 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Field Background" translatesAutoresizingMaskIntoConstraints="NO" id="cM0-aS-Gph">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SOUTHEASTERN LOGO-VERT WHITE" translatesAutoresizingMaskIntoConstraints="NO" id="Fi3-ch-1hr">
                                 <rect key="frame" x="268" y="28" width="233" height="231"/>
+                                <animations/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mdv-AD-gwb" customClass="KDCircularProgress" customModule="NFL_Superbowl_Picks" customModuleProvider="target">
                                 <rect key="frame" x="234" y="349" width="300" height="300"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AFC Logo" translatesAutoresizingMaskIntoConstraints="NO" id="BYa-yq-0zQ">
                                         <rect key="frame" x="33" y="33" width="234" height="233"/>
+                                        <animations/>
                                     </imageView>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="angle">
@@ -414,10 +476,10 @@
                                         <real key="value" value="0.10000000000000001"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
-                                        <color key="value" red="0.36755259429999998" green="1" blue="0.25770074259999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.039215686274509803" green="0.37647058823529411" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="IBColor1">
-                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="trackThickness">
                                         <real key="value" value="0.10000000000000001"/>
@@ -426,13 +488,15 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDB-r9-rKp">
                                 <rect key="frame" x="213" y="798" width="150" height="150"/>
+                                <animations/>
                                 <state key="normal" title="Jaguars" image="jags"/>
                                 <connections>
                                     <action selector="teamProgressButtonTapped:" destination="BqE-OG-7Sa" eventType="touchUpInside" id="9lg-JR-JQb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQS-C9-cqU">
-                                <rect key="frame" x="475" y="657" width="150" height="150"/>
+                                <rect key="frame" x="456" y="652" width="150" height="150"/>
+                                <animations/>
                                 <state key="normal" title="Titans" image="titans"/>
                                 <connections>
                                     <action selector="teamProgressButtonTapped:" destination="BqE-OG-7Sa" eventType="touchUpInside" id="TPS-51-R9i"/>
@@ -440,27 +504,31 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vue-v1-sWY">
                                 <rect key="frame" x="48" y="37" width="150" height="150"/>
+                                <animations/>
                                 <state key="normal" title="Bengals" image="bengals"/>
                                 <connections>
                                     <action selector="teamProgressButtonTapped:" destination="BqE-OG-7Sa" eventType="touchUpInside" id="cAa-7D-5Pc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJC-7i-WgX">
-                                <rect key="frame" x="270" y="58" width="150" height="150"/>
+                                <rect key="frame" x="256" y="15" width="150" height="150"/>
+                                <animations/>
                                 <state key="normal" title="Jets" image="jets"/>
                                 <connections>
                                     <action selector="teamProgressButtonTapped:" destination="BqE-OG-7Sa" eventType="touchUpInside" id="mEn-01-cC8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4am-Tr-pNA">
-                                <rect key="frame" x="461" y="161" width="150" height="150"/>
+                                <rect key="frame" x="440" y="143" width="150" height="150"/>
+                                <animations/>
                                 <state key="normal" title="Steelers" image="steelers"/>
                                 <connections>
                                     <action selector="teamProgressButtonTapped:" destination="BqE-OG-7Sa" eventType="touchUpInside" id="DzQ-FP-4uf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLp-YW-71b">
-                                <rect key="frame" x="598" y="28" width="150" height="150"/>
+                                <rect key="frame" x="574" y="28" width="150" height="150"/>
+                                <animations/>
                                 <state key="normal" title="Bills" image="bills"/>
                                 <connections>
                                     <action selector="teamProgressButtonTapped:" destination="BqE-OG-7Sa" eventType="touchUpInside" id="rEf-qs-dfH"/>
@@ -468,13 +536,15 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vM1-5q-jsb">
                                 <rect key="frame" x="20" y="236" width="150" height="150"/>
+                                <animations/>
                                 <state key="normal" title="Broncos" image="broncos"/>
                                 <connections>
                                     <action selector="teamProgressButtonTapped:" destination="BqE-OG-7Sa" eventType="touchUpInside" id="Fsf-ZF-lNP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="057-DD-sGR">
-                                <rect key="frame" x="225" y="220" width="150" height="150"/>
+                                <rect key="frame" x="234" y="201" width="150" height="150"/>
+                                <animations/>
                                 <state key="normal" title="Browns" image="browns"/>
                                 <connections>
                                     <action selector="teamProgressButtonTapped:" destination="BqE-OG-7Sa" eventType="touchUpInside" id="hLt-Ib-zkd"/>
@@ -482,6 +552,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dk3-Oq-ua5">
                                 <rect key="frame" x="598" y="499" width="150" height="150"/>
+                                <animations/>
                                 <state key="normal" title="Chargers" image="chargers"/>
                                 <connections>
                                     <action selector="teamProgressButtonTapped:" destination="BqE-OG-7Sa" eventType="touchUpInside" id="AfX-tl-4Ld"/>
@@ -489,6 +560,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IxM-zk-qXg">
                                 <rect key="frame" x="542" y="319" width="150" height="150"/>
+                                <animations/>
                                 <state key="normal" title="Cheifs" image="cheifs"/>
                                 <connections>
                                     <action selector="teamProgressButtonTapped:" destination="BqE-OG-7Sa" eventType="touchUpInside" id="lOH-b8-Ur0"/>
@@ -496,20 +568,15 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPQ-Ca-16P">
                                 <rect key="frame" x="403" y="832" width="150" height="150"/>
+                                <animations/>
                                 <state key="normal" title="Dolphins" image="dolphins"/>
                                 <connections>
                                     <action selector="teamProgressButtonTapped:" destination="BqE-OG-7Sa" eventType="touchUpInside" id="bt8-Rj-uk6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIn-Rn-6Eh">
-                                <rect key="frame" x="234" y="615" width="150" height="150"/>
-                                <state key="normal" title="Patriots" image="patriots"/>
-                                <connections>
-                                    <action selector="teamProgressButtonTapped:" destination="BqE-OG-7Sa" eventType="touchUpInside" id="XTn-d3-XFu"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0EE-vM-OtI">
                                 <rect key="frame" x="76" y="412" width="150" height="150"/>
+                                <animations/>
                                 <state key="normal" title="Raiders" image="raiders"/>
                                 <connections>
                                     <action selector="teamProgressButtonTapped:" destination="BqE-OG-7Sa" eventType="touchUpInside" id="2mD-9P-Ffi"/>
@@ -517,6 +584,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEc-hm-LNc">
                                 <rect key="frame" x="14" y="610" width="150" height="150"/>
+                                <animations/>
                                 <state key="normal" title="Ravens" image="ravens"/>
                                 <connections>
                                     <action selector="teamProgressButtonTapped:" destination="BqE-OG-7Sa" eventType="touchUpInside" id="yoQ-5W-Eef"/>
@@ -524,6 +592,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8v-R6-gSv">
                                 <rect key="frame" x="14" y="832" width="150" height="150"/>
+                                <animations/>
                                 <state key="normal" title="Texans" image="texans"/>
                                 <connections>
                                     <action selector="teamProgressButtonTapped:" destination="BqE-OG-7Sa" eventType="touchUpInside" id="cDU-zb-bOI"/>
@@ -531,12 +600,22 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUi-WO-9Qp">
                                 <rect key="frame" x="593" y="810" width="150" height="150"/>
+                                <animations/>
                                 <state key="normal" title="Colts" image="colts"/>
                                 <connections>
                                     <action selector="teamProgressButtonTapped:" destination="BqE-OG-7Sa" eventType="touchUpInside" id="Ffd-KH-reQ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIn-Rn-6Eh">
+                                <rect key="frame" x="219" y="624" width="150" height="150"/>
+                                <animations/>
+                                <state key="normal" title="Patriots" image="patriots"/>
+                                <connections>
+                                    <action selector="teamProgressButtonTapped:" destination="BqE-OG-7Sa" eventType="touchUpInside" id="XTn-d3-XFu"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
@@ -580,29 +659,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F7m-VY-sWW" customClass="ScrollViewContainer" customModule="NFL_Superbowl_Picks" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="736" width="768" height="288"/>
-                                <subviews>
-                                    <scrollView autoresizesSubviews="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="otZ-K9-Y0n">
-                                        <rect key="frame" x="213" y="0.0" width="343" height="288"/>
-                                    </scrollView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            <scrollView autoresizesSubviews="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="otZ-K9-Y0n">
+                                <rect key="frame" x="0.0" y="303" width="768" height="424"/>
+                                <animations/>
+                            </scrollView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Good Luck!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ySN-85-Jbr">
-                                <rect key="frame" x="264" y="46" width="240" height="64"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <rect key="frame" x="70" y="40" width="246" height="81"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SOUTHEASTERN LOGO- HORIZONTAL" translatesAutoresizingMaskIntoConstraints="NO" id="79G-zY-J0d">
-                                <rect key="frame" x="121" y="530" width="526" height="198"/>
-                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Your picks have been recorded!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ryx-nN-kAA">
-                                <rect key="frame" x="173" y="111" width="423" height="51.5"/>
+                                <rect key="frame" x="324" y="54" width="374" height="51.5"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="thinkJine" translatesAutoresizingMaskIntoConstraints="NO" id="6Pt-4d-xfU">
+                                <rect key="frame" x="434" y="779" width="240" height="199"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SOUTHEASTERN LOGO- HORIZONTAL" translatesAutoresizingMaskIntoConstraints="NO" id="79G-zY-J0d">
+                                <rect key="frame" x="52" y="801" width="362" height="156"/>
+                                <animations/>
+                            </imageView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
@@ -626,8 +708,9 @@
         <image name="SOUTHEASTERN LOGO- HORIZONTAL" width="1849" height="607"/>
         <image name="SOUTHEASTERN LOGO- HORIZONTAL WHITE" width="1800" height="900"/>
         <image name="SOUTHEASTERN LOGO-VERT WHITE" width="900" height="900"/>
-        <image name="WaitScreen" width="1532" height="2030"/>
+        <image name="WaitScreenTemp" width="1533" height="2030"/>
         <image name="bears" width="262" height="262"/>
+        <image name="bearsG(larger)" width="310" height="310"/>
         <image name="bengals" width="264" height="265"/>
         <image name="bills" width="264" height="265"/>
         <image name="broncos" width="264" height="265"/>
@@ -659,6 +742,7 @@
         <image name="steelers" width="264" height="265"/>
         <image name="texans" width="264" height="265"/>
         <image name="text_field_back" width="1088" height="188"/>
+        <image name="thinkJine" width="330" height="330"/>
         <image name="titans" width="264" height="265"/>
         <image name="vikings" width="262" height="262"/>
     </resources>

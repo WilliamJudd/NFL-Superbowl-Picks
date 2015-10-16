@@ -7,159 +7,286 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08EB4738128282454077E18009CED677 /* Pods-NFL Superbowl PicksUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0264E2C287361F7D4AD4DCBD43A22E /* Pods-NFL Superbowl PicksUITests-dummy.m */; };
-		0FB24BD435BA404DCF864D2DF518DBBA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5EB1E0C12BB680C1813B49400A0792 /* SystemConfiguration.framework */; };
-		1C173F08616DA7A93F0588DD0B69E8AA /* FMutableData.h in Headers */ = {isa = PBXBuildFile; fileRef = A94CE564D85973CC614F08110CB3571D /* FMutableData.h */; };
-		28940154FE049E593E791E98D0DBD467 /* Pods-NFL Superbowl PicksTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9FEC0622F769F73A858967D4B7A7CB /* Pods-NFL Superbowl PicksTests-dummy.m */; };
-		35968108C4CBA7DFF2F3A58B4A630699 /* FirebaseServerValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 888D546C2D53ACD09F4330C3AE873A32 /* FirebaseServerValue.h */; };
-		3C8B4CB0457510FFE608203EE1CA3309 /* Firebase.h in Headers */ = {isa = PBXBuildFile; fileRef = 595110EF0BD5E04C126B02521CB6BF79 /* Firebase.h */; };
-		3F21D87E82A7BAB4D733F6FC860FDEE1 /* FEventType.h in Headers */ = {isa = PBXBuildFile; fileRef = A1C3131D080216E0720FA43AAE32F71A /* FEventType.h */; };
-		4317EFF2E464E018E837E04A0A39A8C8 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71D167283A2C1622FF31A96F1A5FC7D1 /* CFNetwork.framework */; };
-		4EF3906AA1C365F55729317F042B7823 /* FQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 13788FA67964036A4D054A972AEB9170 /* FQuery.h */; };
-		50D16A1D15CD6EC1C504D4C36FC394C5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E51A9CA9098F28D433B5E70271DB335 /* Security.framework */; };
-		58337F71EBC733C6543A9907A135A41F /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7EF28EF2B5388DE45E7F237ADB0421 /* Pods-dummy.m */; };
-		7420DB05D01127CD6E3693EE64DE83FB /* FAuthType.h in Headers */ = {isa = PBXBuildFile; fileRef = FD0E0E9D835A0D93046FAA12B578ECD1 /* FAuthType.h */; };
-		79D0A2C3F0FEC711FD4F223D3F53396B /* Pods-NFL Superbowl Picks-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 934CF190F7FAD19B0006A65C580BC2B0 /* Pods-NFL Superbowl Picks-dummy.m */; };
-		7C21D2B58AD18482882E3395AE31463A /* FTransactionResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 707535220CA3544B5FF95802994B30F4 /* FTransactionResult.h */; };
-		7F938EE3F9926D730DFBE2C4ED6420B0 /* FirebaseApp.h in Headers */ = {isa = PBXBuildFile; fileRef = C87137C04CBDEBE06D62BF76AB00E5CD /* FirebaseApp.h */; };
-		86AB2C596357C582BA9ED8BC0BA989EE /* Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 81038BB6A0EA0F8EFEF11707E0830BA4 /* Empty.m */; };
-		906A92CECA84C224562E3D021AE0882E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA95E4A569B6D0C684FC5E6ACE2053A /* Foundation.framework */; };
-		935E591C6FE646D4A492EE3C518DE7AE /* FAuthData.h in Headers */ = {isa = PBXBuildFile; fileRef = 60355A4BE6432443FC014BDA3F80C31D /* FAuthData.h */; };
-		9446514662D907D8A207B43139D99640 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA95E4A569B6D0C684FC5E6ACE2053A /* Foundation.framework */; };
-		BE51E9E25A94D4F2C66C6CC8F7BD58E5 /* FDataSnapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AF43149B33DE0A06478C28E6EB1961B /* FDataSnapshot.h */; };
-		C84DB29BAEB52E244E88ABC83CD8BAE5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA95E4A569B6D0C684FC5E6ACE2053A /* Foundation.framework */; };
-		CB43A37F73662527D4AF8D4D0299A604 /* Firebase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2514195978F9855388A11FEC3EC135FF /* Firebase-dummy.m */; };
-		D671718AF1F193D1863C84CB4910DB93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA95E4A569B6D0C684FC5E6ACE2053A /* Foundation.framework */; };
-		EDEEDDF13FE8FC3369DC5FB749E1D86B /* FConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 3278D4E28D8585C124F11544F103D876 /* FConfig.h */; };
-		F935A091525E9DAC0C58C18AEAFD58FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA95E4A569B6D0C684FC5E6ACE2053A /* Foundation.framework */; };
+		005DE2A5B2286A9A8B2E941E55E11051 /* DesignableTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F57D354C4436DD1A14C270F7DE41917 /* DesignableTabBarController.swift */; };
+		012A7E018F3D34F159894EBD7EACACF9 /* Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A644D9C72C210EFFE3BA8902328092 /* Empty.m */; };
+		0617F40AF89A25F9302943790B197615 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BAA2405E0FD36D767A46AA91E80881 /* BlurView.swift */; };
+		093241396EC61991D9FD87C7C78A072E /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9043B1EE18325F098965C12EFAAA40 /* KeyboardLayoutConstraint.swift */; };
+		096F71FA5B24453A75E19899807355FB /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A7431A4EE8C6276F2B61EC179A329B /* ImageLoader.swift */; };
+		0E363728BB49F8B88344A95B8FF3958B /* Pods-NFL Superbowl PicksTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DDFF391FB1E836AA6F97D177E9754B5 /* Pods-NFL Superbowl PicksTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0FF6FA1265BFFBB45D500E003CFCAC1F /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FD25BA67611AFCD562886BB03E80BEF /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		10F25BE9C660A4F7238781ABDA6F13A6 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B878B6A9B3DA6C5C3E05A4AD44F95F6 /* DesignableButton.swift */; };
+		191DE2EB9A35585AE0A88BA9F833A1F4 /* FTransactionResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 10170F5CA408C6BD94894270FE1EE738 /* FTransactionResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C04A7CD5B70C4561F6D98C882731C65 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6204446BD9150A17B12E81B4A6F9CA8 /* Security.framework */; };
+		1C3EF85CD30E6FF2E51471BD5B3CEB29 /* Firebase.h in Headers */ = {isa = PBXBuildFile; fileRef = E96EB1EC8FDDA01D62C5D4FB4F6559A1 /* Firebase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D925BB011B04DDED982C7946571A67A /* FAuthType.h in Headers */ = {isa = PBXBuildFile; fileRef = C4B292DD69DF90453F22BAB04C62584E /* FAuthType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D9D7FF5237C8CC91EF58DC45AC274FB /* Firebase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4EB99DF0E0E16352DF9A373A71ABF3 /* Firebase-dummy.m */; };
+		1DE388C0B6E6FF94959DAB0D4567E86D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C49D928448B31FB9A7D5AE5C8D6C4E /* Foundation.framework */; };
+		2135E25F80703E7CC69EA15FE4B5BFAC /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B638E5E644B833B9365B08DDAD181814 /* TransitionZoom.swift */; };
+		239B10F388840841389B7F09648735B1 /* FEventType.h in Headers */ = {isa = PBXBuildFile; fileRef = 959EFB6181764CB117790DF2E7C9171B /* FEventType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		25D61801747E1EFAB680A840FEC582C3 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD5EB5527903D5901398AB29B188C9 /* LoadingView.swift */; };
+		26035CF8D6EE9DAEF99E4967DE70B4E2 /* Pods-NFL Superbowl Picks-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A554DF22E3E44FA2DC6CFD180C73F0F6 /* Pods-NFL Superbowl Picks-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B4BA12F866405B5A2C35F8CEAF1571C /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6208D5FEE481430216557A26478E8B1 /* DesignableView.swift */; };
+		2F1496011DBBB75777645194AAAFE92D /* FirebaseApp.h in Headers */ = {isa = PBXBuildFile; fileRef = 459F69CC64E3EE92C30EA219336D4C80 /* FirebaseApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		301EEE6CE4D2688DBAB2D732152E97C0 /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60262EE7EC7E71391DC9A59B6E23A841 /* UnwindSegue.swift */; };
+		32735434CEC275323E987F7E5145BFDF /* SpringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFC8DA26133DAE6AB5D20D648750BAC /* SpringView.swift */; };
+		33B1938E901543C80DFF7039D8414966 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FB8C9146E45131557D5E3179630F63 /* AsyncImageView.swift */; };
+		3612347A5FA98328D90F5E465510950D /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15080C757DF1F242196E20E65411612E /* AsyncButton.swift */; };
+		3B5710901E7A160129ED88A8C5779AF5 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2183EB18C4B31FF6424E9EC7A8CA30 /* SpringAnimation.swift */; };
+		3E54CE4BA8E5371EBE9D0A742C1ABFE2 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F481D37214E3A8A2AB3C912D078ADFB7 /* Misc.swift */; };
+		4507ECF1EEED3FC1B52F276D97980DEA /* Pods-NFL Superbowl PicksUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F89B8ADAF816E9B1D7C89EFF72481FF5 /* Pods-NFL Superbowl PicksUITests-dummy.m */; };
+		45A35E531C4E6B034100246DD7B7CCEC /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784B92F3E5C42523C935586A2989DFAF /* DesignableTextField.swift */; };
+		4B0EFAAA29109D9A705A27EFFA10FAE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C49D928448B31FB9A7D5AE5C8D6C4E /* Foundation.framework */; };
+		4D75CF0089B20355B17A851513C4A002 /* FQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = C9471BFD49C72FA0638B37573B7178FB /* FQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D9696AE14C9C0024B409D2BB17E2B0E /* Pods-NFL Superbowl PicksUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EBE7DFD8B8B7CD1641E617AC42C31961 /* Pods-NFL Superbowl PicksUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5050725AFF9B336852E97E3254E05CA3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BEAD6C183165951794614B622E18AC3 /* Images.xcassets */; };
+		566F2DF75A5853C9369337D797BD39E7 /* SpringTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9CA3798BB7AC4213ED2F7A561734A1 /* SpringTextView.swift */; };
+		5B6F0DE51051D39F875495244AF56626 /* DesignableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD8F637001855BAD75C038C349905E /* DesignableImageView.swift */; };
+		60F9139BDD38565B78214C4FC5F5729D /* Firebase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8024AEB82741523AC14217773FC9B135 /* Firebase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6646DA26298257396C7FFE141BB84CC3 /* FirebaseServerValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A95A86FF3F9A33CE1A661D4C889EF43 /* FirebaseServerValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A8FAC67AD83B14E87DC3818248416F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C49D928448B31FB9A7D5AE5C8D6C4E /* Foundation.framework */; };
+		7EDCE68202DC12E3DF778A8725B102E4 /* SpringButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104693EEFEB5270F2DCAB627AC27B09C /* SpringButton.swift */; };
+		8AF018A55BB20ED14949E7C975DD60E1 /* Pods-NFL Superbowl PicksTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A743BA454E21D57A0C7B042A1A1031B1 /* Pods-NFL Superbowl PicksTests-dummy.m */; };
+		8C8D7219CDA92AAD6A7839613C16A832 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C49D928448B31FB9A7D5AE5C8D6C4E /* Foundation.framework */; };
+		93DEA5A19DB66FA1B0E7583C91B64B65 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7151EEB1E033283552C9A7BB4F87B28 /* LoadingView.xib */; };
+		982E8F05570CF43837AB76130419C48F /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55D9C84553A74DAA27DB0A9B6DABA50 /* TransitionManager.swift */; };
+		99F902068EABE28D54807C479D6B8BD6 /* SpringTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DB23CF3FB2253494A05CDB88AEC606 /* SpringTextField.swift */; };
+		A283A2D0A795CDA6C7CBCC3384FE9A72 /* Spring.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACF77F65DE3885A2C0591DA42BB07BC /* Spring.swift */; };
+		B4C35B1399537D376B9BDBAF61797043 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C49D928448B31FB9A7D5AE5C8D6C4E /* Foundation.framework */; };
+		B4FA9F6E368CFD2CF208A3E551F95A8E /* AutoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37DA660851B7B6A853D328B914083C4 /* AutoTextView.swift */; };
+		B9EFBA5F35A82110220238CAB79BEAB0 /* DesignableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACFAB2DB37958EC2D535EF9D9AC9F8C /* DesignableTextView.swift */; };
+		C0EF2C8B686F5E1DBF0C3D711128137F /* SpringImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EAF93BA45D796C1D5E5B66DC82D17 /* SpringImageView.swift */; };
+		C23FCF31260D47CEC1494A292DAA1A1E /* FAuthData.h in Headers */ = {isa = PBXBuildFile; fileRef = BA89D8C363C1FB0FE9A437BDA27B2C3E /* FAuthData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8B490C03F05D384A5FB4D5D24C97B18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C49D928448B31FB9A7D5AE5C8D6C4E /* Foundation.framework */; };
+		DA348692422580D26FE1D67310A7B898 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 129AB2651C3807E30A1BB948BEFB752F /* Pods-dummy.m */; };
+		DB05A9DD8244D10C28B6915C514AE15F /* FMutableData.h in Headers */ = {isa = PBXBuildFile; fileRef = 714227E537074BABC1433BE3CBFC5BF9 /* FMutableData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE87716C3ADB1A579B0A862DC5286E58 /* Spring-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1B59B3D7F1A4E9535FBF4F53BEE7B1 /* Spring-dummy.m */; };
+		E0DDD75306ECBF726E6E8814FF4FC422 /* DesignableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F2EBED8A490A52092FE2B95B7FAB49 /* DesignableLabel.swift */; };
+		E1A883FEBDEED9B85D90D6BE2080F218 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6166BE40C18BC6BF0EED92CAB212EC33 /* SystemConfiguration.framework */; };
+		E3FBB5B462A14E8ACC9B340227DE4BE1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F85758B54CB0D843A3E97DFFB2F21F /* CFNetwork.framework */; };
+		E60FA42EEC3ECC48701DB55986D25D69 /* FConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = DE39BD6C80840EE28ABEF71A6F7CA97F /* FConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6F94AED4AE65D8DDCC3D6435C48F48F /* SpringLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAB42ACF14BAFFB5505304E09BFDB88 /* SpringLabel.swift */; };
+		E8B534D15D2B25919ACD898217266891 /* FDataSnapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 27E1CFB4FBBBEF14D2A6CDB15BBB85ED /* FDataSnapshot.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE0B3FF03EEDAEA24409E01A364066F5 /* Pods-NFL Superbowl Picks-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EADEF7AC878DA2C7C810604DE504A3C /* Pods-NFL Superbowl Picks-dummy.m */; };
+		EF1ABDD6323F6253C40E68EFCB2B216F /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D85020EAF3129FDB50346B267E91B10 /* SoundPlayer.swift */; };
+		FD8EB567E382675881ABE44C83527344 /* Spring-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C5E449651BCA143F4E6360642A5E1E5A /* Spring-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		028F7585085D51E40ABF7D6D5E5EE179 /* PBXContainerItemProxy */ = {
+		3EF9E3F2277894E6658E29FA0C3B5095 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A7096BEBCC964329E5EA8A79B1928359;
+			remoteGlobalIDString = 9CD7BC614C000777DA28A61DB41F1075;
+			remoteInfo = Spring;
+		};
+		5B8559B1EE266973A2BC5FF3D0ABE509 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7AC9326D819482593FE118E915409D7;
 			remoteInfo = Firebase;
 		};
-		2CA380215423B9139DA72C4B68CAB96E /* PBXContainerItemProxy */ = {
+		6F4C8C728E5A9D319728FC6741231006 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A7096BEBCC964329E5EA8A79B1928359;
+			remoteGlobalIDString = B7AC9326D819482593FE118E915409D7;
 			remoteInfo = Firebase;
 		};
-		67DCE83BBDDDBB5722EBF2C43714C115 /* PBXContainerItemProxy */ = {
+		A2D95052F18078F4DF693DFE79EFFD93 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A7096BEBCC964329E5EA8A79B1928359;
+			remoteGlobalIDString = 9CD7BC614C000777DA28A61DB41F1075;
+			remoteInfo = Spring;
+		};
+		B6CC521FF07B6AE1EE882BB09233EBC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9CD7BC614C000777DA28A61DB41F1075;
+			remoteInfo = Spring;
+		};
+		BC67E4DCB4FA391E865AEE2C261296C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7AC9326D819482593FE118E915409D7;
 			remoteInfo = Firebase;
 		};
-		6CF69B4137E5DA81D328C4F6C8ECAD87 /* PBXContainerItemProxy */ = {
+		CA126D69608D133F88C2A0C96F96749A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A7096BEBCC964329E5EA8A79B1928359;
+			remoteGlobalIDString = 9CD7BC614C000777DA28A61DB41F1075;
+			remoteInfo = Spring;
+		};
+		EDEB92DB38D572C7AC249CDDA89BF955 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7AC9326D819482593FE118E915409D7;
 			remoteInfo = Firebase;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		09BB83590B583A2AD62A3E220685DF77 /* Pods-NFL Superbowl Picks-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NFL Superbowl Picks-acknowledgements.markdown"; sourceTree = "<group>"; };
-		0C7EF28EF2B5388DE45E7F237ADB0421 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		0CA95E4A569B6D0C684FC5E6ACE2053A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		0E0D49E76A3FCCDBA97E94E8E4BF2A84 /* Firebase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Firebase.xcconfig; sourceTree = "<group>"; };
-		0E62378D32E5874D0CB070A5FB91D778 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		12CC474D5B336EBDF2801FDF67B1CADD /* Pods-NFL Superbowl PicksUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NFL Superbowl PicksUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		13788FA67964036A4D054A972AEB9170 /* FQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FQuery.h; sourceTree = "<group>"; };
-		1F436B993AD3E5253F4965CC6FAC9A23 /* libPods-NFL Superbowl PicksUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NFL Superbowl PicksUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1F628D03CBAEFCC119CB6F2CAD50ED0C /* Pods-NFL Superbowl PicksTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NFL Superbowl PicksTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2514195978F9855388A11FEC3EC135FF /* Firebase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Firebase-dummy.m"; sourceTree = "<group>"; };
-		325A285AB15C52753A175D2C20029277 /* libPods-NFL Superbowl Picks.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NFL Superbowl Picks.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3278D4E28D8585C124F11544F103D876 /* FConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FConfig.h; sourceTree = "<group>"; };
-		357E490002879938F9ACE2E1812168FA /* Pods-NFL Superbowl PicksUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NFL Superbowl PicksUITests-resources.sh"; sourceTree = "<group>"; };
-		38911E71F02C123D47AD26115D454F12 /* Pods-NFL Superbowl PicksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NFL Superbowl PicksTests.debug.xcconfig"; sourceTree = "<group>"; };
-		3F0264E2C287361F7D4AD4DCBD43A22E /* Pods-NFL Superbowl PicksUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NFL Superbowl PicksUITests-dummy.m"; sourceTree = "<group>"; };
-		4849C8DB5B92CD9594FE757AA660B7E8 /* Firebase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Firebase-prefix.pch"; sourceTree = "<group>"; };
-		4AF43149B33DE0A06478C28E6EB1961B /* FDataSnapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FDataSnapshot.h; sourceTree = "<group>"; };
-		4CC7E701255F712223B02F3CF7CD9315 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		56FDFDCDDF990B0AC3AAB00FF2CC3A91 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		595110EF0BD5E04C126B02521CB6BF79 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
-		59C83C8442B6E848319CCF7C7C516386 /* libPods-NFL Superbowl PicksTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NFL Superbowl PicksTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5AF0156864474DB13376668C7D536DFC /* libFirebaseStatic.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libFirebaseStatic.a; sourceTree = "<group>"; };
-		60355A4BE6432443FC014BDA3F80C31D /* FAuthData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FAuthData.h; sourceTree = "<group>"; };
-		69EB20100EFFE154038F52A1B3D0997A /* Pods-NFL Superbowl Picks-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NFL Superbowl Picks-acknowledgements.plist"; sourceTree = "<group>"; };
-		707535220CA3544B5FF95802994B30F4 /* FTransactionResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FTransactionResult.h; sourceTree = "<group>"; };
-		71D167283A2C1622FF31A96F1A5FC7D1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
-		738BB9F92AE1E67065A31855CE41C63C /* Firebase-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Firebase-Private.xcconfig"; sourceTree = "<group>"; };
-		7E51A9CA9098F28D433B5E70271DB335 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
-		81038BB6A0EA0F8EFEF11707E0830BA4 /* Empty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Empty.m; sourceTree = "<group>"; };
-		888D546C2D53ACD09F4330C3AE873A32 /* FirebaseServerValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FirebaseServerValue.h; sourceTree = "<group>"; };
-		934CF190F7FAD19B0006A65C580BC2B0 /* Pods-NFL Superbowl Picks-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NFL Superbowl Picks-dummy.m"; sourceTree = "<group>"; };
-		97749977DB3D5FABAD13B9E5CA80AB3B /* Pods-NFL Superbowl Picks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NFL Superbowl Picks.release.xcconfig"; sourceTree = "<group>"; };
-		A12E8846AF437DB5AB4DF25CEE0C75C0 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		A1C3131D080216E0720FA43AAE32F71A /* FEventType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FEventType.h; sourceTree = "<group>"; };
-		A85BB14B2131AA5E9FAF03770282B90D /* Pods-NFL Superbowl PicksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NFL Superbowl PicksUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		A94CE564D85973CC614F08110CB3571D /* FMutableData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FMutableData.h; sourceTree = "<group>"; };
-		B32F4ACA4839B7229ADD536B1BD83A32 /* Pods-NFL Superbowl PicksTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NFL Superbowl PicksTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		B60A84BDEE5827552EE4C5B765D9E5F8 /* Pods-NFL Superbowl PicksTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NFL Superbowl PicksTests-resources.sh"; sourceTree = "<group>"; };
+		02A4E6FE4CEE6643582EDC59670D82E0 /* Pods-NFL Superbowl PicksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NFL Superbowl PicksTests.debug.xcconfig"; sourceTree = "<group>"; };
+		03667C27F4661713E810BDCBF7573620 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		064BFAA20C76E3A1A7130ADF4ABA22AE /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0C3AD37F518177F19731B9DE1C1BE6F2 /* Pods-NFL Superbowl Picks.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-NFL Superbowl Picks.modulemap"; sourceTree = "<group>"; };
+		0C9CA3798BB7AC4213ED2F7A561734A1 /* SpringTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringTextView.swift; path = Spring/SpringTextView.swift; sourceTree = "<group>"; };
+		0EAF6ED230CE995E403322F4141D03A7 /* Spring.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Spring.modulemap; sourceTree = "<group>"; };
+		0FADC19A5D378BB3EDD89818D2D40B7B /* Pods-NFL Superbowl PicksTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NFL Superbowl PicksTests-frameworks.sh"; sourceTree = "<group>"; };
+		0FD25BA67611AFCD562886BB03E80BEF /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
+		10170F5CA408C6BD94894270FE1EE738 /* FTransactionResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FTransactionResult.h; sourceTree = "<group>"; };
+		104693EEFEB5270F2DCAB627AC27B09C /* SpringButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringButton.swift; path = Spring/SpringButton.swift; sourceTree = "<group>"; };
+		10990C56B4772F9AA29ACA8E7B23D5EB /* Pods-NFL Superbowl PicksUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NFL Superbowl PicksUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		129AB2651C3807E30A1BB948BEFB752F /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		139F91C43978E9E1A0D605B59866EA91 /* Pods-NFL Superbowl PicksTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NFL Superbowl PicksTests-resources.sh"; sourceTree = "<group>"; };
+		14DBE42ED5A84730A03D73FA3FC9B9C4 /* Pods-NFL Superbowl PicksTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-NFL Superbowl PicksTests.modulemap"; sourceTree = "<group>"; };
+		15080C757DF1F242196E20E65411612E /* AsyncButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncButton.swift; path = Spring/AsyncButton.swift; sourceTree = "<group>"; };
+		1A395C7E25342D7DB20BE93E93C5795E /* Pods-NFL Superbowl PicksTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NFL Superbowl PicksTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		1BD42B792F6AD34EC7BE57B7AEF32677 /* Firebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Firebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C6932851AFFABFE82387A224D8982C3 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		27E1CFB4FBBBEF14D2A6CDB15BBB85ED /* FDataSnapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FDataSnapshot.h; sourceTree = "<group>"; };
+		2AD5DFCA7C93B209251EF507B54709E8 /* Pods-NFL Superbowl PicksTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NFL Superbowl PicksTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2DDFF391FB1E836AA6F97D177E9754B5 /* Pods-NFL Superbowl PicksTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NFL Superbowl PicksTests-umbrella.h"; sourceTree = "<group>"; };
+		3ADD5EB5527903D5901398AB29B188C9 /* LoadingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoadingView.swift; path = Spring/LoadingView.swift; sourceTree = "<group>"; };
+		459F69CC64E3EE92C30EA219336D4C80 /* FirebaseApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FirebaseApp.h; sourceTree = "<group>"; };
+		4D93E91126A48A4F96626E869DE53DAB /* libFirebaseStatic.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libFirebaseStatic.a; sourceTree = "<group>"; };
+		57EE8BEE2F95FD5B1EF34862DBF73FE4 /* Pods-NFL Superbowl Picks-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NFL Superbowl Picks-acknowledgements.plist"; sourceTree = "<group>"; };
+		58DB23CF3FB2253494A05CDB88AEC606 /* SpringTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringTextField.swift; path = Spring/SpringTextField.swift; sourceTree = "<group>"; };
+		5ACFAB2DB37958EC2D535EF9D9AC9F8C /* DesignableTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableTextView.swift; path = Spring/DesignableTextView.swift; sourceTree = "<group>"; };
+		5D876F9E15AC7CDBD8A4B3E990E01D84 /* Spring.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Spring.xcconfig; sourceTree = "<group>"; };
+		60262EE7EC7E71391DC9A59B6E23A841 /* UnwindSegue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnwindSegue.swift; path = Spring/UnwindSegue.swift; sourceTree = "<group>"; };
+		60F85758B54CB0D843A3E97DFFB2F21F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		6166BE40C18BC6BF0EED92CAB212EC33 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		620994269D8164C3571B9DE8F7D9220F /* Pods-NFL Superbowl Picks-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NFL Superbowl Picks-acknowledgements.markdown"; sourceTree = "<group>"; };
+		622A42CC43D87158D46C1524C82581F7 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
+		6560C9CC9A89468F8BF9F5C1CC7E926F /* Pods-NFL Superbowl Picks-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NFL Superbowl Picks-resources.sh"; sourceTree = "<group>"; };
+		65FFE77E42E1B80094A8364D0477336E /* Spring.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Spring.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6633CC5064444EF4D0B91E35FDDD3AB3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C653B15B94EF81569BB02ECD63F3609 /* Pods_NFL_Superbowl_PicksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NFL_Superbowl_PicksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C9043B1EE18325F098965C12EFAAA40 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardLayoutConstraint.swift; path = Spring/KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
+		6D5BA362C3F233093271ED5B9E17AA7A /* Pods-NFL Superbowl PicksUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-NFL Superbowl PicksUITests.modulemap"; sourceTree = "<group>"; };
+		6D85020EAF3129FDB50346B267E91B10 /* SoundPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SoundPlayer.swift; path = Spring/SoundPlayer.swift; sourceTree = "<group>"; };
+		6DAB42ACF14BAFFB5505304E09BFDB88 /* SpringLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringLabel.swift; path = Spring/SpringLabel.swift; sourceTree = "<group>"; };
+		6EFC8DA26133DAE6AB5D20D648750BAC /* SpringView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringView.swift; path = Spring/SpringView.swift; sourceTree = "<group>"; };
+		6F57D354C4436DD1A14C270F7DE41917 /* DesignableTabBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableTabBarController.swift; path = Spring/DesignableTabBarController.swift; sourceTree = "<group>"; };
+		714227E537074BABC1433BE3CBFC5BF9 /* FMutableData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FMutableData.h; sourceTree = "<group>"; };
+		71F2EBED8A490A52092FE2B95B7FAB49 /* DesignableLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableLabel.swift; path = Spring/DesignableLabel.swift; sourceTree = "<group>"; };
+		7485E35B0608086A4AC0AD9D5FFF6B8E /* Pods-NFL Superbowl PicksUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NFL Superbowl PicksUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		77C49D928448B31FB9A7D5AE5C8D6C4E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		784B92F3E5C42523C935586A2989DFAF /* DesignableTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableTextField.swift; path = Spring/DesignableTextField.swift; sourceTree = "<group>"; };
+		793234822EDFA4DFB00BEC4B634A1C1D /* Pods-NFL Superbowl PicksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NFL Superbowl PicksTests.release.xcconfig"; sourceTree = "<group>"; };
+		7BDD077CA7B5450B4A90BB2130C33E80 /* Pods-NFL Superbowl PicksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NFL Superbowl PicksUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7BEAD6C183165951794614B622E18AC3 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SpringApp/Images.xcassets; sourceTree = "<group>"; };
+		7D1B59B3D7F1A4E9535FBF4F53BEE7B1 /* Spring-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Spring-dummy.m"; sourceTree = "<group>"; };
+		7E4EB99DF0E0E16352DF9A373A71ABF3 /* Firebase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Firebase-dummy.m"; sourceTree = "<group>"; };
+		7EADEF7AC878DA2C7C810604DE504A3C /* Pods-NFL Superbowl Picks-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NFL Superbowl Picks-dummy.m"; sourceTree = "<group>"; };
+		8024AEB82741523AC14217773FC9B135 /* Firebase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Firebase-umbrella.h"; sourceTree = "<group>"; };
+		82747DA74619505E513BE58A9881EF76 /* Firebase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Firebase.modulemap; sourceTree = "<group>"; };
+		871EDBBB2B9DF574F0DD3D7A19481578 /* Pods_NFL_Superbowl_PicksUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NFL_Superbowl_PicksUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A6EAF93BA45D796C1D5E5B66DC82D17 /* SpringImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringImageView.swift; path = Spring/SpringImageView.swift; sourceTree = "<group>"; };
+		8A95A86FF3F9A33CE1A661D4C889EF43 /* FirebaseServerValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FirebaseServerValue.h; sourceTree = "<group>"; };
+		8B878B6A9B3DA6C5C3E05A4AD44F95F6 /* DesignableButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableButton.swift; path = Spring/DesignableButton.swift; sourceTree = "<group>"; };
+		959EFB6181764CB117790DF2E7C9171B /* FEventType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FEventType.h; sourceTree = "<group>"; };
+		97AD8F637001855BAD75C038C349905E /* DesignableImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableImageView.swift; path = Spring/DesignableImageView.swift; sourceTree = "<group>"; };
+		9E9BA9FCBEEDEBD0DB1A4CEAD5729C1F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A554DF22E3E44FA2DC6CFD180C73F0F6 /* Pods-NFL Superbowl Picks-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NFL Superbowl Picks-umbrella.h"; sourceTree = "<group>"; };
+		A743BA454E21D57A0C7B042A1A1031B1 /* Pods-NFL Superbowl PicksTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NFL Superbowl PicksTests-dummy.m"; sourceTree = "<group>"; };
+		A99A0B5FA05D80AAFF48474B841A7327 /* Spring-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Spring-prefix.pch"; sourceTree = "<group>"; };
+		B09675901E4C8A68AA13951EE18A5D95 /* Firebase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Firebase-prefix.pch"; sourceTree = "<group>"; };
+		B3587FE92C899032B7517A6EA1BB1FF6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B381CB537D1BCE77B773E5CC8839A45B /* Pods-NFL Superbowl Picks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NFL Superbowl Picks.debug.xcconfig"; sourceTree = "<group>"; };
+		B5AB62855159B4E49E0A30A324BE7C39 /* Pods-NFL Superbowl PicksUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NFL Superbowl PicksUITests-frameworks.sh"; sourceTree = "<group>"; };
+		B638E5E644B833B9365B08DDAD181814 /* TransitionZoom.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionZoom.swift; path = Spring/TransitionZoom.swift; sourceTree = "<group>"; };
+		B7A644D9C72C210EFFE3BA8902328092 /* Empty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Empty.m; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C72D2A113D8AD22C600C354DB583B77E /* Pods-NFL Superbowl Picks-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NFL Superbowl Picks-resources.sh"; sourceTree = "<group>"; };
-		C87137C04CBDEBE06D62BF76AB00E5CD /* FirebaseApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FirebaseApp.h; sourceTree = "<group>"; };
-		CA7630D541C3A650C13E4253D52C1A18 /* Pods-NFL Superbowl PicksUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NFL Superbowl PicksUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		D2FB3428815DFCC702A8A68A5806448B /* libFirebase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFirebase.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		DABECBC50BE8A5CB73F2D78D2C496BED /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		DC3E2A8A33A272D8C0A76EAB40FE49BB /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		DC84F01336648FD95B9933C3FF9CC0A6 /* Pods-NFL Superbowl PicksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NFL Superbowl PicksTests.release.xcconfig"; sourceTree = "<group>"; };
-		ED06F613358BD29100EDCE93C07C8461 /* Pods-NFL Superbowl Picks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NFL Superbowl Picks.debug.xcconfig"; sourceTree = "<group>"; };
-		FCB66374E1FB4AB8B3B4E7CBF812B675 /* Pods-NFL Superbowl PicksUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NFL Superbowl PicksUITests.release.xcconfig"; sourceTree = "<group>"; };
-		FD0E0E9D835A0D93046FAA12B578ECD1 /* FAuthType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FAuthType.h; sourceTree = "<group>"; };
-		FF5EB1E0C12BB680C1813B49400A0792 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
-		FF9FEC0622F769F73A858967D4B7A7CB /* Pods-NFL Superbowl PicksTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NFL Superbowl PicksTests-dummy.m"; sourceTree = "<group>"; };
+		BA89D8C363C1FB0FE9A437BDA27B2C3E /* FAuthData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FAuthData.h; sourceTree = "<group>"; };
+		BC82F2ACB6589B5E78F8185CDECA2D1A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		BD2183EB18C4B31FF6424E9EC7A8CA30 /* SpringAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringAnimation.swift; path = Spring/SpringAnimation.swift; sourceTree = "<group>"; };
+		C16452F9B1EB358A096668D12631946F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1EB58B43A1C2728FBDD703B58A0953B /* Pods-NFL Superbowl Picks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NFL Superbowl Picks.release.xcconfig"; sourceTree = "<group>"; };
+		C2A1C85C4237049329D9668348F14EC4 /* Firebase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Firebase.xcconfig; sourceTree = "<group>"; };
+		C4B292DD69DF90453F22BAB04C62584E /* FAuthType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FAuthType.h; sourceTree = "<group>"; };
+		C5E449651BCA143F4E6360642A5E1E5A /* Spring-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Spring-umbrella.h"; sourceTree = "<group>"; };
+		C6204446BD9150A17B12E81B4A6F9CA8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		C6DFD190D02D322B9AD9FEB75D88E446 /* Pods_NFL_Superbowl_Picks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NFL_Superbowl_Picks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7BAA2405E0FD36D767A46AA91E80881 /* BlurView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlurView.swift; path = Spring/BlurView.swift; sourceTree = "<group>"; };
+		C7FB8C9146E45131557D5E3179630F63 /* AsyncImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncImageView.swift; path = Spring/AsyncImageView.swift; sourceTree = "<group>"; };
+		C8A7431A4EE8C6276F2B61EC179A329B /* ImageLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageLoader.swift; path = Spring/ImageLoader.swift; sourceTree = "<group>"; };
+		C8CCD0C625BCB4D331ADDFA9B91C6677 /* Pods-NFL Superbowl Picks-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NFL Superbowl Picks-frameworks.sh"; sourceTree = "<group>"; };
+		C9471BFD49C72FA0638B37573B7178FB /* FQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FQuery.h; sourceTree = "<group>"; };
+		CACF77F65DE3885A2C0591DA42BB07BC /* Spring.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Spring.swift; path = Spring/Spring.swift; sourceTree = "<group>"; };
+		D6208D5FEE481430216557A26478E8B1 /* DesignableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableView.swift; path = Spring/DesignableView.swift; sourceTree = "<group>"; };
+		D9042E7F521F8A14067BD5735E7EAF91 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDE5CC4AB3EA4EA810389447AD213568 /* Pods-NFL Superbowl PicksUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NFL Superbowl PicksUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DE1C68B1891019A79F67907C0A690D5F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		DE39BD6C80840EE28ABEF71A6F7CA97F /* FConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FConfig.h; sourceTree = "<group>"; };
+		E37DA660851B7B6A853D328B914083C4 /* AutoTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutoTextView.swift; path = Spring/AutoTextView.swift; sourceTree = "<group>"; };
+		E55D9C84553A74DAA27DB0A9B6DABA50 /* TransitionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionManager.swift; path = Spring/TransitionManager.swift; sourceTree = "<group>"; };
+		E96EB1EC8FDDA01D62C5D4FB4F6559A1 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
+		E9B25BF9A8276EFB92D32E048B4AF414 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBE7DFD8B8B7CD1641E617AC42C31961 /* Pods-NFL Superbowl PicksUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NFL Superbowl PicksUITests-umbrella.h"; sourceTree = "<group>"; };
+		EDB14829D49423EF955BA742BAC76137 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		EE64FE3993EF0DFC057494DAF09EEB19 /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
+		F481D37214E3A8A2AB3C912D078ADFB7 /* Misc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Misc.swift; path = Spring/Misc.swift; sourceTree = "<group>"; };
+		F7151EEB1E033283552C9A7BB4F87B28 /* LoadingView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = LoadingView.xib; path = Spring/LoadingView.xib; sourceTree = "<group>"; };
+		F89B8ADAF816E9B1D7C89EFF72481FF5 /* Pods-NFL Superbowl PicksUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NFL Superbowl PicksUITests-dummy.m"; sourceTree = "<group>"; };
+		FEC500F2FDDBDD0DF3BD2854686DC208 /* Pods-NFL Superbowl PicksUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NFL Superbowl PicksUITests-resources.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3D3C6D6565A96110CB29D5BF8BEDD1F7 /* Frameworks */ = {
+		132859C0231EE53B65706FA8141642E0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4317EFF2E464E018E837E04A0A39A8C8 /* CFNetwork.framework in Frameworks */,
-				D671718AF1F193D1863C84CB4910DB93 /* Foundation.framework in Frameworks */,
-				50D16A1D15CD6EC1C504D4C36FC394C5 /* Security.framework in Frameworks */,
-				0FB24BD435BA404DCF864D2DF518DBBA /* SystemConfiguration.framework in Frameworks */,
+				7A8FAC67AD83B14E87DC3818248416F9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3F94FC062FBE626ABB1C13AAE315E2BB /* Frameworks */ = {
+		5E15C107D5320A21F27EAB8D8AFA99B5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C84DB29BAEB52E244E88ABC83CD8BAE5 /* Foundation.framework in Frameworks */,
+				8C8D7219CDA92AAD6A7839613C16A832 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		58B1E2BA40AA8FC7E6A045160C0716EE /* Frameworks */ = {
+		7AA63AF55F44BCAE793BA75633F5DB6F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				906A92CECA84C224562E3D021AE0882E /* Foundation.framework in Frameworks */,
+				1DE388C0B6E6FF94959DAB0D4567E86D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6105A7928003A538B26D9144B4BBA513 /* Frameworks */ = {
+		8D35ACACA30A8448D1BF59AD09919DBD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9446514662D907D8A207B43139D99640 /* Foundation.framework in Frameworks */,
+				D8B490C03F05D384A5FB4D5D24C97B18 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6328703AA4B8ABAF77AA9E4C790FCFBC /* Frameworks */ = {
+		A7E10F383DCD59079712A57B50DCF88E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F935A091525E9DAC0C58C18AEAFD58FC /* Foundation.framework in Frameworks */,
+				E3FBB5B462A14E8ACC9B340227DE4BE1 /* CFNetwork.framework in Frameworks */,
+				4B0EFAAA29109D9A705A27EFFA10FAE2 /* Foundation.framework in Frameworks */,
+				1C04A7CD5B70C4561F6D98C882731C65 /* Security.framework in Frameworks */,
+				E1A883FEBDEED9B85D90D6BE2080F218 /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE7E9058E7A56D56EE5D6369493ECA82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4C35B1399537D376B9BDBAF61797043 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,62 +296,92 @@
 		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E3F965ECCBF10B69E9313EF2EA1CC3F7 /* iOS */,
+				843A690C4A272ACCFA5202DC4499C74E /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4823D028D29499233BEA41C327ABA68D /* Pods-NFL Superbowl PicksTests */ = {
+		1B58746086CACEBDFFAED52141C7F21E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1F628D03CBAEFCC119CB6F2CAD50ED0C /* Pods-NFL Superbowl PicksTests-acknowledgements.markdown */,
-				B32F4ACA4839B7229ADD536B1BD83A32 /* Pods-NFL Superbowl PicksTests-acknowledgements.plist */,
-				FF9FEC0622F769F73A858967D4B7A7CB /* Pods-NFL Superbowl PicksTests-dummy.m */,
-				B60A84BDEE5827552EE4C5B765D9E5F8 /* Pods-NFL Superbowl PicksTests-resources.sh */,
-				38911E71F02C123D47AD26115D454F12 /* Pods-NFL Superbowl PicksTests.debug.xcconfig */,
-				DC84F01336648FD95B9933C3FF9CC0A6 /* Pods-NFL Superbowl PicksTests.release.xcconfig */,
+				4D93E91126A48A4F96626E869DE53DAB /* libFirebaseStatic.a */,
 			);
-			name = "Pods-NFL Superbowl PicksTests";
-			path = "Target Support Files/Pods-NFL Superbowl PicksTests";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6FAC8960F165E2326017179C44CB77E6 /* Pods-NFL Superbowl PicksUITests */ = {
+		282CE2AF15B47865DAB7A62F8EC92033 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
-				12CC474D5B336EBDF2801FDF67B1CADD /* Pods-NFL Superbowl PicksUITests-acknowledgements.markdown */,
-				CA7630D541C3A650C13E4253D52C1A18 /* Pods-NFL Superbowl PicksUITests-acknowledgements.plist */,
-				3F0264E2C287361F7D4AD4DCBD43A22E /* Pods-NFL Superbowl PicksUITests-dummy.m */,
-				357E490002879938F9ACE2E1812168FA /* Pods-NFL Superbowl PicksUITests-resources.sh */,
-				A85BB14B2131AA5E9FAF03770282B90D /* Pods-NFL Superbowl PicksUITests.debug.xcconfig */,
-				FCB66374E1FB4AB8B3B4E7CBF812B675 /* Pods-NFL Superbowl PicksUITests.release.xcconfig */,
+				B7A644D9C72C210EFFE3BA8902328092 /* Empty.m */,
+				BA89D8C363C1FB0FE9A437BDA27B2C3E /* FAuthData.h */,
+				C4B292DD69DF90453F22BAB04C62584E /* FAuthType.h */,
+				DE39BD6C80840EE28ABEF71A6F7CA97F /* FConfig.h */,
+				27E1CFB4FBBBEF14D2A6CDB15BBB85ED /* FDataSnapshot.h */,
+				959EFB6181764CB117790DF2E7C9171B /* FEventType.h */,
+				E96EB1EC8FDDA01D62C5D4FB4F6559A1 /* Firebase.h */,
+				459F69CC64E3EE92C30EA219336D4C80 /* FirebaseApp.h */,
+				8A95A86FF3F9A33CE1A661D4C889EF43 /* FirebaseServerValue.h */,
+				714227E537074BABC1433BE3CBFC5BF9 /* FMutableData.h */,
+				C9471BFD49C72FA0638B37573B7178FB /* FQuery.h */,
+				10170F5CA408C6BD94894270FE1EE738 /* FTransactionResult.h */,
+				1B58746086CACEBDFFAED52141C7F21E /* Frameworks */,
+				D876A204D266FC2ED2A5221BCE6532A8 /* Support Files */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		2ABDF3226A88C3CCA40781A09A0E063C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				282CE2AF15B47865DAB7A62F8EC92033 /* Firebase */,
+				C70F239CEB35A575F7B5EF2874AD4F95 /* Spring */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3982626636602F44562BA0453CC737BC /* Pods-NFL Superbowl PicksUITests */ = {
+			isa = PBXGroup;
+			children = (
+				03667C27F4661713E810BDCBF7573620 /* Info.plist */,
+				6D5BA362C3F233093271ED5B9E17AA7A /* Pods-NFL Superbowl PicksUITests.modulemap */,
+				7485E35B0608086A4AC0AD9D5FFF6B8E /* Pods-NFL Superbowl PicksUITests-acknowledgements.markdown */,
+				10990C56B4772F9AA29ACA8E7B23D5EB /* Pods-NFL Superbowl PicksUITests-acknowledgements.plist */,
+				F89B8ADAF816E9B1D7C89EFF72481FF5 /* Pods-NFL Superbowl PicksUITests-dummy.m */,
+				B5AB62855159B4E49E0A30A324BE7C39 /* Pods-NFL Superbowl PicksUITests-frameworks.sh */,
+				FEC500F2FDDBDD0DF3BD2854686DC208 /* Pods-NFL Superbowl PicksUITests-resources.sh */,
+				EBE7DFD8B8B7CD1641E617AC42C31961 /* Pods-NFL Superbowl PicksUITests-umbrella.h */,
+				7BDD077CA7B5450B4A90BB2130C33E80 /* Pods-NFL Superbowl PicksUITests.debug.xcconfig */,
+				DDE5CC4AB3EA4EA810389447AD213568 /* Pods-NFL Superbowl PicksUITests.release.xcconfig */,
 			);
 			name = "Pods-NFL Superbowl PicksUITests";
 			path = "Target Support Files/Pods-NFL Superbowl PicksUITests";
 			sourceTree = "<group>";
 		};
-		77BCDBA72CF40D099260180698A29A37 /* Pods */ = {
+		63D83C81464905E1AC94E02F7BBBC5D8 /* Pods-NFL Superbowl Picks */ = {
 			isa = PBXGroup;
 			children = (
-				DC3E2A8A33A272D8C0A76EAB40FE49BB /* Pods-acknowledgements.markdown */,
-				A12E8846AF437DB5AB4DF25CEE0C75C0 /* Pods-acknowledgements.plist */,
-				0C7EF28EF2B5388DE45E7F237ADB0421 /* Pods-dummy.m */,
-				56FDFDCDDF990B0AC3AAB00FF2CC3A91 /* Pods-resources.sh */,
-				DABECBC50BE8A5CB73F2D78D2C496BED /* Pods.debug.xcconfig */,
-				4CC7E701255F712223B02F3CF7CD9315 /* Pods.release.xcconfig */,
+				9E9BA9FCBEEDEBD0DB1A4CEAD5729C1F /* Info.plist */,
+				0C3AD37F518177F19731B9DE1C1BE6F2 /* Pods-NFL Superbowl Picks.modulemap */,
+				620994269D8164C3571B9DE8F7D9220F /* Pods-NFL Superbowl Picks-acknowledgements.markdown */,
+				57EE8BEE2F95FD5B1EF34862DBF73FE4 /* Pods-NFL Superbowl Picks-acknowledgements.plist */,
+				7EADEF7AC878DA2C7C810604DE504A3C /* Pods-NFL Superbowl Picks-dummy.m */,
+				C8CCD0C625BCB4D331ADDFA9B91C6677 /* Pods-NFL Superbowl Picks-frameworks.sh */,
+				6560C9CC9A89468F8BF9F5C1CC7E926F /* Pods-NFL Superbowl Picks-resources.sh */,
+				A554DF22E3E44FA2DC6CFD180C73F0F6 /* Pods-NFL Superbowl Picks-umbrella.h */,
+				B381CB537D1BCE77B773E5CC8839A45B /* Pods-NFL Superbowl Picks.debug.xcconfig */,
+				C1EB58B43A1C2728FBDD703B58A0953B /* Pods-NFL Superbowl Picks.release.xcconfig */,
 			);
-			name = Pods;
-			path = "Target Support Files/Pods";
+			name = "Pods-NFL Superbowl Picks";
+			path = "Target Support Files/Pods-NFL Superbowl Picks";
 			sourceTree = "<group>";
 		};
-		783FD52E0F2C3F127678A5E4A310291C /* Targets Support Files */ = {
+		6BC7F0518D9DE57259DF5BF00DC08450 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				77BCDBA72CF40D099260180698A29A37 /* Pods */,
-				986AE54D4A74E9B46B7DFA6571687D22 /* Pods-NFL Superbowl Picks */,
-				4823D028D29499233BEA41C327ABA68D /* Pods-NFL Superbowl PicksTests */,
-				6FAC8960F165E2326017179C44CB77E6 /* Pods-NFL Superbowl PicksUITests */,
+				7BEAD6C183165951794614B622E18AC3 /* Images.xcassets */,
+				F7151EEB1E033283552C9A7BB4F87B28 /* LoadingView.xib */,
 			);
-			name = "Targets Support Files";
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -232,180 +389,294 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
-				F56CE447D2542B744EB0DA47C71E6EDD /* Pods */,
-				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
-				783FD52E0F2C3F127678A5E4A310291C /* Targets Support Files */,
+				2ABDF3226A88C3CCA40781A09A0E063C /* Pods */,
+				8A0A4D3AA9ED1E0427527BFD533B2203 /* Products */,
+				96E5BE987B2C4421787A0941E4F3343F /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		9023F874588F0D535B02F2544AA37B64 /* Firebase */ = {
+		843A690C4A272ACCFA5202DC4499C74E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				81038BB6A0EA0F8EFEF11707E0830BA4 /* Empty.m */,
-				60355A4BE6432443FC014BDA3F80C31D /* FAuthData.h */,
-				FD0E0E9D835A0D93046FAA12B578ECD1 /* FAuthType.h */,
-				3278D4E28D8585C124F11544F103D876 /* FConfig.h */,
-				4AF43149B33DE0A06478C28E6EB1961B /* FDataSnapshot.h */,
-				A1C3131D080216E0720FA43AAE32F71A /* FEventType.h */,
-				A94CE564D85973CC614F08110CB3571D /* FMutableData.h */,
-				13788FA67964036A4D054A972AEB9170 /* FQuery.h */,
-				707535220CA3544B5FF95802994B30F4 /* FTransactionResult.h */,
-				595110EF0BD5E04C126B02521CB6BF79 /* Firebase.h */,
-				C87137C04CBDEBE06D62BF76AB00E5CD /* FirebaseApp.h */,
-				888D546C2D53ACD09F4330C3AE873A32 /* FirebaseServerValue.h */,
-				C802C45F8DAA2CA2669CEAE3E7B9A56A /* Frameworks */,
-				A42FD4F744587A19C2207F46FB2C1FC1 /* Support Files */,
+				60F85758B54CB0D843A3E97DFFB2F21F /* CFNetwork.framework */,
+				77C49D928448B31FB9A7D5AE5C8D6C4E /* Foundation.framework */,
+				C6204446BD9150A17B12E81B4A6F9CA8 /* Security.framework */,
+				6166BE40C18BC6BF0EED92CAB212EC33 /* SystemConfiguration.framework */,
 			);
-			path = Firebase;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		986AE54D4A74E9B46B7DFA6571687D22 /* Pods-NFL Superbowl Picks */ = {
+		8A0A4D3AA9ED1E0427527BFD533B2203 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				09BB83590B583A2AD62A3E220685DF77 /* Pods-NFL Superbowl Picks-acknowledgements.markdown */,
-				69EB20100EFFE154038F52A1B3D0997A /* Pods-NFL Superbowl Picks-acknowledgements.plist */,
-				934CF190F7FAD19B0006A65C580BC2B0 /* Pods-NFL Superbowl Picks-dummy.m */,
-				C72D2A113D8AD22C600C354DB583B77E /* Pods-NFL Superbowl Picks-resources.sh */,
-				ED06F613358BD29100EDCE93C07C8461 /* Pods-NFL Superbowl Picks.debug.xcconfig */,
-				97749977DB3D5FABAD13B9E5CA80AB3B /* Pods-NFL Superbowl Picks.release.xcconfig */,
+				1BD42B792F6AD34EC7BE57B7AEF32677 /* Firebase.framework */,
+				E9B25BF9A8276EFB92D32E048B4AF414 /* Pods.framework */,
+				C6DFD190D02D322B9AD9FEB75D88E446 /* Pods_NFL_Superbowl_Picks.framework */,
+				6C653B15B94EF81569BB02ECD63F3609 /* Pods_NFL_Superbowl_PicksTests.framework */,
+				871EDBBB2B9DF574F0DD3D7A19481578 /* Pods_NFL_Superbowl_PicksUITests.framework */,
+				65FFE77E42E1B80094A8364D0477336E /* Spring.framework */,
 			);
-			name = "Pods-NFL Superbowl Picks";
-			path = "Target Support Files/Pods-NFL Superbowl Picks";
+			name = Products;
 			sourceTree = "<group>";
 		};
-		A42FD4F744587A19C2207F46FB2C1FC1 /* Support Files */ = {
+		96E5BE987B2C4421787A0941E4F3343F /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				0E0D49E76A3FCCDBA97E94E8E4BF2A84 /* Firebase.xcconfig */,
-				738BB9F92AE1E67065A31855CE41C63C /* Firebase-Private.xcconfig */,
-				2514195978F9855388A11FEC3EC135FF /* Firebase-dummy.m */,
-				4849C8DB5B92CD9594FE757AA660B7E8 /* Firebase-prefix.pch */,
+				B3370927AE814BE70778231A3F734E9E /* Pods */,
+				63D83C81464905E1AC94E02F7BBBC5D8 /* Pods-NFL Superbowl Picks */,
+				995C0B4722530F98977698B254F7D2EF /* Pods-NFL Superbowl PicksTests */,
+				3982626636602F44562BA0453CC737BC /* Pods-NFL Superbowl PicksUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		995C0B4722530F98977698B254F7D2EF /* Pods-NFL Superbowl PicksTests */ = {
+			isa = PBXGroup;
+			children = (
+				B3587FE92C899032B7517A6EA1BB1FF6 /* Info.plist */,
+				14DBE42ED5A84730A03D73FA3FC9B9C4 /* Pods-NFL Superbowl PicksTests.modulemap */,
+				2AD5DFCA7C93B209251EF507B54709E8 /* Pods-NFL Superbowl PicksTests-acknowledgements.markdown */,
+				1A395C7E25342D7DB20BE93E93C5795E /* Pods-NFL Superbowl PicksTests-acknowledgements.plist */,
+				A743BA454E21D57A0C7B042A1A1031B1 /* Pods-NFL Superbowl PicksTests-dummy.m */,
+				0FADC19A5D378BB3EDD89818D2D40B7B /* Pods-NFL Superbowl PicksTests-frameworks.sh */,
+				139F91C43978E9E1A0D605B59866EA91 /* Pods-NFL Superbowl PicksTests-resources.sh */,
+				2DDFF391FB1E836AA6F97D177E9754B5 /* Pods-NFL Superbowl PicksTests-umbrella.h */,
+				02A4E6FE4CEE6643582EDC59670D82E0 /* Pods-NFL Superbowl PicksTests.debug.xcconfig */,
+				793234822EDFA4DFB00BEC4B634A1C1D /* Pods-NFL Superbowl PicksTests.release.xcconfig */,
+			);
+			name = "Pods-NFL Superbowl PicksTests";
+			path = "Target Support Files/Pods-NFL Superbowl PicksTests";
+			sourceTree = "<group>";
+		};
+		B3370927AE814BE70778231A3F734E9E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6633CC5064444EF4D0B91E35FDDD3AB3 /* Info.plist */,
+				EE64FE3993EF0DFC057494DAF09EEB19 /* Pods.modulemap */,
+				064BFAA20C76E3A1A7130ADF4ABA22AE /* Pods-acknowledgements.markdown */,
+				EDB14829D49423EF955BA742BAC76137 /* Pods-acknowledgements.plist */,
+				129AB2651C3807E30A1BB948BEFB752F /* Pods-dummy.m */,
+				622A42CC43D87158D46C1524C82581F7 /* Pods-frameworks.sh */,
+				1C6932851AFFABFE82387A224D8982C3 /* Pods-resources.sh */,
+				0FD25BA67611AFCD562886BB03E80BEF /* Pods-umbrella.h */,
+				DE1C68B1891019A79F67907C0A690D5F /* Pods.debug.xcconfig */,
+				BC82F2ACB6589B5E78F8185CDECA2D1A /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		C70F239CEB35A575F7B5EF2874AD4F95 /* Spring */ = {
+			isa = PBXGroup;
+			children = (
+				15080C757DF1F242196E20E65411612E /* AsyncButton.swift */,
+				C7FB8C9146E45131557D5E3179630F63 /* AsyncImageView.swift */,
+				E37DA660851B7B6A853D328B914083C4 /* AutoTextView.swift */,
+				C7BAA2405E0FD36D767A46AA91E80881 /* BlurView.swift */,
+				8B878B6A9B3DA6C5C3E05A4AD44F95F6 /* DesignableButton.swift */,
+				97AD8F637001855BAD75C038C349905E /* DesignableImageView.swift */,
+				71F2EBED8A490A52092FE2B95B7FAB49 /* DesignableLabel.swift */,
+				6F57D354C4436DD1A14C270F7DE41917 /* DesignableTabBarController.swift */,
+				784B92F3E5C42523C935586A2989DFAF /* DesignableTextField.swift */,
+				5ACFAB2DB37958EC2D535EF9D9AC9F8C /* DesignableTextView.swift */,
+				D6208D5FEE481430216557A26478E8B1 /* DesignableView.swift */,
+				C8A7431A4EE8C6276F2B61EC179A329B /* ImageLoader.swift */,
+				6C9043B1EE18325F098965C12EFAAA40 /* KeyboardLayoutConstraint.swift */,
+				3ADD5EB5527903D5901398AB29B188C9 /* LoadingView.swift */,
+				F481D37214E3A8A2AB3C912D078ADFB7 /* Misc.swift */,
+				6D85020EAF3129FDB50346B267E91B10 /* SoundPlayer.swift */,
+				CACF77F65DE3885A2C0591DA42BB07BC /* Spring.swift */,
+				BD2183EB18C4B31FF6424E9EC7A8CA30 /* SpringAnimation.swift */,
+				104693EEFEB5270F2DCAB627AC27B09C /* SpringButton.swift */,
+				8A6EAF93BA45D796C1D5E5B66DC82D17 /* SpringImageView.swift */,
+				6DAB42ACF14BAFFB5505304E09BFDB88 /* SpringLabel.swift */,
+				58DB23CF3FB2253494A05CDB88AEC606 /* SpringTextField.swift */,
+				0C9CA3798BB7AC4213ED2F7A561734A1 /* SpringTextView.swift */,
+				6EFC8DA26133DAE6AB5D20D648750BAC /* SpringView.swift */,
+				E55D9C84553A74DAA27DB0A9B6DABA50 /* TransitionManager.swift */,
+				B638E5E644B833B9365B08DDAD181814 /* TransitionZoom.swift */,
+				60262EE7EC7E71391DC9A59B6E23A841 /* UnwindSegue.swift */,
+				6BC7F0518D9DE57259DF5BF00DC08450 /* Resources */,
+				E9E13F653D76548DE426062033FE01B7 /* Support Files */,
+			);
+			path = Spring;
+			sourceTree = "<group>";
+		};
+		D876A204D266FC2ED2A5221BCE6532A8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				82747DA74619505E513BE58A9881EF76 /* Firebase.modulemap */,
+				C2A1C85C4237049329D9668348F14EC4 /* Firebase.xcconfig */,
+				7E4EB99DF0E0E16352DF9A373A71ABF3 /* Firebase-dummy.m */,
+				B09675901E4C8A68AA13951EE18A5D95 /* Firebase-prefix.pch */,
+				8024AEB82741523AC14217773FC9B135 /* Firebase-umbrella.h */,
+				C16452F9B1EB358A096668D12631946F /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Firebase";
 			sourceTree = "<group>";
 		};
-		C802C45F8DAA2CA2669CEAE3E7B9A56A /* Frameworks */ = {
+		E9E13F653D76548DE426062033FE01B7 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				5AF0156864474DB13376668C7D536DFC /* libFirebaseStatic.a */,
+				D9042E7F521F8A14067BD5735E7EAF91 /* Info.plist */,
+				0EAF6ED230CE995E403322F4141D03A7 /* Spring.modulemap */,
+				5D876F9E15AC7CDBD8A4B3E990E01D84 /* Spring.xcconfig */,
+				7D1B59B3D7F1A4E9535FBF4F53BEE7B1 /* Spring-dummy.m */,
+				A99A0B5FA05D80AAFF48474B841A7327 /* Spring-prefix.pch */,
+				C5E449651BCA143F4E6360642A5E1E5A /* Spring-umbrella.h */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D2FB3428815DFCC702A8A68A5806448B /* libFirebase.a */,
-				0E62378D32E5874D0CB070A5FB91D778 /* libPods.a */,
-				325A285AB15C52753A175D2C20029277 /* libPods-NFL Superbowl Picks.a */,
-				59C83C8442B6E848319CCF7C7C516386 /* libPods-NFL Superbowl PicksTests.a */,
-				1F436B993AD3E5253F4965CC6FAC9A23 /* libPods-NFL Superbowl PicksUITests.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		E3F965ECCBF10B69E9313EF2EA1CC3F7 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				71D167283A2C1622FF31A96F1A5FC7D1 /* CFNetwork.framework */,
-				0CA95E4A569B6D0C684FC5E6ACE2053A /* Foundation.framework */,
-				7E51A9CA9098F28D433B5E70271DB335 /* Security.framework */,
-				FF5EB1E0C12BB680C1813B49400A0792 /* SystemConfiguration.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		F56CE447D2542B744EB0DA47C71E6EDD /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				9023F874588F0D535B02F2544AA37B64 /* Firebase */,
-			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/Spring";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		D02290CCD246C1A0EB20B340E14F0DF7 /* Headers */ = {
+		2FDCAAB615C287D16BF7F1F2AA978246 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				935E591C6FE646D4A492EE3C518DE7AE /* FAuthData.h in Headers */,
-				7420DB05D01127CD6E3693EE64DE83FB /* FAuthType.h in Headers */,
-				EDEEDDF13FE8FC3369DC5FB749E1D86B /* FConfig.h in Headers */,
-				BE51E9E25A94D4F2C66C6CC8F7BD58E5 /* FDataSnapshot.h in Headers */,
-				3F21D87E82A7BAB4D733F6FC860FDEE1 /* FEventType.h in Headers */,
-				1C173F08616DA7A93F0588DD0B69E8AA /* FMutableData.h in Headers */,
-				4EF3906AA1C365F55729317F042B7823 /* FQuery.h in Headers */,
-				7C21D2B58AD18482882E3395AE31463A /* FTransactionResult.h in Headers */,
-				3C8B4CB0457510FFE608203EE1CA3309 /* Firebase.h in Headers */,
-				7F938EE3F9926D730DFBE2C4ED6420B0 /* FirebaseApp.h in Headers */,
-				35968108C4CBA7DFF2F3A58B4A630699 /* FirebaseServerValue.h in Headers */,
+				C23FCF31260D47CEC1494A292DAA1A1E /* FAuthData.h in Headers */,
+				1D925BB011B04DDED982C7946571A67A /* FAuthType.h in Headers */,
+				E60FA42EEC3ECC48701DB55986D25D69 /* FConfig.h in Headers */,
+				E8B534D15D2B25919ACD898217266891 /* FDataSnapshot.h in Headers */,
+				239B10F388840841389B7F09648735B1 /* FEventType.h in Headers */,
+				60F9139BDD38565B78214C4FC5F5729D /* Firebase-umbrella.h in Headers */,
+				1C3EF85CD30E6FF2E51471BD5B3CEB29 /* Firebase.h in Headers */,
+				2F1496011DBBB75777645194AAAFE92D /* FirebaseApp.h in Headers */,
+				6646DA26298257396C7FFE141BB84CC3 /* FirebaseServerValue.h in Headers */,
+				DB05A9DD8244D10C28B6915C514AE15F /* FMutableData.h in Headers */,
+				4D75CF0089B20355B17A851513C4A002 /* FQuery.h in Headers */,
+				191DE2EB9A35585AE0A88BA9F833A1F4 /* FTransactionResult.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		572584DBDB54D75A535F99072D28D9BD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D9696AE14C9C0024B409D2BB17E2B0E /* Pods-NFL Superbowl PicksUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9358D0D4A916493E07AD028286863E0D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26035CF8D6EE9DAEF99E4967DE70B4E2 /* Pods-NFL Superbowl Picks-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E58FB9F518BD1B666FD7DCC26F56977 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FF6FA1265BFFBB45D500E003CFCAC1F /* Pods-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF86C414AF718FDB3DA81F0397F61BFE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E363728BB49F8B88344A95B8FF3958B /* Pods-NFL Superbowl PicksTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE86FF92ED97D8A20257CA6FEBF0904F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD8EB567E382675881ABE44C83527344 /* Spring-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0D5BA03BF0F707DECDA62FC937D85509 /* Pods-NFL Superbowl PicksTests */ = {
+		16AACEB444E8F94774A600DA402A4D58 /* Pods */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 977A4EE802D2ADCED7DBC14B25EBACC7 /* Build configuration list for PBXNativeTarget "Pods-NFL Superbowl PicksTests" */;
+			buildConfigurationList = DB5AC5E737765F07152620C20149211E /* Build configuration list for PBXNativeTarget "Pods" */;
 			buildPhases = (
-				B4CAE169037207794FF2ECD5EFB8194E /* Sources */,
-				58B1E2BA40AA8FC7E6A045160C0716EE /* Frameworks */,
+				9BBAE9A956738DECE12C22C6A9102FE3 /* Sources */,
+				7AA63AF55F44BCAE793BA75633F5DB6F /* Frameworks */,
+				9E58FB9F518BD1B666FD7DCC26F56977 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D5703A2781CFC3909103C06E9B7271B3 /* PBXTargetDependency */,
+				28FBBDA9F6C8FF26090DDA29CE99AAC5 /* PBXTargetDependency */,
+				66A3432D11044EA3B837B2681F91BA70 /* PBXTargetDependency */,
 			);
-			name = "Pods-NFL Superbowl PicksTests";
-			productName = "Pods-NFL Superbowl PicksTests";
-			productReference = 59C83C8442B6E848319CCF7C7C516386 /* libPods-NFL Superbowl PicksTests.a */;
-			productType = "com.apple.product-type.library.static";
+			name = Pods;
+			productName = Pods;
+			productReference = E9B25BF9A8276EFB92D32E048B4AF414 /* Pods.framework */;
+			productType = "com.apple.product-type.framework";
 		};
-		76F877AF2E794D68CFEB28A50117BCFB /* Pods-NFL Superbowl PicksUITests */ = {
+		481260C71345706CDF0A5AE5872C016E /* Pods-NFL Superbowl Picks */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3DC31C8D8CE66F09B214850B81BD0501 /* Build configuration list for PBXNativeTarget "Pods-NFL Superbowl PicksUITests" */;
+			buildConfigurationList = 59338909D7509734ECB4352FB4B77874 /* Build configuration list for PBXNativeTarget "Pods-NFL Superbowl Picks" */;
 			buildPhases = (
-				79FD93D2FABEA90DC20A2312D61963F9 /* Sources */,
-				3F94FC062FBE626ABB1C13AAE315E2BB /* Frameworks */,
+				31549DEF5FF82AE2D8862746B9032185 /* Sources */,
+				EE7E9058E7A56D56EE5D6369493ECA82 /* Frameworks */,
+				9358D0D4A916493E07AD028286863E0D /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				66C88117853EAE6E7884BD4716320182 /* PBXTargetDependency */,
-			);
-			name = "Pods-NFL Superbowl PicksUITests";
-			productName = "Pods-NFL Superbowl PicksUITests";
-			productReference = 1F436B993AD3E5253F4965CC6FAC9A23 /* libPods-NFL Superbowl PicksUITests.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		7D83F741D29396B86708D6795B7A1C83 /* Pods-NFL Superbowl Picks */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6121A903D5503E40084FA428CB074D40 /* Build configuration list for PBXNativeTarget "Pods-NFL Superbowl Picks" */;
-			buildPhases = (
-				2A13570DB683CA661882008012D425DC /* Sources */,
-				6105A7928003A538B26D9144B4BBA513 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4D3870415CCCA43788B7601715B05146 /* PBXTargetDependency */,
+				A18BDC91C33D2673CFCB8D1912E4FF57 /* PBXTargetDependency */,
+				F3BBD3A9751F6C3D3A1AC90A3F0F5C42 /* PBXTargetDependency */,
 			);
 			name = "Pods-NFL Superbowl Picks";
 			productName = "Pods-NFL Superbowl Picks";
-			productReference = 325A285AB15C52753A175D2C20029277 /* libPods-NFL Superbowl Picks.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = C6DFD190D02D322B9AD9FEB75D88E446 /* Pods_NFL_Superbowl_Picks.framework */;
+			productType = "com.apple.product-type.framework";
 		};
-		A7096BEBCC964329E5EA8A79B1928359 /* Firebase */ = {
+		80FC208F7AE368AFFF5603CAE69840DE /* Pods-NFL Superbowl PicksUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2939F738B8D2E556FAB18039819E6748 /* Build configuration list for PBXNativeTarget "Firebase" */;
+			buildConfigurationList = A8200FA8529B6CBA39EEDF815DD06773 /* Build configuration list for PBXNativeTarget "Pods-NFL Superbowl PicksUITests" */;
 			buildPhases = (
-				42FABEA36ACA4FE1E4DA253F235ABEB5 /* Sources */,
-				3D3C6D6565A96110CB29D5BF8BEDD1F7 /* Frameworks */,
-				D02290CCD246C1A0EB20B340E14F0DF7 /* Headers */,
+				E5394F68C1258B041A30AFDC90DEF30A /* Sources */,
+				8D35ACACA30A8448D1BF59AD09919DBD /* Frameworks */,
+				572584DBDB54D75A535F99072D28D9BD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F82D70324294628BAB9FDA1F03A8092 /* PBXTargetDependency */,
+				0E34FFB548EE95276C3D733AD90F694D /* PBXTargetDependency */,
+			);
+			name = "Pods-NFL Superbowl PicksUITests";
+			productName = "Pods-NFL Superbowl PicksUITests";
+			productReference = 871EDBBB2B9DF574F0DD3D7A19481578 /* Pods_NFL_Superbowl_PicksUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9CD7BC614C000777DA28A61DB41F1075 /* Spring */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0744D38D514F0C42D3D0B4F16CD20892 /* Build configuration list for PBXNativeTarget "Spring" */;
+			buildPhases = (
+				86A1273FC764595C81A7659D0CE2885F /* Sources */,
+				5E15C107D5320A21F27EAB8D8AFA99B5 /* Frameworks */,
+				2D48C58052F4ED19002D91BC04381FCE /* Resources */,
+				DE86FF92ED97D8A20257CA6FEBF0904F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Spring;
+			productName = Spring;
+			productReference = 65FFE77E42E1B80094A8364D0477336E /* Spring.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B7AC9326D819482593FE118E915409D7 /* Firebase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49B346C14D532324DCD14D0FA1347BC6 /* Build configuration list for PBXNativeTarget "Firebase" */;
+			buildPhases = (
+				46E052D320E3B778B76D8393E0BAFE0F /* Sources */,
+				A7E10F383DCD59079712A57B50DCF88E /* Frameworks */,
+				2FDCAAB615C287D16BF7F1F2AA978246 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -413,25 +684,27 @@
 			);
 			name = Firebase;
 			productName = Firebase;
-			productReference = D2FB3428815DFCC702A8A68A5806448B /* libFirebase.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = 1BD42B792F6AD34EC7BE57B7AEF32677 /* Firebase.framework */;
+			productType = "com.apple.product-type.framework";
 		};
-		A94976411318FE93AF41B0D95BB8F5BF /* Pods */ = {
+		FDFCBC372CF693BC249CE9A5DCB4C46D /* Pods-NFL Superbowl PicksTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C7BE2A9725C5A7BB88AD67D3963A11BC /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildConfigurationList = DB7955707E542AEC128E94489EBA1016 /* Build configuration list for PBXNativeTarget "Pods-NFL Superbowl PicksTests" */;
 			buildPhases = (
-				B642F58F617D68EB584305B53E506F22 /* Sources */,
-				6328703AA4B8ABAF77AA9E4C790FCFBC /* Frameworks */,
+				F2827981EC96FD0EF6BFABDE974E6830 /* Sources */,
+				132859C0231EE53B65706FA8141642E0 /* Frameworks */,
+				AF86C414AF718FDB3DA81F0397F61BFE /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				108649A99CF48AB874779AD9F41BA4EB /* PBXTargetDependency */,
+				39934F86D59CF163DB09A6FFCC0658F8 /* PBXTargetDependency */,
+				4EFFD844662CFCBAEE3BB758C83826E4 /* PBXTargetDependency */,
 			);
-			name = Pods;
-			productName = Pods;
-			productReference = 0E62378D32E5874D0CB070A5FB91D778 /* libPods.a */;
-			productType = "com.apple.product-type.library.static";
+			name = "Pods-NFL Superbowl PicksTests";
+			productName = "Pods-NFL Superbowl PicksTests";
+			productReference = 6C653B15B94EF81569BB02ECD63F3609 /* Pods_NFL_Superbowl_PicksTests.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -450,170 +723,340 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = CCA510CFBEA2D207524CDA0D73C3B561 /* Products */;
+			productRefGroup = 8A0A4D3AA9ED1E0427527BFD533B2203 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A7096BEBCC964329E5EA8A79B1928359 /* Firebase */,
-				A94976411318FE93AF41B0D95BB8F5BF /* Pods */,
-				7D83F741D29396B86708D6795B7A1C83 /* Pods-NFL Superbowl Picks */,
-				0D5BA03BF0F707DECDA62FC937D85509 /* Pods-NFL Superbowl PicksTests */,
-				76F877AF2E794D68CFEB28A50117BCFB /* Pods-NFL Superbowl PicksUITests */,
+				B7AC9326D819482593FE118E915409D7 /* Firebase */,
+				16AACEB444E8F94774A600DA402A4D58 /* Pods */,
+				481260C71345706CDF0A5AE5872C016E /* Pods-NFL Superbowl Picks */,
+				FDFCBC372CF693BC249CE9A5DCB4C46D /* Pods-NFL Superbowl PicksTests */,
+				80FC208F7AE368AFFF5603CAE69840DE /* Pods-NFL Superbowl PicksUITests */,
+				9CD7BC614C000777DA28A61DB41F1075 /* Spring */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		2D48C58052F4ED19002D91BC04381FCE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5050725AFF9B336852E97E3254E05CA3 /* Images.xcassets in Resources */,
+				93DEA5A19DB66FA1B0E7583C91B64B65 /* LoadingView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		2A13570DB683CA661882008012D425DC /* Sources */ = {
+		31549DEF5FF82AE2D8862746B9032185 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79D0A2C3F0FEC711FD4F223D3F53396B /* Pods-NFL Superbowl Picks-dummy.m in Sources */,
+				EE0B3FF03EEDAEA24409E01A364066F5 /* Pods-NFL Superbowl Picks-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		42FABEA36ACA4FE1E4DA253F235ABEB5 /* Sources */ = {
+		46E052D320E3B778B76D8393E0BAFE0F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86AB2C596357C582BA9ED8BC0BA989EE /* Empty.m in Sources */,
-				CB43A37F73662527D4AF8D4D0299A604 /* Firebase-dummy.m in Sources */,
+				012A7E018F3D34F159894EBD7EACACF9 /* Empty.m in Sources */,
+				1D9D7FF5237C8CC91EF58DC45AC274FB /* Firebase-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		79FD93D2FABEA90DC20A2312D61963F9 /* Sources */ = {
+		86A1273FC764595C81A7659D0CE2885F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08EB4738128282454077E18009CED677 /* Pods-NFL Superbowl PicksUITests-dummy.m in Sources */,
+				3612347A5FA98328D90F5E465510950D /* AsyncButton.swift in Sources */,
+				33B1938E901543C80DFF7039D8414966 /* AsyncImageView.swift in Sources */,
+				B4FA9F6E368CFD2CF208A3E551F95A8E /* AutoTextView.swift in Sources */,
+				0617F40AF89A25F9302943790B197615 /* BlurView.swift in Sources */,
+				10F25BE9C660A4F7238781ABDA6F13A6 /* DesignableButton.swift in Sources */,
+				5B6F0DE51051D39F875495244AF56626 /* DesignableImageView.swift in Sources */,
+				E0DDD75306ECBF726E6E8814FF4FC422 /* DesignableLabel.swift in Sources */,
+				005DE2A5B2286A9A8B2E941E55E11051 /* DesignableTabBarController.swift in Sources */,
+				45A35E531C4E6B034100246DD7B7CCEC /* DesignableTextField.swift in Sources */,
+				B9EFBA5F35A82110220238CAB79BEAB0 /* DesignableTextView.swift in Sources */,
+				2B4BA12F866405B5A2C35F8CEAF1571C /* DesignableView.swift in Sources */,
+				096F71FA5B24453A75E19899807355FB /* ImageLoader.swift in Sources */,
+				093241396EC61991D9FD87C7C78A072E /* KeyboardLayoutConstraint.swift in Sources */,
+				25D61801747E1EFAB680A840FEC582C3 /* LoadingView.swift in Sources */,
+				3E54CE4BA8E5371EBE9D0A742C1ABFE2 /* Misc.swift in Sources */,
+				EF1ABDD6323F6253C40E68EFCB2B216F /* SoundPlayer.swift in Sources */,
+				DE87716C3ADB1A579B0A862DC5286E58 /* Spring-dummy.m in Sources */,
+				A283A2D0A795CDA6C7CBCC3384FE9A72 /* Spring.swift in Sources */,
+				3B5710901E7A160129ED88A8C5779AF5 /* SpringAnimation.swift in Sources */,
+				7EDCE68202DC12E3DF778A8725B102E4 /* SpringButton.swift in Sources */,
+				C0EF2C8B686F5E1DBF0C3D711128137F /* SpringImageView.swift in Sources */,
+				E6F94AED4AE65D8DDCC3D6435C48F48F /* SpringLabel.swift in Sources */,
+				99F902068EABE28D54807C479D6B8BD6 /* SpringTextField.swift in Sources */,
+				566F2DF75A5853C9369337D797BD39E7 /* SpringTextView.swift in Sources */,
+				32735434CEC275323E987F7E5145BFDF /* SpringView.swift in Sources */,
+				982E8F05570CF43837AB76130419C48F /* TransitionManager.swift in Sources */,
+				2135E25F80703E7CC69EA15FE4B5BFAC /* TransitionZoom.swift in Sources */,
+				301EEE6CE4D2688DBAB2D732152E97C0 /* UnwindSegue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B4CAE169037207794FF2ECD5EFB8194E /* Sources */ = {
+		9BBAE9A956738DECE12C22C6A9102FE3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28940154FE049E593E791E98D0DBD467 /* Pods-NFL Superbowl PicksTests-dummy.m in Sources */,
+				DA348692422580D26FE1D67310A7B898 /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B642F58F617D68EB584305B53E506F22 /* Sources */ = {
+		E5394F68C1258B041A30AFDC90DEF30A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58337F71EBC733C6543A9907A135A41F /* Pods-dummy.m in Sources */,
+				4507ECF1EEED3FC1B52F276D97980DEA /* Pods-NFL Superbowl PicksUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2827981EC96FD0EF6BFABDE974E6830 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AF018A55BB20ED14949E7C975DD60E1 /* Pods-NFL Superbowl PicksTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		108649A99CF48AB874779AD9F41BA4EB /* PBXTargetDependency */ = {
+		0E34FFB548EE95276C3D733AD90F694D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Firebase;
-			target = A7096BEBCC964329E5EA8A79B1928359 /* Firebase */;
-			targetProxy = 2CA380215423B9139DA72C4B68CAB96E /* PBXContainerItemProxy */;
+			name = Spring;
+			target = 9CD7BC614C000777DA28A61DB41F1075 /* Spring */;
+			targetProxy = CA126D69608D133F88C2A0C96F96749A /* PBXContainerItemProxy */;
 		};
-		4D3870415CCCA43788B7601715B05146 /* PBXTargetDependency */ = {
+		28FBBDA9F6C8FF26090DDA29CE99AAC5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Firebase;
-			target = A7096BEBCC964329E5EA8A79B1928359 /* Firebase */;
-			targetProxy = 67DCE83BBDDDBB5722EBF2C43714C115 /* PBXContainerItemProxy */;
+			target = B7AC9326D819482593FE118E915409D7 /* Firebase */;
+			targetProxy = BC67E4DCB4FA391E865AEE2C261296C8 /* PBXContainerItemProxy */;
 		};
-		66C88117853EAE6E7884BD4716320182 /* PBXTargetDependency */ = {
+		2F82D70324294628BAB9FDA1F03A8092 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Firebase;
-			target = A7096BEBCC964329E5EA8A79B1928359 /* Firebase */;
-			targetProxy = 6CF69B4137E5DA81D328C4F6C8ECAD87 /* PBXContainerItemProxy */;
+			target = B7AC9326D819482593FE118E915409D7 /* Firebase */;
+			targetProxy = EDEB92DB38D572C7AC249CDDA89BF955 /* PBXContainerItemProxy */;
 		};
-		D5703A2781CFC3909103C06E9B7271B3 /* PBXTargetDependency */ = {
+		39934F86D59CF163DB09A6FFCC0658F8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Firebase;
-			target = A7096BEBCC964329E5EA8A79B1928359 /* Firebase */;
-			targetProxy = 028F7585085D51E40ABF7D6D5E5EE179 /* PBXContainerItemProxy */;
+			target = B7AC9326D819482593FE118E915409D7 /* Firebase */;
+			targetProxy = 6F4C8C728E5A9D319728FC6741231006 /* PBXContainerItemProxy */;
+		};
+		4EFFD844662CFCBAEE3BB758C83826E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Spring;
+			target = 9CD7BC614C000777DA28A61DB41F1075 /* Spring */;
+			targetProxy = A2D95052F18078F4DF693DFE79EFFD93 /* PBXContainerItemProxy */;
+		};
+		66A3432D11044EA3B837B2681F91BA70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Spring;
+			target = 9CD7BC614C000777DA28A61DB41F1075 /* Spring */;
+			targetProxy = B6CC521FF07B6AE1EE882BB09233EBC7 /* PBXContainerItemProxy */;
+		};
+		A18BDC91C33D2673CFCB8D1912E4FF57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Firebase;
+			target = B7AC9326D819482593FE118E915409D7 /* Firebase */;
+			targetProxy = 5B8559B1EE266973A2BC5FF3D0ABE509 /* PBXContainerItemProxy */;
+		};
+		F3BBD3A9751F6C3D3A1AC90A3F0F5C42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Spring;
+			target = 9CD7BC614C000777DA28A61DB41F1075 /* Spring */;
+			targetProxy = 3EF9E3F2277894E6658E29FA0C3B5095 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		090004CC7047BF163011C84BCD074691 /* Debug */ = {
+		1E6F3A29AA923EE27195E72FDA8E0E74 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A85BB14B2131AA5E9FAF03770282B90D /* Pods-NFL Superbowl PicksUITests.debug.xcconfig */;
+			baseConfigurationReference = C1EB58B43A1C2728FBDD703B58A0953B /* Pods-NFL Superbowl Picks.release.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-NFL Superbowl Picks/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NFL Superbowl Picks/Pods-NFL Superbowl Picks.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_NFL_Superbowl_Picks;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		218092E89274B80C7788FC844C934DF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE1C68B1891019A79F67907C0A690D5F /* Pods.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Pods;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		10611DF906BE77CCCA20B33B66EB6FBD /* Debug */ = {
+		25F03073C784C4C1C216943F6735C0BF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DABECBC50BE8A5CB73F2D78D2C496BED /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 7BDD077CA7B5450B4A90BB2130C33E80 /* Pods-NFL Superbowl PicksUITests.debug.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-NFL Superbowl PicksUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NFL Superbowl PicksUITests/Pods-NFL Superbowl PicksUITests.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Pods_NFL_Superbowl_PicksUITests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		35206850E5CCAD2E02AC970E3F75C871 /* Release */ = {
+		3C10E5AF5D555F1787644D164909A872 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 97749977DB3D5FABAD13B9E5CA80AB3B /* Pods-NFL Superbowl Picks.release.xcconfig */;
+			baseConfigurationReference = C2A1C85C4237049329D9668348F14EC4 /* Firebase.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Firebase/Firebase-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Firebase/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Firebase/Firebase.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Firebase;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		414A83BB3997E961F1E4513F44073CA9 /* Release */ = {
+		480240F59B029A63DA7E170B3CBEB44C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC84F01336648FD95B9933C3FF9CC0A6 /* Pods-NFL Superbowl PicksTests.release.xcconfig */;
+			baseConfigurationReference = 5D876F9E15AC7CDBD8A4B3E990E01D84 /* Spring.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Spring/Spring-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Spring/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Spring/Spring.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Spring;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		47B0DDF4CC40EAF540D3A023CF030630 /* Release */ = {
+		4A1D551D445B58502408703E4666EF3A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4CC7E701255F712223B02F3CF7CD9315 /* Pods.release.xcconfig */;
+			baseConfigurationReference = B381CB537D1BCE77B773E5CC8839A45B /* Pods-NFL Superbowl Picks.debug.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-NFL Superbowl Picks/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NFL Superbowl Picks/Pods-NFL Superbowl Picks.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Pods_NFL_Superbowl_Picks;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		511103F7F15A7E8F83B268EA03462CAB /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -649,35 +1092,148 @@
 			};
 			name = Release;
 		};
-		7C168A9740581CEE225270B552B78DF8 /* Release */ = {
+		5A64D3202CB6D130930334CDC2E01B55 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FCB66374E1FB4AB8B3B4E7CBF812B675 /* Pods-NFL Superbowl PicksUITests.release.xcconfig */;
+			baseConfigurationReference = DDE5CC4AB3EA4EA810389447AD213568 /* Pods-NFL Superbowl PicksUITests.release.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-NFL Superbowl PicksUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NFL Superbowl PicksUITests/Pods-NFL Superbowl PicksUITests.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Pods_NFL_Superbowl_PicksUITests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		8CB61E530C7632FC94D1501F4D04440B /* Release */ = {
+		6ABB1B2251C652A8B896CA4781C14377 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 738BB9F92AE1E67065A31855CE41C63C /* Firebase-Private.xcconfig */;
+			baseConfigurationReference = 02A4E6FE4CEE6643582EDC59670D82E0 /* Pods-NFL Superbowl PicksTests.debug.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-NFL Superbowl PicksTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NFL Superbowl PicksTests/Pods-NFL Superbowl PicksTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_NFL_Superbowl_PicksTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		815BBC3C774ECF34D42CA02E8A25B683 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D876F9E15AC7CDBD8A4B3E990E01D84 /* Spring.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Spring/Spring-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Spring/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Spring/Spring.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Spring;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		82769E035F65D540A64A3DE978496EAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2A1C85C4237049329D9668348F14EC4 /* Firebase.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Firebase/Firebase-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Firebase/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Firebase/Firebase.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Firebase;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8B340692E7CF1918CD7491467535E580 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC82F2ACB6589B5E78F8185CDECA2D1A /* Pods.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -720,62 +1276,44 @@
 			};
 			name = Debug;
 		};
-		BD865775409CE9CF2B8FDE9574B76485 /* Debug */ = {
+		DA6C543974FBC8D79EDD29DEB909D1EF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38911E71F02C123D47AD26115D454F12 /* Pods-NFL Superbowl PicksTests.debug.xcconfig */;
+			baseConfigurationReference = 793234822EDFA4DFB00BEC4B634A1C1D /* Pods-NFL Superbowl PicksTests.release.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-NFL Superbowl PicksTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NFL Superbowl PicksTests/Pods-NFL Superbowl PicksTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Pods_NFL_Superbowl_PicksTests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
-		};
-		C6EEE4F0ACFBBFD89AF176459731D7ED /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 738BB9F92AE1E67065A31855CE41C63C /* Firebase-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Firebase/Firebase-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		D1094D77409483B792FAC1473B152B74 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED06F613358BD29100EDCE93C07C8461 /* Pods-NFL Superbowl Picks.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2939F738B8D2E556FAB18039819E6748 /* Build configuration list for PBXNativeTarget "Firebase" */ = {
+		0744D38D514F0C42D3D0B4F16CD20892 /* Build configuration list for PBXNativeTarget "Spring" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C6EEE4F0ACFBBFD89AF176459731D7ED /* Debug */,
-				8CB61E530C7632FC94D1501F4D04440B /* Release */,
+				480240F59B029A63DA7E170B3CBEB44C /* Debug */,
+				815BBC3C774ECF34D42CA02E8A25B683 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -789,38 +1327,47 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3DC31C8D8CE66F09B214850B81BD0501 /* Build configuration list for PBXNativeTarget "Pods-NFL Superbowl PicksUITests" */ = {
+		49B346C14D532324DCD14D0FA1347BC6 /* Build configuration list for PBXNativeTarget "Firebase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				090004CC7047BF163011C84BCD074691 /* Debug */,
-				7C168A9740581CEE225270B552B78DF8 /* Release */,
+				82769E035F65D540A64A3DE978496EAC /* Debug */,
+				3C10E5AF5D555F1787644D164909A872 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6121A903D5503E40084FA428CB074D40 /* Build configuration list for PBXNativeTarget "Pods-NFL Superbowl Picks" */ = {
+		59338909D7509734ECB4352FB4B77874 /* Build configuration list for PBXNativeTarget "Pods-NFL Superbowl Picks" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D1094D77409483B792FAC1473B152B74 /* Debug */,
-				35206850E5CCAD2E02AC970E3F75C871 /* Release */,
+				4A1D551D445B58502408703E4666EF3A /* Debug */,
+				1E6F3A29AA923EE27195E72FDA8E0E74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		977A4EE802D2ADCED7DBC14B25EBACC7 /* Build configuration list for PBXNativeTarget "Pods-NFL Superbowl PicksTests" */ = {
+		A8200FA8529B6CBA39EEDF815DD06773 /* Build configuration list for PBXNativeTarget "Pods-NFL Superbowl PicksUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BD865775409CE9CF2B8FDE9574B76485 /* Debug */,
-				414A83BB3997E961F1E4513F44073CA9 /* Release */,
+				25F03073C784C4C1C216943F6735C0BF /* Debug */,
+				5A64D3202CB6D130930334CDC2E01B55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C7BE2A9725C5A7BB88AD67D3963A11BC /* Build configuration list for PBXNativeTarget "Pods" */ = {
+		DB5AC5E737765F07152620C20149211E /* Build configuration list for PBXNativeTarget "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				10611DF906BE77CCCA20B33B66EB6FBD /* Debug */,
-				47B0DDF4CC40EAF540D3A023CF030630 /* Release */,
+				218092E89274B80C7788FC844C934DF2 /* Debug */,
+				8B340692E7CF1918CD7491467535E580 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB7955707E542AEC128E94489EBA1016 /* Build configuration list for PBXNativeTarget "Pods-NFL Superbowl PicksTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6ABB1B2251C652A8B896CA4781C14377 /* Debug */,
+				DA6C543974FBC8D79EDD29DEB909D1EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,0 +1,6 @@
+framework module Pods_NFL_Superbowl_PicksUITests {
+  umbrella header "Pods-NFL Superbowl PicksUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

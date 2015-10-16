@@ -12,6 +12,7 @@ import AssetsLibrary
 import MessageUI
 import AVFoundation
 import MessageUI
+import Firebase
 
 
 class AFCPicksViewController: UIViewController, MFMailComposeViewControllerDelegate {
@@ -29,6 +30,9 @@ class AFCPicksViewController: UIViewController, MFMailComposeViewControllerDeleg
     var afcPicks2 : NSMutableArray = NSMutableArray()
     var nfcPicks : NSMutableArray = NSMutableArray()
     var nfcPicks2 : NSMutableArray = NSMutableArray()
+    
+    // Timeout
+    var timer: NSTimer!
     
     @IBOutlet weak var circularProgressView: KDCircularProgress!
     @IBOutlet weak var jaguars: UIButton!
@@ -54,12 +58,9 @@ class AFCPicksViewController: UIViewController, MFMailComposeViewControllerDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        _ = NSTimer.scheduledTimerWithTimeInterval(45.0, target: self, selector: "timeToMoveOn", userInfo: nil, repeats: false)
-
-        
-        
         circularProgressView.angle = 0
+        
+        
         let bubbles = [self.jaguars,self.titans,self.texans,self.ravens,self.raiders,self.patriots,self.dolphins,self.colts,self.cheifs,self.chargers,self.browns,self.broncos,self.bills,self.steelers,self.jets,self.bengals]
         
         for bt in bubbles{
@@ -209,6 +210,56 @@ class AFCPicksViewController: UIViewController, MFMailComposeViewControllerDeleg
         }
         
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        createAlert()
+        startTimer()
+    
+    }
+    
+    
+    func createAlert() {
+        
+        alertView = UIView(frame: view.bounds)
+        alertView.backgroundColor = UIColor.clearColor()
+        alertView.alpha = 0.0
+        alertView.layer.cornerRadius = 10;
+        alertView.layer.shadowColor = UIColor.blackColor().CGColor;
+        alertView.layer.shadowOffset = CGSizeMake(0, 5);
+        alertView.layer.shadowOpacity = 0.3;
+        alertView.layer.shadowRadius = 10.0;
+        alertView.tag = 1
+        
+        
+        let alert = UIImage(named: "Alert7") as UIImage!
+        let imageView = UIImageView(image: alert)
+        imageView.frame = CGRectMake((view.bounds.width - 320) / 2, (view.bounds.height - 280) / 2 - 30, 320, 280)
+        imageView.alpha = 0.0
+        
+        
+        
+        
+        let button = UIButton(type: UIButtonType.System) as UIButton
+        button.setTitle("Pick!", forState: UIControlState.Normal)
+        button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        button.titleLabel?.font = UIFont(name: "Arial", size: 20)
+        button.backgroundColor = UIColor(red: 0.82, green: 0.01, blue: 0.11, alpha: 1)
+        button.frame = CGRectMake((view.bounds.width - 310)/2 , (view.bounds.height - 125)/2 + 103, 310, 65)
+        button.layer.cornerRadius = 5
+        button.addTarget(self, action: Selector("dismissA"), forControlEvents: UIControlEvents.TouchUpInside)
+        button.bringSubviewToFront(button)
+        
+        view.addSubview(alertView)
+        alertView.addSubview(imageView)
+        alertView.insertSubview(button, aboveSubview: imageView)
+        
+        UIView.animateWithDuration(0.5) {
+            self.alertView.alpha = 1.0
+            imageView.alpha = 1.0
+            
+        }
+    }
+
         
         
     func createAlert2() {
@@ -303,18 +354,55 @@ class AFCPicksViewController: UIViewController, MFMailComposeViewControllerDeleg
         
     }
    
-       
-   
-    
-    
-
-
+    func createAlert4() {
+        
+        alertView = UIView(frame: view.bounds)
+        alertView.backgroundColor = UIColor.clearColor()
+        alertView.alpha = 0.0
+        alertView.layer.cornerRadius = 10;
+        alertView.layer.shadowColor = UIColor.blackColor().CGColor;
+        alertView.layer.shadowOffset = CGSizeMake(0, 5);
+        alertView.layer.shadowOpacity = 0.3;
+        alertView.layer.shadowRadius = 10.0;
+        alertView.tag = 1
+        
+        let alert = UIImage(named: "Alert9") as UIImage!
+        let imageView = UIImageView(image: alert)
+        imageView.frame = CGRectMake((view.bounds.width - 320) / 2, (view.bounds.height - 280) / 2 - 30, 320, 280)
+        imageView.alpha = 0.0
+        
+        // Yes Button
+        let button = UIButton(type: UIButtonType.System) as UIButton
+        button.setTitle("Yes!", forState: UIControlState.Normal)
+        button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        button.titleLabel?.font = UIFont(name: "Arial", size: 20)
+        button.backgroundColor = UIColor(red: 0.82, green: 0.01, blue: 0.11, alpha: 1)
+        button.frame = CGRectMake((view.bounds.width - 310)/2 , (view.bounds.height - 125)/2 + 103, 310, 65)
+        button.layer.cornerRadius = 5
+        button.addTarget(self, action: Selector("dismissA"), forControlEvents: UIControlEvents.TouchUpInside)
+        button.bringSubviewToFront(button)
+        
+        view.addSubview(alertView)
+        alertView.addSubview(imageView)
+        alertView.insertSubview(button, aboveSubview: imageView)
+        
+        UIView.animateWithDuration(0.7) {
+            self.alertView.alpha = 1.0
+            imageView.alpha = 1.0
+            
+            self.timer = NSTimer.scheduledTimerWithTimeInterval(10.0, target: self, selector: "timeToMoveOn", userInfo: nil, repeats: false)
+            
+        }
+        
+    }
 
 
 func dismissA () {
     
     if let viewWithTag = self.view.viewWithTag(1) {
         viewWithTag.removeFromSuperview()
+        resetTimer()
+        
     }else{
         
     }
@@ -322,16 +410,9 @@ func dismissA () {
 }
 
 
-
-
-
-
-
-
-
-
-
     @IBAction func teamProgressButtonTapped(sender: UIButton!) {
+        
+        resetTimer()
         
         titans.setImage(UIImage(named: "titans"), forState:.Normal);
         titans.setImage(UIImage(named: "titansG"), forState:.Selected);
@@ -390,11 +471,13 @@ func dismissA () {
                 
                 afcPicks.addObject((sender.titleLabel?.text)!)
                 afcPicks2.addObject(sender.imageForState(.Selected)!)
+                sender.transform = CGAffineTransformMakeScale(1.3,1.3)
                 
             }else{
                 
                 afcPicks.removeObject((sender.titleLabel?.text)!)
                 afcPicks2.removeObject(sender.imageForState(.Selected)!)
+                sender.transform = CGAffineTransformMakeScale(1,1)
             }
         }
         
@@ -483,6 +566,9 @@ func dismissA () {
     func lastPage(){
         
         performSegueWithIdentifier("thanks", sender: self)
+        timer.invalidate()
+    
+    
     }
   
     
@@ -503,17 +589,18 @@ func dismissA () {
     
     func timeToMoveOn() {
         self.performSegueWithIdentifier("unwindFromAFCVC", sender: self)
+        recordRef.removeValue()
         
     }
     
+    func startTimer(){
+        timer = NSTimer.scheduledTimerWithTimeInterval(30.0, target: self, selector: Selector("createAlert4"), userInfo: "timer", repeats:false)
+    }
     
-    
-    func delay(seconds seconds: Double, completion:()->()) {
-        let popTime = dispatch_time(DISPATCH_TIME_NOW, Int64( Double(NSEC_PER_SEC) * seconds ))
+    func resetTimer(){
         
-        dispatch_after(popTime, dispatch_get_main_queue()) {
-            completion()
-        }
+        timer.invalidate()
+        timer = NSTimer.scheduledTimerWithTimeInterval(30.0, target: self, selector: Selector("createAlert4"), userInfo: "timer", repeats: false)
     }
     
     

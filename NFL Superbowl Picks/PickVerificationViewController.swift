@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class PickVerificationViewController: UIViewController {
 
@@ -48,59 +49,59 @@ class PickVerificationViewController: UIViewController {
         
         let image = nfcPicks2[0] as! UIImage
         let imageView = UIImageView(image: image)
-        imageView.frame = CGRect(x: (view.bounds.width - 150) / 2 - 300, y: (view.bounds.height - 100) / 2 - 260, width: 150, height: 150)
+        imageView.frame = CGRect(x: (view.bounds.width - 70) / 2 - 36, y: (view.bounds.height - 70) / 2 - 320, width: 70, height: 70)
         view.addSubview(imageView)
-        
+
         let image2 = nfcPicks2[1] as! UIImage
         let imageView2 = UIImageView(image: image2)
-        imageView2.frame = CGRect(x: (view.bounds.width - 150) / 2 - 150, y: (view.bounds.height - 100) / 2 - 260, width: 150, height: 150)
+        imageView2.frame = CGRect(x: (view.bounds.width - 70) / 2 - 111, y: (view.bounds.height - 70) / 2 - 320, width: 70, height: 70)
         view.addSubview(imageView2)
         
         let image3 = nfcPicks2[2] as! UIImage
         let imageView3 = UIImageView(image: image3)
-        imageView3.frame = CGRect(x: (view.bounds.width - 150) / 2 - 0, y: (view.bounds.height - 100) / 2 - 260, width: 150, height: 150)
+        imageView3.frame = CGRect(x: (view.bounds.width - 70) / 2 - 186, y: (view.bounds.height - 70) / 2 - 320, width: 70, height: 70)
         view.addSubview(imageView3)
         
         let image4 = nfcPicks2[3] as! UIImage
         let imageView4 = UIImageView(image: image4)
-        imageView4.frame = CGRect(x: (view.bounds.width - 150) / 2 + 150, y: (view.bounds.height - 100) / 2 - 260, width: 150, height: 150)
+        imageView4.frame = CGRect(x: (view.bounds.width - 70) / 2 - 261, y: (view.bounds.height - 70) / 2 - 320, width: 70, height: 70)
         view.addSubview(imageView4)
         
         let image5 = nfcPicks2[4] as! UIImage
         let imageView5 = UIImageView(image: image5)
-        imageView5.frame = CGRect(x: (view.bounds.width - 150) / 2 + 300, y: (view.bounds.height - 100) / 2 - 260, width: 150, height: 150)
+        imageView5.frame = CGRect(x: (view.bounds.width - 70) / 2 - 336, y: (view.bounds.height - 70) / 2 - 320, width: 70, height: 70)
         view.addSubview(imageView5)
-        
+
         let image6 = afcPicks2[0] as! UIImage
         let imageView6 = UIImageView(image: image6)
-        imageView6.frame = CGRect(x: (view.bounds.width - 150) / 2 - 300, y: (view.bounds.height - 100) / 2 - 100, width: 150, height: 150)
+        imageView6.frame = CGRect(x: (view.bounds.width - 70) / 2 + 39, y: (view.bounds.height - 70) / 2 - 320, width: 70, height: 70)
         view.addSubview(imageView6)
         
         let image7 = afcPicks2[1] as! UIImage
         let imageView7 = UIImageView(image: image7)
-        imageView7.frame = CGRect(x: (view.bounds.width - 150) / 2 - 150, y: (view.bounds.height - 100) / 2 - 100, width: 150, height: 150)
+        imageView7.frame = CGRect(x: (view.bounds.width - 70) / 2 + 114, y: (view.bounds.height - 70) / 2 - 320, width: 70, height: 70)
         view.addSubview(imageView7)
         
         let image8 = afcPicks2[2] as! UIImage
         let imageView8 = UIImageView(image: image8)
-        imageView8.frame = CGRect(x: (view.bounds.width - 150) / 2 - 0, y: (view.bounds.height - 100) / 2 - 100, width: 150, height: 150)
+        imageView8.frame = CGRect(x: (view.bounds.width - 70) / 2 + 189, y: (view.bounds.height - 70) / 2 - 320, width: 70, height: 70)
         view.addSubview(imageView8)
         
         let image9 = afcPicks2[3] as! UIImage
         let imageView9 = UIImageView(image: image9)
-        imageView9.frame = CGRect(x: (view.bounds.width - 150) / 2 + 150, y: (view.bounds.height - 100) / 2 - 100, width: 150, height: 150)
+        imageView9.frame = CGRect(x: (view.bounds.width - 70) / 2 + 264, y: (view.bounds.height - 70) / 2 - 320, width: 70, height: 70)
         view.addSubview(imageView9)
         
         let image10 = afcPicks2[4] as! UIImage
         let imageView10 = UIImageView(image: image10)
-        imageView10.frame = CGRect(x: (view.bounds.width - 150) / 2 + 300, y: (view.bounds.height - 100) / 2 - 100, width: 150, height: 150)
+        imageView10.frame = CGRect(x: (view.bounds.width - 70) / 2 + 339, y: (view.bounds.height - 70) / 2 - 320, width: 70, height: 70)
         view.addSubview(imageView10)
         
         
         
         
         
-//        _ = NSTimer.scheduledTimerWithTimeInterval(8.0, target: self, selector: "timeToMoveOn", userInfo: nil, repeats: false)
+        _ = NSTimer.scheduledTimerWithTimeInterval(8.0, target: self, selector: "timeToMoveOn", userInfo: nil, repeats: false)
         
         
         
@@ -164,11 +165,11 @@ class PickVerificationViewController: UIViewController {
     }
     
     func loadVisiblePages() {
-        UIView.animateWithDuration(8) {
-            self.scrollView.setContentOffset(CGPointMake(400, 0), animated: true)
-            
-            
-        }
+//        UIView.animateWithDuration(8) {
+//            self.scrollView.setContentOffset(CGPointMake(1500, 0), animated: true)
+//            
+//            
+//        }
         // First, determine which page is currently visible
         let pageWidth = scrollView.frame.size.width
         let page = Int(floor((scrollView.contentOffset.x * 2.0 + pageWidth) / (pageWidth * 2.0)))

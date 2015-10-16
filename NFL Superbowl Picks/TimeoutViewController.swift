@@ -10,9 +10,9 @@ import UIKit
 
 class TimeoutViewController: UIViewController {
 
-    override func viewDidLoad() {
+      override func viewDidLoad() {
         super.viewDidLoad()
-
+      
         
     }
     
@@ -26,7 +26,7 @@ class TimeoutViewController: UIViewController {
         
     }
     
-     
+  
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if let _ = touches.first {

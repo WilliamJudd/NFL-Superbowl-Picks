@@ -11,6 +11,7 @@ import Foundation
 import AssetsLibrary
 import MessageUI
 import AVFoundation
+import Firebase
 
 
 class NFCPicksViewController: UIViewController {
@@ -27,6 +28,8 @@ class NFCPicksViewController: UIViewController {
 // Arrays
     var nfcPicks : NSMutableArray = NSMutableArray()
     var nfcPicks2 : NSMutableArray = NSMutableArray()
+    
+    var timer: NSTimer!
 
     
     
@@ -52,7 +55,9 @@ class NFCPicksViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         circularProgressView.angle = 0
-     
+        startTimer()
+        
+        
         let bubbles = [self.bucs,self.cardinals,self.cowboys,self.eagles,self.falcons,self.giants,self.greenbay,self.panthers,self.rams,self.redskins,self.saints,self.seahawks,self.vikings,self.lions,self.bears,self.niners]
         
         for bt in bubbles{
@@ -202,23 +207,13 @@ class NFCPicksViewController: UIViewController {
         
         
      
-}
-    }
-    
-        
-        
-        
-    
-    
-    func removeSubview(){
-
-        if let viewWithTag = self.view.viewWithTag(1) {
-            viewWithTag.removeFromSuperview()
-        }else{
-            
         }
+}
+    
         
-    }
+        
+        
+    
     
     func createOverlay() {
         
@@ -278,18 +273,9 @@ class NFCPicksViewController: UIViewController {
         imageView6.frame = CGRect(x: (view.bounds.width - 600) / 2, y: (view.bounds.height - 400) / 2 + 175, width: 600, height: 400)
         view.addSubview(imageView6)
       
-        let button2 = UIButton(type: UIButtonType.System) as UIButton
-        button2.setTitle("Pick AFC!", forState: UIControlState.Normal)
-        button2.setTitleColor(UIColor(red: 0.27, green: 0.56, blue: 0.9, alpha: 1), forState: UIControlState.Normal)
-        button2.titleLabel?.font = UIFont(name: "Arial", size: 23)
-        button2.backgroundColor = UIColor.whiteColor()
-        button2.frame = CGRectMake((view.bounds.width - 300)/2 , (view.bounds.height - 75)/2 - 400, 300, 75)
-        button2.layer.cornerRadius = 10
-        button2.addTarget(self, action: Selector("afcPicks"), forControlEvents: UIControlEvents.TouchUpInside)
-        button2.alpha = 0.8
+     
         
-        
-        view.addSubview(button2)
+       
         
         UIView.animateWithDuration(0.0) {
             self.overlayView.alpha = 1.0
@@ -317,12 +303,17 @@ class NFCPicksViewController: UIViewController {
             imageView5.alpha = 1.0
             
         }
+    
+    timer.invalidate()
+    _ = NSTimer.scheduledTimerWithTimeInterval(8.0, target: self, selector: "afcPicks", userInfo: nil, repeats: false)
+    
+    
+    
     }
 
 
     override func viewDidAppear(animated: Bool) {
          createAlert()
-    
     }
     
     func createAlert() {
@@ -463,17 +454,70 @@ class NFCPicksViewController: UIViewController {
 
     }
 
+    func createAlert4() {
+        
+        alertView = UIView(frame: view.bounds)
+        alertView.backgroundColor = UIColor.clearColor()
+        alertView.alpha = 0.0
+        alertView.layer.cornerRadius = 10;
+        alertView.layer.shadowColor = UIColor.blackColor().CGColor;
+        alertView.layer.shadowOffset = CGSizeMake(0, 5);
+        alertView.layer.shadowOpacity = 0.3;
+        alertView.layer.shadowRadius = 10.0;
+        alertView.tag = 1
+        
+        
+        let alert = UIImage(named: "Alert8") as UIImage!
+        let imageView = UIImageView(image: alert)
+        imageView.frame = CGRectMake((view.bounds.width - 320) / 2, (view.bounds.height - 280) / 2 - 30, 320, 280)
+        imageView.alpha = 0.0
+
+        
+        // Yes Button
+        let button = UIButton(type: UIButtonType.System) as UIButton
+        button.setTitle("Yes!", forState: UIControlState.Normal)
+        button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        button.titleLabel?.font = UIFont(name: "Arial", size: 20)
+        button.backgroundColor = UIColor(red: 0.27, green: 0.56, blue: 0.9, alpha: 1)
+        button.frame = CGRectMake((view.bounds.width - 310)/2 , (view.bounds.height - 125)/2 + 103, 310, 65)
+        button.layer.cornerRadius = 5
+        button.addTarget(self, action: Selector("dismissA"), forControlEvents: UIControlEvents.TouchUpInside)
+        button.bringSubviewToFront(button)
+        
+        view.addSubview(alertView)
+        alertView.addSubview(imageView)
+        alertView.insertSubview(button, aboveSubview: imageView)
+        
+        UIView.animateWithDuration(0.7) {
+            self.alertView.alpha = 1.0
+            imageView.alpha = 1.0
+            
+         self.timer = NSTimer.scheduledTimerWithTimeInterval(10.0, target: self, selector: "timeToMoveOn", userInfo: nil, repeats: false)
+        
+        }
+        
+    }
+
+    
     func dismissA () {
         
         if let viewWithTag = self.view.viewWithTag(1) {
             viewWithTag.removeFromSuperview()
-        }else{
+            resetTimer()
             
+        
+        }else{
+    
         }
     }
     
+
     
     @IBAction func teamProgressButtonTapped(sender: UIButton!) {
+      
+
+        resetTimer()
+    
         
         rams.setImage(UIImage(named: "rams"), forState:.Normal);
         rams.setImage(UIImage(named: "ramsG"), forState:.Selected);
@@ -532,14 +576,16 @@ class NFCPicksViewController: UIViewController {
             sender.selected = !sender.selected
         
             if sender.state.rawValue == 5  {
-             
+            
             nfcPicks.addObject((sender.titleLabel?.text)!)
             nfcPicks2.addObject(sender.imageForState(.Selected)!)
-                
-        }else{
-
+            sender.transform = CGAffineTransformMakeScale(1.3,1.3)
+            
+            }else{
+           
             nfcPicks.removeObject((sender.titleLabel?.text)!)
             nfcPicks2.removeObject(sender.imageForState(.Selected)!)
+            sender.transform = CGAffineTransformMakeScale(1,1)
                 
             }
         }
@@ -555,29 +601,24 @@ class NFCPicksViewController: UIViewController {
             
             circularProgressView.animateToAngle(0, duration: 0.0, completion: nil)
             
-            
         }else{
         
             if nfcPicks.count == (1) {
             
             
-                circularProgressView.animateToAngle(72, duration: 0.0, completion: nil)
-            
-            
-        }else{
+            circularProgressView.animateToAngle(72, duration: 0.0, completion: nil)
+           }else{
         
                 if nfcPicks.count == (2) {
             
             
                     circularProgressView.animateToAngle(144, duration: 0.0, completion: nil)
             
-            
         }else{
     
                     if nfcPicks.count == (3) {
             
                         circularProgressView.animateToAngle(216, duration: 0.0, completion: nil)
-            
             
         }else{
         
@@ -586,14 +627,12 @@ class NFCPicksViewController: UIViewController {
        
         
                             circularProgressView.animateToAngle(288, duration: 0.0, completion: nil)
-        
     
         }else{
         
                             if nfcPicks.count == (5) {
                                 createAlert2()
                                 circularProgressView.animateToAngle(360, duration: 0.0, completion: nil)
-         
         }else{
             
             
@@ -603,7 +642,7 @@ class NFCPicksViewController: UIViewController {
                                     nfcPicks.removeLastObject()
                                     nfcPicks2.removeLastObject()
                                     circularProgressView.animateToAngle(360, duration: 0.0, completion: nil)
-        }else{
+                                }else{
             
             
                             
@@ -636,14 +675,23 @@ class NFCPicksViewController: UIViewController {
             afcPicksViewController.recordRef = recordRef
             afcPicksViewController.nfcPicks = nfcPicks
             afcPicksViewController.nfcPicks2 = nfcPicks2
-//            nfcPicksViewController.toRecipient = email.text
            
         }
     }
     
     func timeToMoveOn() {
         self.performSegueWithIdentifier("unwindFromNFCVC", sender: self)
+        recordRef.removeValue()
         
+    }
+    func startTimer(){
+        timer = NSTimer.scheduledTimerWithTimeInterval(30.0, target: self, selector: Selector("createAlert4"), userInfo: "timer", repeats:false)
+    }
+    
+    func resetTimer(){
+        
+        timer.invalidate()
+        timer = NSTimer.scheduledTimerWithTimeInterval(30.0, target: self, selector: Selector("createAlert4"), userInfo: "timer", repeats: false)
     }
 
 }

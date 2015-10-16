@@ -675,12 +675,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="thinkJine" translatesAutoresizingMaskIntoConstraints="NO" id="6Pt-4d-xfU">
-                                <rect key="frame" x="434" y="779" width="240" height="199"/>
-                                <animations/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SOUTHEASTERN LOGO- HORIZONTAL" translatesAutoresizingMaskIntoConstraints="NO" id="79G-zY-J0d">
                                 <rect key="frame" x="52" y="801" width="362" height="156"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="poweredJineus" translatesAutoresizingMaskIntoConstraints="NO" id="6Pt-4d-xfU">
+                                <rect key="frame" x="453" y="805" width="254" height="148"/>
                                 <animations/>
                             </imageView>
                         </subviews>
@@ -708,7 +708,7 @@
         <image name="SOUTHEASTERN LOGO- HORIZONTAL" width="1849" height="607"/>
         <image name="SOUTHEASTERN LOGO- HORIZONTAL WHITE" width="1800" height="900"/>
         <image name="SOUTHEASTERN LOGO-VERT WHITE" width="900" height="900"/>
-        <image name="WaitScreenTemp" width="1533" height="2030"/>
+        <image name="WaitScreenTemp" width="1531" height="2030"/>
         <image name="bears" width="262" height="262"/>
         <image name="bearsG(larger)" width="310" height="310"/>
         <image name="bengals" width="264" height="265"/>
@@ -733,6 +733,7 @@
         <image name="next_button" width="212" height="212"/>
         <image name="panthers" width="262" height="262"/>
         <image name="patriots" width="264" height="265"/>
+        <image name="poweredJineus" width="445" height="261"/>
         <image name="raiders" width="264" height="265"/>
         <image name="rams" width="262" height="262"/>
         <image name="ravens" width="264" height="265"/>
@@ -742,7 +743,6 @@
         <image name="steelers" width="264" height="265"/>
         <image name="texans" width="264" height="265"/>
         <image name="text_field_back" width="1088" height="188"/>
-        <image name="thinkJine" width="330" height="330"/>
         <image name="titans" width="264" height="265"/>
         <image name="vikings" width="262" height="262"/>
     </resources>

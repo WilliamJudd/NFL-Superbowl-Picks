@@ -56,6 +56,8 @@ class NFCPicksViewController: UIViewController {
         super.viewDidLoad()
         circularProgressView.angle = 0
         startTimer()
+        createAlert()
+
         
         
         let bubbles = [self.bucs,self.cardinals,self.cowboys,self.eagles,self.falcons,self.giants,self.greenbay,self.panthers,self.rams,self.redskins,self.saints,self.seahawks,self.vikings,self.lions,self.bears,self.niners]
@@ -217,6 +219,10 @@ class NFCPicksViewController: UIViewController {
     
     func createOverlay() {
         
+        
+        
+        
+        
         overlayView = UIView(frame: view.bounds)
         overlayView.backgroundColor = UIColor.grayColor()
         overlayView.alpha = 0.0
@@ -304,18 +310,14 @@ class NFCPicksViewController: UIViewController {
             
         }
     
-    timer.invalidate()
+    
     _ = NSTimer.scheduledTimerWithTimeInterval(8.0, target: self, selector: "afcPicks", userInfo: nil, repeats: false)
     
-    
+    timer.invalidate()
     
     }
 
 
-    override func viewDidAppear(animated: Bool) {
-         createAlert()
-    }
-    
     func createAlert() {
         
         alertView = UIView(frame: view.bounds)
@@ -410,8 +412,10 @@ class NFCPicksViewController: UIViewController {
             self.alertView.alpha = 1.0
             imageView.alpha = 1.0
             
+        
+        
         }
-  
+//  timer.invalidate()
     }
     
     func createAlert3() {
@@ -492,7 +496,8 @@ class NFCPicksViewController: UIViewController {
             self.alertView.alpha = 1.0
             imageView.alpha = 1.0
             
-         self.timer = NSTimer.scheduledTimerWithTimeInterval(10.0, target: self, selector: "timeToMoveOn", userInfo: nil, repeats: false)
+     //    self.timer.invalidate()
+            self.timer = NSTimer.scheduledTimerWithTimeInterval(10.0, target: self, selector: "timeToMoveOn", userInfo: nil, repeats: false)
         
         }
         
@@ -666,7 +671,7 @@ class NFCPicksViewController: UIViewController {
     func afcPicks () {
         
         performSegueWithIdentifier("afcpicks", sender: self)
-        
+        timer.invalidate()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
@@ -681,6 +686,7 @@ class NFCPicksViewController: UIViewController {
     
     func timeToMoveOn() {
         self.performSegueWithIdentifier("unwindFromNFCVC", sender: self)
+        timer.invalidate()
         recordRef.removeValue()
         
     }

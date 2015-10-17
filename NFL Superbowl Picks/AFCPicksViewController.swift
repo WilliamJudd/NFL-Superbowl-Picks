@@ -59,6 +59,8 @@ class AFCPicksViewController: UIViewController, MFMailComposeViewControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         circularProgressView.angle = 0
+        startTimer()
+        createAlert()
         
         
         let bubbles = [self.jaguars,self.titans,self.texans,self.ravens,self.raiders,self.patriots,self.dolphins,self.colts,self.cheifs,self.chargers,self.browns,self.broncos,self.bills,self.steelers,self.jets,self.bengals]
@@ -211,11 +213,7 @@ class AFCPicksViewController: UIViewController, MFMailComposeViewControllerDeleg
         
     }
     
-    override func viewDidAppear(animated: Bool) {
-        createAlert()
-        startTimer()
-    
-    }
+   
     
     
     func createAlert() {
@@ -256,8 +254,10 @@ class AFCPicksViewController: UIViewController, MFMailComposeViewControllerDeleg
         UIView.animateWithDuration(0.5) {
             self.alertView.alpha = 1.0
             imageView.alpha = 1.0
-            
+         
+       
         }
+    
     }
 
         
@@ -310,9 +310,13 @@ class AFCPicksViewController: UIViewController, MFMailComposeViewControllerDeleg
         UIView.animateWithDuration(0.7) {
             self.alertView.alpha = 1.0
             imageView.alpha = 1.0
+//          self.timer.invalidate()
             
         }
+    
+   
     }
+    
     
     func createAlert3() {
        
@@ -568,7 +572,6 @@ func dismissA () {
         performSegueWithIdentifier("thanks", sender: self)
         timer.invalidate()
     
-    
     }
   
     
@@ -581,7 +584,6 @@ func dismissA () {
             thanksViewController.nfcPicks2 = nfcPicks2
             thanksViewController.afcPicks = afcPicks
             thanksViewController.afcPicks2 = afcPicks2
-            //            nfcPicksViewController.toRecipient = email.text
             
         }
     }

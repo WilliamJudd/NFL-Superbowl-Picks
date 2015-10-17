@@ -311,7 +311,7 @@ class NFCPicksViewController: UIViewController {
         }
     
     
-    _ = NSTimer.scheduledTimerWithTimeInterval(8.0, target: self, selector: "afcPicks", userInfo: nil, repeats: false)
+    _ = NSTimer.scheduledTimerWithTimeInterval(4.0, target: self, selector: "afcPicks", userInfo: nil, repeats: false)
     
     timer.invalidate()
     

@@ -741,6 +741,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "NFL Superbowl Picks/NFL Superbowl Picks-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -761,6 +762,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Think-Jinues.NFL-Superbowl-Picks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "NFL Superbowl Picks/NFL Superbowl Picks-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
